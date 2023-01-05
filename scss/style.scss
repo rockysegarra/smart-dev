@@ -1,0 +1,93 @@
+$primary: #4363F9;
+$secondary: #F26B21;
+$success: #60D084;
+$danger: #E94F37;
+$warning: #ffc107;
+$info: #252D6C;
+$dark: #393E41;
+$light: #F4F5FB;
+
+
+body {
+    font-family: 'Poppins',
+        sans-serif !important;
+    background-color: $light;
+}
+
+a {
+    color: $primary;
+}
+
+.btn {
+    border-radius: 20px !important;
+    min-width: 100px;
+}
+
+.card {
+    border-radius: 5px !important;
+}
+
+.page-sidebar {
+    border-right: 0px solid #e7e7e9 !important;
+    background-color: #fff;
+}
+
+.page-sidebar .nav-link.active,
+.page-sidebar .nav-link[data-bs-toggle=collapse].active,
+.page-sidebar .sidebar-item .sidebar-link.active {
+    color: #000000 !important;
+    border-top-left-radius: 50rem;
+    border-bottom-left-radius: 50rem;
+    background-color: $light !important;
+    border-top-right-radius: 0rem !important;
+    border-bottom-right-radius: 0rem !important;
+}
+
+.page-sidebar .nav-link {
+    padding-left: 10px !important;
+    border-top-left-radius: 50rem !important;
+    border-bottom-left-radius: 50rem !important;
+    border-top-right-radius: 0rem !important;
+    border-bottom-right-radius: 0rem !important;
+}
+
+.page-sidebar a:hover {
+    color: $secondary !important;
+    background-color: $light;
+    border-top-left-radius: 50rem !important;
+    border-bottom-left-radius: 50rem !important;
+    border-top-right-radius: 0rem !important;
+    border-bottom-right-radius: 0rem !important;
+}
+
+.nav-link {
+    margin-bottom: 5px !important;
+}
+
+
+// Bootstrap functions
+@import './node_modules/bootstrap/scss/functions';
+
+// theme functions
+@import './custom/functions/functions';
+
+//Third party plugins style import
+
+//Aos Plugin Scss
+@import "./node_modules/aos/src/sass/aos.scss";
+
+//Import bootstrap overrides variables - theme variables
+@import "./custom/variables/variables";
+@import "./custom/variables/additional-variables";
+
+//Import bootstrap core scss
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+
+
+
+//Admin core css files
+@import "./custom/utilities/utilities";
+@import "./custom/components/components";
+// Bootstrap functions
+@import './custom/webfonts/webfonts';

@@ -1,0 +1,15 @@
+//
+// App inbox style start
+//
+
+.inbox-badge svg,.inbox-attachment,.inbox-time{
+    opacity: .4;
+}
+.inbox-from,.inbox-subject,.inbox-summary{
+opacity: .75;
+}
+.unread{
+    .inbox-badge svg,.inbox-from,.inbox-subject,.inbox-summary,.inbox-attachment,.inbox-time{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,9 @@
+import './custom/jquery.global';
+import './custom/mode_switcher';
+import './custom/preloader';
+import './custom/bootstrap.custom';
+import './custom/page-sidebar';
+import './custom/validation';
+import './custom/aos';
+import './custom/choices';
+import 'simplebar';

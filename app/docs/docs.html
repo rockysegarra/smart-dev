@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Panel Admin UI</title>
+
+        <!--Simplebar css-->
+        <link rel="stylesheet" href="../assets/vendor/css/simplebar.min.css">
+
+        <!--Choices css-->
+        <link rel="stylesheet" href="../assets/vendor/css/choices.min.css">
+
+        <!--Font awesome icons-->
+<link href="../assets/fonts/font-awesome5-free/css/all.min.css" rel="stylesheet">
+
+<!--Google web fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+        <!--Main style-->
+        <link rel="stylesheet" href="../assets/css/style.min.css">
+    </head>
+
+    <body>
+        <!--App Start-->
+        <div class="d-flex flex-column flex-root">
+            <!--Page-->
+            <div class="page d-flex flex-row flex-column-fluid">
+                <!--///////////Page sidebar begin///////////////-->
+                <aside class="page-sidebar">
+                    <div class="h-100 flex-column d-flex" data-simplebar>
+
+                        <!--Aside-logo-->
+                        <div class="aside-logo p-3 position-relative">
+                            <a href="docs.html" class="d-block px-2">
+                                <div class="d-flex align-items-center flex-no-wrap text-truncate">
+                                    <!--Sidebar-icon-->
+                                    <span class="sidebar-icon fs-5 lh-1 text-white rounded-3 bg-primary fw-bold">
+                                        <svg width="16" height="18" viewBox="0 0 11 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="0.399994" width="4" height="12" fill="white" />
+                                            <path
+                                                d="M5.89998 9.6C7.1465 9.6 8.34196 9.09429 9.22338 8.19411C10.1048 7.29394 10.6 6.07304 10.6 4.8C10.6 3.52696 10.1048 2.30606 9.22338 1.40589C8.34196 0.505713 7.1465 2.4787e-07 5.89998 0L5.89998 4.8L5.89998 9.6Z"
+                                                fill="white" />
+                                        </svg>
+                                    </span>
+                                    <span class="sidebar-text">
+                                        <!--Sidebar-text-->
+                                        <span class="sidebar-text text-truncate fs-4 text-uppercase fw-bolder">
+                                            Panel <small class="opacity-50">Docs</small>
+                                        </span>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <!--Aside-Menu-->
+                        <div class="aside-menu px-2 my-auto flex-column-fluid">
+                            <nav class="flex-grow-1 h-100" id="page-navbar">
+                                <!--:Sidebar nav-->
+                                <ul class="nav flex-column collapse-group collapse d-flex pt-4">
+                                    <li class="nav-item">
+                                        <a href="docs.html" class="nav-link d-flex align-items-center text-truncate active">
+                                            <!--Sidebar nav text-->
+                                            <span class="sidebar-text">Get started</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="structure.html" class="nav-link d-flex align-items-center text-truncate ">
+                                            <!--Sidebar nav text-->
+                                            <span class="sidebar-text">Structure</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="starter-template.html" class="nav-link d-flex align-items-center text-truncate ">
+                                            <!--Sidebar nav text-->
+                                            <span class="sidebar-text">Starter template</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="credits.html" class="nav-link d-flex align-items-center text-truncate ">
+                                            <!--Sidebar nav text-->
+                                            <span class="sidebar-text">Credits</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="changelog.html" class="nav-link d-flex align-items-center text-truncate ">
+                                            <!--Sidebar nav text-->
+                                            <span class="sidebar-text">Changelog</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!--Aside-footer-->
+                        <footer class="aside-footer p-3">
+                            <div class="p-3 bg-secondary text-white rounded-2">
+                                <p class="mb-0 pb-2">Grab a license today</p>
+                                <!--Action button-->
+                                <a href="#!.html" class="btn rounded-pill btn-white text-truncate btn-sm">Purchase now</a>
+                            </div>
+                        </footer>
+                    </div>
+                </aside>
+                <!--///////////Page Sidebar End///////////////-->
+
+                <!--///Sidebar close button for 991px or below devices///-->
+                <div class="sidebar-close d-lg-none">
+                    <a href="#"></a>
+                </div>
+                <!--///.Sidebar close end///-->
+
+
+                <!--///////////Page content wrapper///////////////-->
+                <main class="page-content d-flex flex-column flex-row-fluid">
+
+
+                    <!--//Page Toolbar//-->
+                    <div class="toolbar p-4 bg-primary text-white shadow">
+                        <div class="position-relative container-fluid px-0">
+                            <div class="row align-items-center position-relative">
+                                <div class="col-lg-8 col-10">
+                                    <h3 class="mb-2">Get Started</h3>
+
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb mb-0">
+                                            <li class="breadcrumb-item"><a href="#!">Docs</a></li>
+                                            <li class="breadcrumb-item active">Get Started</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                                <div class="col-lg-4 text-end col-2">
+                                    <a href="#"
+                                        class="nav-link d-inline-flex d-lg-none sidebar-trigger-lg-down bg-white text-dark rounded-circle size-35 p-0 d-flex align-items-center justify-content-center rounded-3">
+                                        <i class="fas fa-bars"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//Page Toolbar End//-->
+
+                    <!--//Page content//-->
+                    <div class="content p-4 d-flex flex-column-fluid">
+                        <div class="container-fluid px-0">
+                            <h1 class="mb-2">Welcome to Panel Admin</h1>
+                            <p class="mb-5">If you own a theme’s license already, thank you very much for purchasing!</p>
+                            <h3 class="mb-3">
+                              Get started with Panel Admin!
+                            </h3>
+                            <p class="mb-5">
+                              This guide will help you get started with Panel Admin! All the important stuff – compiling the files, structure, build tools, file includes – is documented here, but should you have any questions, always feel free to reach out to <a href="mailto:mylifedesign143@gmail.com" class="border-bottom border-dashed border-primary text-dark">mylifedesign143@gmail.com</a>
+                            </p>
+                            <div class="alert alert-primary" role="alert">
+                              <h3>Panel Admin is a Static HTML Template</h3>
+                              For the time being, we do <span class="fw-bold">NOT</span> offer any tutorials or any other materials on how to integrate Panel Admin with any CMS, Web Application Frameworks (including Angular, Vue, React, etc.) or any other similar technology. However, since <span class="fw-bold">Panel Admin is a static HTML/CSS and JS template</span>, then it <em>should be compatible</em> with any backend technology and frameworks.
+                            </div>
+                            <hr class="bg-transparent opacity-100 border-bottom border-dashed my-6">
+                            <h3 class="mb-2" id="devSetup">
+                              Development setup
+                            </h3>
+                            <p class="">
+                              To get started, you need to do the following:
+                            </p>
+                            <ol class="">
+                              <li><strong>Make sure you have Node installed</strong> since Panel Admin uses npm to manage dependencies. If you don't, installing is quite easy, just visit the <a href="https://nodejs.org/en/download/" target="_blank">Node Downloads page</a> and install it. </li>
+                              <li><strong>Unzip your theme and open your command line</strong>, making sure your command line prompt is at the root of the unzipped theme directory. </li>
+                              <li><strong class="badge bg-tint-danger"><code>npm install</code></strong>: Open your command line to the root directory of your unzipped theme and run to install all of Landkit's dependencies.</li>
+                                <li><strong class="badge bg-tint-danger"><code>gulp</code></strong>: Run gulp command once all dependecies installed</li>
+                            </ol>
+                            <p class="">
+                                  It's that simple! If you're not used to using terminal, don't worry, this is as advanced as it gets. If you want to kill the server and stop Webpack, just hit <code>Control + C</code>.
+                                </p>
+                          </div>
+                    </div>
+                    <!--//Page content End//-->
+
+                    <!--//Page-footer//-->
+                    <footer class="pb-4">
+                        <div class="container-fluid px-4">
+                            <span class="d-block lh-sm small text-muted text-end">&copy;
+                                <script>
+                                    document.write(new Date().getFullYear())
+                                </script>. Copyright
+                            </span>
+                        </div>
+                    </footer>
+                    <!--/.Page Footer End-->
+
+                </main>
+                <!--///////////Page content wrapper End///////////////-->
+            </div>
+        </div>
+
+        <!--////////////Theme Core scripts Start/////////////////-->
+
+        <script src="../assets/vendor/feather.min.js"></script>
+        <script src="../assets/js/theme.bundle.js"></script>
+        <script>
+            feather.replace()
+        </script>
+
+        <!--////////////Theme Core scripts End/////////////////-->
+
+
+    </body>
+
+</html>

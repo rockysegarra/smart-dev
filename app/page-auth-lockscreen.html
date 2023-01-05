@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Panel-Admin</title>
+
+        <!--Font awesome icons-->
+        <link href="assets/fonts/font-awesome5-free/css/all.min.css" rel="stylesheet">
+
+        <!--Google web fonts-->
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/style.min.css" id="switchThemeStyle">
+    </head>
+
+    <body>
+          <!--Theme mode switcher-->
+          <div class="position-absolute end-0 top-0 size-40 z-index-fixed">
+            <div class="switch_modes">
+                <a href="#" class="mode_dark">
+                    <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16"
+                        height="16">
+                        <path fill-rule="evenodd"
+                            d="M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="#" class="mode_light active">
+                    <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16"
+                        height="16">
+                        <path fill-rule="evenodd"
+                            d="M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+          <!--////////////////// PreLoader Start//////////////////////-->
+          <div class="loader">
+            <!--Placeholder animated layout for preloader-->
+            <div class="d-flex flex-column flex-root">
+              <div class="page d-flex flex-row flex-column-fluid">
+                <div class="page-content ps-0 ms-0 d-flex flex-column flex-row-fluid">
+                  <div
+                    class="content flex-column p-4 pb-0 d-flex justify-content-center align-items-center flex-column-fluid position-relative">
+                    <div class="w-100 h-100 position-relative d-flex align-items-center justify-content-center">
+                      <i class="anim-spinner fas fa-spinner me-3"></i> 
+                      <div>
+                      <span>Loading...</span>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--////////////////// /.PreLoader END//////////////////////-->
+
+        
+        <div class="d-flex flex-column flex-root">
+            <!--Page-->
+            <div class="page d-flex flex-row flex-column-fluid z-index-1 position-relative">
+                <!--///////////Page content wrapper///////////////-->
+                <main class="page-content overflow-hidden ms-0 d-flex flex-column flex-row-fluid">
+                    
+
+                    <!--//content//-->
+                    <div class="content p-1 d-flex flex-column-fluid position-relative">
+                        <div class="container py-4">
+                            <div class="row h-100 align-items-center justify-content-center">
+                                <div class="col-sm-8 col-11 col-lg-5 col-xl-4">
+                                    <!--Lockscreen avatar-->
+                                    <img src="assets/media/avatars/01.jpg" class="avatar xxl z-index-1 mb-n5 d-block mx-auto rounded-circle position-relative" alt="">
+                                    <!--Card-->
+                                    <div class="card card-body bg-transparent border-0 shadow-none p-4 pt-8 rounded-3">
+                                        <h4 class="mb-2 text-center">Adam Milne</h4>
+                                        <form class="z-index-1 position-relative needs-validation" novalidate="" action="index.html">
+                                            <div class="position-relative mb-3">
+                                                <input type="password" class="form-control shadow-sm form-control-lg" required=""
+                                                    id="floatingLockscreenPass" placeholder="Password">
+                                                
+                                            <button class="btn btn-gray p-0 d-flex align-items-center justify-content-center shadow-none border-0 position-absolute end-0 top-50 translate-middle-y me-1 border-start h-75 width-30" type="submit">
+                                                <i class="fas fa-paper-plane"></i></button>
+                                            </div>
+                                            <p class="small text-muted text-center mb-0">
+                                               <span class="d-none d-sm-inline-block">Forget password?</span> <a href="page-auth-recover-pass.html"
+                                                    class="ms-2 text-decoration-underline fw-bold link-underline">Recover password</a>
+                                            </p>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--///////////Page content wrapper end///////////////-->
+
+                    <!--//Page-footer//-->
+                     <!--//Page-footer//-->
+                     <footer class="pb-4">
+                        <div class="container-fluid px-4">
+                          <span class="d-block lh-sm small text-muted text-end">&copy;
+                            <script>
+                              document.write(new Date().getFullYear())
+                            </script>. Copyright
+                          </span>
+                        </div>
+                      </footer>
+                      <!--/.Page Footer End-->
+                </main>
+            </div>
+        </div>
+        
+        <!--////////////Theme Core scripts Start/////////////////-->
+
+        <script src="assets/js/theme.bundle.js"></script>
+        <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+        <!--////////////Theme Core scripts End/////////////////-->
+
+    </body>
+
+</html>
