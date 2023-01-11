@@ -4,19 +4,27 @@ $success: #60D084;
 $danger: #E94F37;
 $warning: #ffc107;
 $info: #252D6C;
-$dark: #393E41;
+$dark: #4D4E4E;
 $light: #F4F5FB;
 
 
 body {
-    // font-family: 'Poppins',
-    //     sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
     background-color: $light;
     color: $dark !important;
 }
 
 a {
     color: $primary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $dark !important;
 }
 
 .form-select {
