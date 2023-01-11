@@ -1,7 +1,12 @@
-//Theme cards uses for widgets
-.card-header{
-    border-bottom:$border-width solid $border-color;
+.card {
+    border-radius: 5px;
 }
-.card-footer{
-    border-top:$border-width solid $border-color;
+
+//Theme cards uses for widgets
+.card-header {
+    border-bottom: $border-width solid $border-color;
+}
+
+.card-footer {
+    border-top: $border-width solid $border-color;
 }

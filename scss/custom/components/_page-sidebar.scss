@@ -29,6 +29,7 @@
     padding-top: $nav-link-padding-y * .75;
     padding-bottom: $nav-link-padding-y * .75;
     font-weight: $sidebar-link-font-weight;
+    margin-bottom: .25rem;
   }
 
   .simplebar-content {
@@ -112,12 +113,13 @@
 
   .sidebar-dropdown {
     padding-left: .5rem;
+    margin-top: 1rem;
   }
 }
 
 //aside colors
 .page-sidebar {
-  border-right: 1px solid $border-color;
+  border-right: 0px solid $border-color;
   background-color: $sidebar-bg;
 
   .aside-logo a,
@@ -129,17 +131,20 @@
   .nav-link[data-bs-toggle="collapse"],
   .sidebar-item .sidebar-link {
     color: $sidebar-link-color;
+    padding-left: .75rem;
+
+    border-top-left-radius: $border-radius-pill;
+    border-bottom-left-radius: $border-radius-pill;
 
     &:hover,
     &[aria-expanded="true"] {
-      color: $sidebar-link-hover-color;
+      color: $secondary !important;
+      background-color: $light;
     }
 
     &.active {
-      color: $sidebar-link-active-color;
-      background-color: $sidebar-link-active-bg;
-      border-top-right-radius: $border-radius-pill;
-      border-bottom-right-radius: $border-radius-pill;
+      color: $secondary !important;
+      background-color: $light;
     }
   }
 }

@@ -1,82 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Panel-Admin</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel-Admin</title>
 
-        @@include('./partials/fonts.html')
-        <link rel="stylesheet" href="assets/css/style.min.css" id="switchThemeStyle">
-    </head>
+    @@include('./partials/fonts.html')
+    <link rel="stylesheet" href="assets/css/style.min.css" id="switchThemeStyle">
+    <link href="/assets/css/fontawesome.css" rel="stylesheet">
+    <link href="/assets/css/brands.css" rel="stylesheet">
+    <link href="/assets/css/solid.css" rel="stylesheet">
+</head>
 
-    <body>
-         <!--Theme mode switcher-->
-         <div class="position-absolute end-0 top-0 size-40 z-index-fixed">
-            <div class="switch_modes">
-                <a href="#" class="mode_dark">
-                    <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16"
-                        height="16">
-                        <path fill-rule="evenodd"
-                            d="M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z">
-                        </path>
-                    </svg>
-                </a>
-                <a href="#" class="mode_light active">
-                    <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16"
-                        height="16">
-                        <path fill-rule="evenodd"
-                            d="M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z">
-                        </path>
-                    </svg>
-                </a>
-            </div>
-        </div>
+<body class="bg-light">
+    @@include('./partials/preloader-horizontal.html')
+    <div class="d-flex flex-column flex-root">
+        <!--Page-->
+        <div class="page d-flex flex-row flex-column-fluid">
 
-        @@include('./partials/preloader-horizontal.html')
-        <div class="d-flex flex-column flex-root">
-            <!--Page-->
-            <div class="page d-flex flex-row flex-column-fluid">
+            <!--///////////Page content wrapper///////////////-->
+            <main class="page-content overflow-hidden ms-0 d-flex flex-column flex-row-fluid">
 
-                <!--///////////Page content wrapper///////////////-->
-                <main class="page-content overflow-hidden ms-0 d-flex flex-column flex-row-fluid">
-
-                    <!--//content//-->
-                    <div class="content p-1 d-flex flex-column-fluid position-relative">
-                        <div class="container py-4">
-                            <div class="row h-100 align-items-center justify-content-center">
-                                <div class="col-md-8 col-lg-5 col-xl-4">
-                                    <!--Logo-->
-                                    <a href="index.html"
-                                        class="d-flex position-relative mb-4 z-index-1 align-items-center justify-content-center">
-                                        <span class="sidebar-icon size-60 bg-primary text-white rounded-circle">
-                                            <svg width="16" height="18" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="0.399994" width="4" height="12" fill="white"/>
-                                                <path d="M5.89998 9.6C7.1465 9.6 8.34196 9.09429 9.22338 8.19411C10.1048 7.29394 10.6 6.07304 10.6 4.8C10.6 3.52696 10.1048 2.30606 9.22338 1.40589C8.34196 0.505713 7.1465 2.4787e-07 5.89998 0L5.89998 4.8L5.89998 9.6Z" fill="white"/>
-                                                </svg> 
-                                        </span>
-                                    </a>
-                                    <!--Card-->
-                                    <div class="card card-body bg-transparent p-4">
-                                        <h4 class="mb-1">Reset password</h4>
-                                        <p class="mb-4 text-muted">
-                                            Enter your email to get a password reset link.
+                <!--//content//-->
+                <div class="content p-1 d-flex flex-column-fluid position-relative">
+                    <div class="container py-4">
+                        <div class="row h-100 align-items-center justify-content-center">
+                            <div class="col-md-8 col-lg-5 col-xl-4">
+                                <!--Logo-->
+                                <a href="#"
+                                    class="d-flex position-relative mb-4 z-index-1 align-items-center justify-content-center">
+                                    <img src="https://smartsuite.co/images/brands/logo_smartcommerce.svg">
+                                </a>
+                                <!--Card-->
+                                <div class="card border-0 shadown-sm bg-white">
+                                    <div class="card-header">
+                                        <h4 class="mb-0 pb-0 text-center">Reset password</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="mb-4">
+                                            Enter your email to get a password reset
+                                            link.
                                         </p>
                                         <form class=" z-index-1 position-relative needs-validation" novalidate="">
                                             <div class="form-floating mb-3">
                                                 <input type="email" class="form-control" required=""
                                                     id="floatingInputEmail" placeholder="name@example.com">
-                                                <label for="floatingInputEmail">Email address</label>
-                                                <span class="invalid-feedback">Please enter a valid email address</span>
+                                                <label for="floatingInputEmail">Email
+                                                    address</label>
+                                                <span class="invalid-feedback">Please
+                                                    enter a valid email
+                                                    address</span>
                                             </div>
-                                            <button class="w-100 btn btn-lg btn-primary" type="submit">Reset
+                                            <button class="w-100 btn btn-lg rounded-pill btn-primary"
+                                                type="submit">Reset
                                                 password</button>
                                             <hr class="mt-4 mb-3">
-                                            <p class="text-muted mb-0">
-                                                Remember your password? <a href="page-auth-signin.html"
-                                                    class="ms-2 text-body">Sign In</a>
-
+                                            <p class="mb-0">
+                                                <a href="page-auth-signin.html">
+                                                    <i class="fa fa-arrow-left me-2"></i> Return to SmartSuite
+                                                </a>
                                             </p>
                                         </form>
                                     </div>
@@ -84,14 +68,15 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!--///////////Page content wrapper end///////////////-->
+                <!--///////////Page content wrapper end///////////////-->
 
-                    @@include('./partials/footer.html')
-                </main>
-            </div>
+                @@include('./partials/footer.html')
+            </main>
         </div>
-        @@include('./partials/core-scripts.html')
-    </body>
+    </div>
+    @@include('./partials/core-scripts.html')
+</body>
 
 </html>

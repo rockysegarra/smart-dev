@@ -9,59 +9,35 @@ $light: #F4F5FB;
 
 
 body {
-    font-family: 'Poppins',
-        sans-serif !important;
+    // font-family: 'Poppins',
+    //     sans-serif !important;
     background-color: $light;
+    color: $dark !important;
 }
 
 a {
     color: $primary;
 }
 
-.btn {
+.form-select {
     border-radius: 20px !important;
-    min-width: 100px;
 }
 
-.card {
-    border-radius: 5px !important;
-}
-
-.page-sidebar {
-    border-right: 0px solid #e7e7e9 !important;
-    background-color: #fff;
-}
-
-.page-sidebar .nav-link.active,
-.page-sidebar .nav-link[data-bs-toggle=collapse].active,
-.page-sidebar .sidebar-item .sidebar-link.active {
-    color: #000000 !important;
-    border-top-left-radius: 50rem;
-    border-bottom-left-radius: 50rem;
+.form-control {
+    border-top: 0px solid !important;
+    border-right: 0px solid !important;
+    border-bottom: solid $primary !important;
+    border-left: 0px solid !important;
     background-color: $light !important;
-    border-top-right-radius: 0rem !important;
-    border-bottom-right-radius: 0rem !important;
+
 }
 
-.page-sidebar .nav-link {
-    padding-left: 10px !important;
-    border-top-left-radius: 50rem !important;
-    border-bottom-left-radius: 50rem !important;
-    border-top-right-radius: 0rem !important;
-    border-bottom-right-radius: 0rem !important;
+.display-4 {
+    font-weight: 400 !important;
 }
 
-.page-sidebar a:hover {
-    color: $secondary !important;
-    background-color: $light;
-    border-top-left-radius: 50rem !important;
-    border-bottom-left-radius: 50rem !important;
-    border-top-right-radius: 0rem !important;
-    border-bottom-right-radius: 0rem !important;
-}
-
-.nav-link {
-    margin-bottom: 5px !important;
+.display-title {
+    font-size: calc(1.625rem + 4.5vw);
 }
 
 
