@@ -48,6 +48,10 @@ h6 {
     font-size: calc(1.625rem + 4.5vw);
 }
 
+.toolbar {
+    padding: 12px 20px;
+}
+
 
 // Bootstrap functions
 @import './node_modules/bootstrap/scss/functions';

@@ -2,20 +2,20 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smart Suite</title>
 
     <!--Simplebar css-->
-    <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css">
+    <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css" />
 
     <!--Choices css-->
-    <link rel="stylesheet" href="assets/vendor/css/choices.min.css">
+    <link rel="stylesheet" href="assets/vendor/css/choices.min.css" />
 
     @@include('./partials/fonts.html')
     <!--Main style-->
-    <link rel="stylesheet" href="assets/css/style.min.css" id="switchThemeStyle">
+    <link rel="stylesheet" href="assets/css/style.min.css" id="switchThemeStyle" />
     <script src="https://kit.fontawesome.com/9b71cccaf3.js" crossorigin="anonymous"></script>
 </head>
 
@@ -32,10 +32,10 @@
                 @@include('./partials/header/header.html')
 
                 <!--//Page Toolbar//-->
-                <div class="toolbar bg-white" style="padding: 12px 20px 12px 20px;">
+                <div class="toolbar bg-white" style="padding: 12px 20px 12px 20px">
                     <div class="position-relative container-fluid px-0">
                         <div class="row position-relative">
-                            <div class="col-md-12 ">
+                            <div class="col-md-12">
                                 <div class="row g-0">
                                     <div class="col-6">
                                         <h5 class="mt-2">Make & Manage</h5>
@@ -50,7 +50,7 @@
                         </div>
                     </div>
                 </div>
-                <div class=" container-fluid text-center border-bottom py-2 px-4">
+                <div class="container-fluid text-center border-bottom py-2 px-4">
                     <div class="row justify-content-md-center">
                         <div class="col text-start align-self-start">
                             <a href="#">
@@ -66,8 +66,7 @@
                             <nav aria-label="breadcrumb">
                                 <ol
                                     class="breadcrumb mb-0 justify-content-end justify-content-lg-center justify-content-sm-end">
-                                    <li class="breadcrumb-item"><a href="#!">Home</a>
-                                    </li>
+                                    <li class="breadcrumb-item"><a href="#!">Home</a></li>
                                     <li class="breadcrumb-item active">Pages</li>
                                     <li class="breadcrumb-item active">Blank</li>
                                 </ol>
@@ -80,44 +79,46 @@
                 <!--//Page content//-->
                 <div class="content p-4 d-flex flex-column-fluid">
                     <div class="container-fluid px-0">
-                        @@include('./partials/wizard.html')
+                        <!-- @@include('./partials/wizard.html') -->
                         <div class="card overflow-hidden">
                             <div class="card-header">
-                                <h5 class="mb-0">Search and choose products</h5>
+                                <div class="hstack gap-3">
+                                    <div class="bg-body-tertiary">
+                                        <h5 class="mb-0">2. Search and choose products</h5>
+                                    </div>
+                                    <div class="bg-body-tertiary ms-auto">
+                                        <h5 class="mb-0">
+                                            <span class="badge bg-light text-dark">2 of 4</span>
+                                        </h5>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card-body" style="min-height: 5rem;">
+                            <div class="card-body" style="min-height: 5rem">
                                 <div class="row border-bottom pb-2 mb-2">
                                     <div class="row">
-                                        <div class="col-auto">
-                                            <form class="row g-3">
-                                                <div class="col-auto">
-                                                    <input type="search" class="form-control"
-                                                        id="exampleFormControlInput1" placeholder="Search">
-                                                </div>
-                                                <div class="col-auto">
-                                                    <button type="submit"
-                                                        class="btn btn-primary mb-3 rounded-pill">Search</button>
-                                                </div>
-                                            </form>
+                                        <div class="col-lg-5 col-md-6 mb-3">
+                                            <div class="hstack gap-3">
+                                                <input class="form-control me-auto" type="text" placeholder="Search"
+                                                    aria-label="Search" />
+                                                <button type="button" class="btn btn-primary rounded-pill">
+                                                    Submit
+                                                </button>
+                                            </div>
                                         </div>
-                                        <div class="col-auto ms-auto">
+                                        <div class="col-lg-7 col-md-6 ms-auto">
                                             <div class="d-flex justify-content-end">
+                                                <div class="form-check form-switch mb-3 mb-lg-0 me-4">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="flexSwitchCheckDefault" checked />
+                                                    <label class="form-check-label" for="flexSwitchCheckDefault">
+                                                        Available Products</label>
+                                                </div>
                                                 <div class="form-check form-switch mb-3 mb-lg-0">
                                                     <input class="form-check-input" type="checkbox" role="switch"
-                                                        id="flexSwitchCheckDefault" checked>
+                                                        id="flexSwitchCheckDefault" checked />
                                                     <label class="form-check-label" for="flexSwitchCheckDefault">
-                                                        Related
-                                                        Products</label>
+                                                        Related Products</label>
                                                 </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-12 mb-2">
-                                            <div class="form-check form-switch mb-3 mb-lg-0">
-                                                <input class="form-check-input" type="checkbox" role="switch"
-                                                    id="flexSwitchCheckDefault" checked>
-                                                <label class="form-check-label" for="flexSwitchCheckDefault">
-                                                    Only Show Available Products</label>
                                             </div>
                                         </div>
                                     </div>
@@ -128,142 +129,153 @@
                                             <div class="col">
                                                 <div class="card h-100">
                                                     <img src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
-                                                        class="card-img-top img-fluid p-5" alt="...">
+                                                        class="card-img-top img-fluid p-5" alt="..." />
                                                     <div class="card-body">
-                                                        <!-- <h5 class="card-title">Card title</h5> -->
-                                                        <p class="card-text">Pantene - Pantene Beautiful Lengths
-                                                            Conditioner 23.7 fl oz bottle</p>
-                                                        <a href="#">See related products (1)</a>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <div class="d-grid gap-2">
-                                                            <button class="btn btn-outline-primary rounded-pill"
-                                                                type="button">Add
-                                                                +</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <div class="row">
-                                                            <div class="col-6"><img class="img-fluid"
-                                                                    src="assets/Frame.svg"></div>
-                                                            <div class="col-6"><img class="img-fluid"
-                                                                    src="assets/target.svg"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="card h-100">
-                                                    <img src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
-                                                        class="card-img-top img-fluid p-5" alt="...">
-                                                    <div class="card-body">
-                                                        <!-- <h5 class="card-title">Card title</h5> -->
-                                                        <p class="card-text">Pantene - Pantene Beautiful Lengths
-                                                            Conditioner 23.7 fl oz bottle</p>
-                                                        <a href="#">See related products (1)</a>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <div class="d-grid gap-2">
-                                                            <button class="btn btn-outline-primary rounded-pill"
-                                                                type="button">Add
-                                                                +</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <div class="row">
-                                                            <div class="col-6"><img class="img-fluid"
-                                                                    src="assets/Frame.svg"></div>
-                                                            <div class="col-6"><img class="img-fluid"
-                                                                    src="assets/target.svg"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="card h-100">
-                                                    <img src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
-                                                        class="card-img-top img-fluid p-5" alt="...">
-                                                    <div class="card-body">
-                                                        <!-- <h5 class="card-title">Card title</h5> -->
-                                                        <p class="card-text">Pantene - Pantene Beautiful Lengths
-                                                            Conditioner 23.7 fl oz bottle</p>
-                                                        <a href="#">See related products (1)</a>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <div class="d-grid gap-2">
-                                                            <button class="btn btn-outline-primary rounded-pill"
-                                                                type="button">Add
-                                                                +</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <div class="row">
-                                                            <div class="col-6"><img class="img-fluid"
-                                                                    src="assets/Frame.svg"></div>
-                                                            <div class="col-6"><img class="img-fluid"
-                                                                    src="assets/target.svg"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="card h-100">
-                                                    <img src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
-                                                        class="card-img-top img-fluid p-5" alt="...">
-                                                    <div class="card-body">
-                                                        <!-- <h5 class="card-title">Card title</h5> -->
-                                                        <p class="card-text">Pantene - Pantene Beautiful Lengths
-                                                            Conditioner 23.7 fl oz bottle</p>
-                                                        <a href="#">See related products (1)</a>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <div class="d-grid gap-2">
-                                                            <button class="btn btn-outline-primary rounded-pill"
-                                                                type="button">Add
-                                                                +</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <div class="row">
-                                                            <div class="col-6"><img class="img-fluid"
-                                                                    src="assets/Frame.svg"></div>
-                                                            <div class="col-6"><img class="img-fluid"
-                                                                    src="assets/target.svg"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="card h-100">
-                                                    <img src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
-                                                        class="card-img-top img-fluid p-5" alt="...">
-                                                    <div class="card-body">
-                                                        <!-- <h5 class="card-title">Card title</h5> -->
                                                         <p class="card-text">
-                                                            Pantene -
-                                                            Pantene
-                                                            Beautiful
-                                                            Lengths
-                                                            Conditioner 23.7
-                                                            fl oz bottle</p>
-                                                        <a href="#">See
-                                                            related products
-                                                            (1)</a>
+                                                            Pantene - Pantene Beautiful Lengths Conditioner
+                                                            23.7 fl oz bottle
+                                                        </p>
+                                                        <a href="#">See related products (1)</a>
                                                     </div>
                                                     <div class="card-footer">
                                                         <div class="d-grid gap-2">
                                                             <button class="btn btn-outline-primary rounded-pill"
-                                                                type="button">Add
-                                                                +</button>
+                                                                type="button">
+                                                                Add +
+                                                            </button>
                                                         </div>
                                                     </div>
                                                     <div class="card-footer">
-                                                        <div class="row">
-                                                            <div class="col-6">
-                                                                <img class="img-fluid" src="assets/Frame.svg">
+                                                        <div class="row justify-content-center">
+                                                            <div class="col-4">
+                                                                <img class="img-fluid" src="assets/Frame.svg" />
                                                             </div>
-                                                            <div class="col-6">
-                                                                <img class="img-fluid" src="assets/target.svg">
+                                                            <div class="col-4">
+                                                                <img class="img-fluid" src="assets/target.svg" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card h-100">
+                                                    <img src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
+                                                        class="card-img-top img-fluid p-5" alt="..." />
+                                                    <div class="card-body">
+                                                        <p class="card-text">
+                                                            Pantene - Pantene Beautiful Lengths Conditioner
+                                                            23.7 fl oz bottle
+                                                        </p>
+                                                        <a href="#">See related products (1)</a>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <div class="d-grid gap-2">
+                                                            <button class="btn btn-outline-primary rounded-pill"
+                                                                type="button">
+                                                                Add +
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <div class="row justify-content-center">
+                                                            <div class="col-4">
+                                                                <img class="img-fluid" src="assets/Frame.svg" />
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <img class="img-fluid" src="assets/target.svg" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card h-100">
+                                                    <img src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
+                                                        class="card-img-top img-fluid p-5" alt="..." />
+                                                    <div class="card-body">
+                                                        <p class="card-text">
+                                                            Pantene - Pantene Beautiful Lengths Conditioner
+                                                            23.7 fl oz bottle
+                                                        </p>
+                                                        <a href="#">See related products (1)</a>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <div class="d-grid gap-2">
+                                                            <button class="btn btn-outline-primary rounded-pill"
+                                                                type="button">
+                                                                Add +
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <div class="row justify-content-center">
+                                                            <div class="col-4">
+                                                                <img class="img-fluid" src="assets/Frame.svg" />
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <img class="img-fluid" src="assets/target.svg" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card h-100">
+                                                    <img src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
+                                                        class="card-img-top img-fluid p-5" alt="..." />
+                                                    <div class="card-body">
+                                                        <p class="card-text">
+                                                            Pantene - Pantene Beautiful Lengths Conditioner
+                                                            23.7 fl oz bottle
+                                                        </p>
+                                                        <a href="#">See related products (1)</a>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <div class="d-grid gap-2">
+                                                            <button class="btn btn-outline-primary rounded-pill"
+                                                                type="button">
+                                                                Add +
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <div class="row justify-content-center">
+                                                            <div class="col-4">
+                                                                <img class="img-fluid" src="assets/Frame.svg" />
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <img class="img-fluid" src="assets/target.svg" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card h-100">
+                                                    <img src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
+                                                        class="card-img-top img-fluid p-5" alt="..." />
+                                                    <div class="card-body">
+                                                        <p class="card-text">
+                                                            Pantene - Pantene Beautiful Lengths Conditioner
+                                                            23.7 fl oz bottle
+                                                        </p>
+                                                        <a href="#">See related products (1)</a>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <div class="d-grid gap-2">
+                                                            <button class="btn btn-outline-primary rounded-pill"
+                                                                type="button">
+                                                                Add +
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <div class="row justify-content-center">
+                                                            <div class="col-4">
+                                                                <img class="img-fluid" src="assets/Frame.svg" />
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <img class="img-fluid" src="assets/target.svg" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -275,13 +287,15 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="table-responsive">
-                                            <table class="table table-borderless  table-nowrap table-card mb-0"
-                                                style="width:100%">
+                                            <table class="table table-borderless table-nowrap table-card mb-0"
+                                                style="width: 100%">
                                                 <thead class="text-muted text-uppercase small bg-body bg-opacity-50">
                                                     <tr>
                                                         <th>Order</th>
                                                         <th>Product</th>
-                                                        <th>Quantity</th>
+                                                        <th style="width: 8rem; text-align: center">
+                                                            Quantity
+                                                        </th>
                                                         <th>Retailers</th>
                                                         <th>Stock</th>
                                                         <th>Product Substitutions</th>
@@ -296,53 +310,11 @@
                                                                 <a href="#!.html"><img
                                                                         src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
                                                                         class="avatar p-1 border rounded-2 me-2 align-middle"
-                                                                        alt=""></a>
-                                                                <p class="mb-0 text-truncate"><a href="#!.html"
-                                                                        class="text-reset">Pantene - Pantene Beautiful
-                                                                        Lengths Conditioner 23.7 fl oz bottle</a></p>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <span class="me-2">
-                                                                    <input type="number"
-                                                                        class="form-control text-center"
-                                                                        id="exampleFormControlInput1"
-                                                                        placeholder="1"></span>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            Walmart, Amazon
-                                                        </td>
-                                                        <td><span
-                                                                class="badge rounded-pill bg-success p-2 text-uppercase">In
-                                                                Stock</span>
-                                                        </td>
-                                                        <td>Direct</td>
-                                                        <td class="text-end">
-                                                            <a href="#" class="me-2"><i class="fa fa-pen"></i></a> <a
-                                                                href="#" class="me-2"><i class="fa fa-trash"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>#1</td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <a href="#!.html"><img
-                                                                        src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
-                                                                        class="avatar p-1 border rounded-2 me-2 align-middle"
-                                                                        alt=""></a>
+                                                                        alt="" /></a>
                                                                 <p class="mb-0 text-truncate">
-                                                                    <a href="#!.html" class="text-reset">Pantene
-                                                                        -
-                                                                        Pantene
-                                                                        Beautiful
-                                                                        Lengths
-                                                                        Conditioner
-                                                                        23.7
-                                                                        fl
-                                                                        oz
-                                                                        bottle</a>
+                                                                    <a href="#!.html" class="text-reset">Pantene -
+                                                                        Pantene Beautiful Lengths
+                                                                        Conditioner 23.7 fl oz bottle</a>
                                                                 </p>
                                                             </div>
                                                         </td>
@@ -352,18 +324,16 @@
                                                                     <input type="number"
                                                                         class="form-control text-center"
                                                                         id="exampleFormControlInput1"
-                                                                        placeholder="1"></span>
+                                                                        placeholder="1" /></span>
                                                             </div>
                                                         </td>
+                                                        <td>Walmart, Amazon</td>
                                                         <td>
-                                                            Walmart, Amazon
-                                                        </td>
-                                                        <td><span
+                                                            <span
                                                                 class="badge rounded-pill bg-success p-2 text-uppercase">In
                                                                 Stock</span>
                                                         </td>
-                                                        <td>Direct
-                                                        </td>
+                                                        <td>Direct</td>
                                                         <td class="text-end">
                                                             <a href="#" class="me-2"><i class="fa fa-pen"></i></a>
                                                             <a href="#" class="me-2"><i class="fa fa-trash"></i></a>
@@ -376,18 +346,11 @@
                                                                 <a href="#!.html"><img
                                                                         src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
                                                                         class="avatar p-1 border rounded-2 me-2 align-middle"
-                                                                        alt=""></a>
+                                                                        alt="" /></a>
                                                                 <p class="mb-0 text-truncate">
-                                                                    <a href="#!.html" class="text-reset">Pantene
-                                                                        -
-                                                                        Pantene
-                                                                        Beautiful
-                                                                        Lengths
-                                                                        Conditioner
-                                                                        23.7
-                                                                        fl
-                                                                        oz
-                                                                        bottle</a>
+                                                                    <a href="#!.html" class="text-reset">Pantene -
+                                                                        Pantene Beautiful Lengths
+                                                                        Conditioner 23.7 fl oz bottle</a>
                                                                 </p>
                                                             </div>
                                                         </td>
@@ -397,18 +360,52 @@
                                                                     <input type="number"
                                                                         class="form-control text-center"
                                                                         id="exampleFormControlInput1"
-                                                                        placeholder="1"></span>
+                                                                        placeholder="1" /></span>
                                                             </div>
                                                         </td>
+                                                        <td>Walmart, Amazon</td>
                                                         <td>
-                                                            Walmart, Amazon
-                                                        </td>
-                                                        <td><span
+                                                            <span
                                                                 class="badge rounded-pill bg-success p-2 text-uppercase">In
                                                                 Stock</span>
                                                         </td>
-                                                        <td>Direct
+                                                        <td>Direct</td>
+                                                        <td class="text-end">
+                                                            <a href="#" class="me-2"><i class="fa fa-pen"></i></a>
+                                                            <a href="#" class="me-2"><i class="fa fa-trash"></i></a>
                                                         </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#1</td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <a href="#!.html"><img
+                                                                        src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
+                                                                        class="avatar p-1 border rounded-2 me-2 align-middle"
+                                                                        alt="" /></a>
+                                                                <p class="mb-0 text-truncate">
+                                                                    <a href="#!.html" class="text-reset">Pantene -
+                                                                        Pantene Beautiful Lengths
+                                                                        Conditioner 23.7 fl oz bottle</a>
+                                                                </p>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="me-2">
+                                                                    <input type="number"
+                                                                        class="form-control text-center"
+                                                                        id="exampleFormControlInput1"
+                                                                        placeholder="1" /></span>
+                                                            </div>
+                                                        </td>
+                                                        <td>Walmart, Amazon</td>
+                                                        <td>
+                                                            <span
+                                                                class="badge rounded-pill bg-success p-2 text-uppercase">In
+                                                                Stock</span>
+                                                        </td>
+                                                        <td>Direct</td>
                                                         <td class="text-end">
                                                             <a href="#" class="me-2"><i class="fa fa-pen"></i></a>
                                                             <a href="#" class="me-2"><i class="fa fa-trash"></i></a>
@@ -437,7 +434,6 @@
         </div>
     </div>
     @@include('./partials/core-scripts.html')
-
 </body>
 
 </html>

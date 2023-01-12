@@ -43,6 +43,10 @@ h6,
   font-size: calc(1.625rem + 4.5vw);
 }
 
+.toolbar {
+  padding: 12px 20px;
+}
+
 body[data-aos-duration="50"] [data-aos], [data-aos][data-aos][data-aos-duration="50"] {
   transition-duration: 50ms;
 }

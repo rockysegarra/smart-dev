@@ -30,9 +30,8 @@
             <!--///////////Page content wrapper///////////////-->
             <main class="page-content d-flex flex-column flex-row-fluid">
                 @@include('./partials/header/header.html')
-
                 <!--//Page Toolbar//-->
-                <div class="toolbar bg-white" style="padding: 12px 20px 12px 20px;">
+                <div class="toolbar bg-white">
                     <div class="position-relative container-fluid px-0">
                         <div class="row position-relative">
                             <div class="col-md-12 ">
@@ -76,10 +75,18 @@
                 <!--//Page content//-->
                 <div class="content p-4 d-flex flex-column-fluid">
                     <div class="container-fluid px-0">
-                        @@include('./partials/wizard.html')
+                        <!-- @@include('./partials/wizard.html') -->
                         <div class="card overflow-hidden">
                             <div class="card-header">
-                                <h5 class="mb-0">Choose the lead retailer</h5>
+                                <div class="hstack gap-3">
+                                    <div class="bg-body-tertiary">
+                                        <h5 class="mb-0"> 1. Choose the lead retailer</h5>
+                                    </div>
+                                    <div class="bg-body-tertiary ms-auto">
+                                        <h5 class="mb-0"><span class="badge bg-light text-dark">1 of
+                                                4</span></h5>
+                                    </div>
+                                </div>
                             </div>
                             <div class="card-body" style="min-height: 5rem;">
                                 <div class="row border-bottom pb-2 mb-2">
