@@ -170,7 +170,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a href="#settings" data-bs-toggle="collapse"
-                                        class="nav-link d-flex align-items-center text-truncate "
+                                        class="nav-link d-flex align-items-center text-truncate active"
                                         aria-expanded="false">
                                         <span class="sidebar-icon">
                                             <i class="fa fa-gear"></i>
@@ -309,11 +309,12 @@
                             <div class="col-md-12 ">
                                 <div class="row g-0">
                                     <div class="col-6">
-                                        <h5 class="mt-2">Make & Manage</h5>
+                                        <h5 class="mt-2">Clients</h5>
                                     </div>
                                     <div class="col-6 text-end">
-                                        <button class="btn btn-outline-primary rounded-pill">
-                                            <i class="fa fa-info me-1"></i> More Info
+                                        <button class="btn btn-outline-primary rounded-pill" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal">
+                                            New Client
                                         </button>
                                     </div>
                                 </div>
@@ -322,25 +323,16 @@
                     </div>
                 </div>
                 <div class=" container-fluid text-center border-bottom py-2 px-4">
-                    <div class="row justify-content-md-center">
-                        <div class="col text-start align-self-start">
-                            <a href="#">
-                                <i class="fa fa-arrow-left me-2"></i>
-                                Return to list
-                            </a>
-                        </div>
+                    <div class="row justify-content-center">
                         <div class="col-auto text-center d-none d-lg-block d-xl-block">
                             <nav aria-label="breadcrumb">
-                                <ol
-                                    class="breadcrumb mb-0 justify-content-end justify-content-lg-center justify-content-sm-end">
+                                <ol class="breadcrumb mb-0 justify-content-center">
                                     <li class="breadcrumb-item"><a href="#!">Home</a>
                                     </li>
-                                    <li class="breadcrumb-item active">Pages</li>
-                                    <li class="breadcrumb-item active">Blank</li>
+                                    <li class="breadcrumb-item active">Clients</li>
                                 </ol>
                             </nav>
                         </div>
-                        <div class="col text-end"></div>
                     </div>
                 </div>
                 <!--//Page Toolbar End//-->
@@ -352,100 +344,75 @@
                             <div class="card-header">
                                 <div class="hstack gap-3">
                                     <div class="bg-body-tertiary">
-                                        <h5 class="mb-0"> 1. Choose the lead retailer</h5>
-                                    </div>
-                                    <div class="bg-body-tertiary ms-auto">
-                                        <h5 class="mb-0"><span class="badge bg-light text-dark">1 of
-                                                4</span></h5>
+                                        <h5 class="mb-0">Filter</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-body" style="min-height: 5rem;">
-                                <div class="row border-bottom pb-2 mb-2">
-                                    <div class="col-auto">
-                                        <div class="form-check form-switch mb-3 mb-lg-0">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="flexSwitchCheckDefault" checked>
-                                            <label class="form-check-label" for="flexSwitchCheckDefault">
-                                                <i class="fa fa-circle text-primary"></i> National
-                                                Retailers</label>
-                                        </div>
+                                <div class="row g-5">
+                                    <div class="col-lg-3">
+                                        <label for="formGroupExampleInput" class="form-label">Name</label>
+                                        <input type="text" class="form-control" placeholder="" aria-label="First name">
                                     </div>
-                                    <div class="col-auto">
-                                        <div class="form-check form-switch mb-2 mb-lg-0">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="flexSwitchCheckDefault" checked>
-                                            <label class="form-check-label" for="flexSwitchCheckDefault">
-                                                <i class="fa fa-circle text-warning"></i> Local
-                                                Retailers</label>
-                                        </div>
+                                    <div class="col-lg-3">
+                                        <label for="formGroupExampleInput" class="form-label">Code</label>
+                                        <input type="text" class="form-control" placeholder="">
                                     </div>
-                                    <div class="col-auto">
-                                        <div class="form-check form-switch mb-3 mb-lg-0">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="flexSwitchCheckDefault">
-                                            <label class="form-check-label" for="flexSwitchCheckDefault">
-                                                <i class="fa fa-circle text-success"></i> PDP
-                                                Retailers</label>
-                                        </div>
+                                    <div class="col-lg-3">
+                                        <label for="formGroupExampleInput" class="form-label">Scrub Status</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>All
+                                            </option>
+                                            <option value="1">Inactive</option>
+                                            <option value="2">Active</option>
+                                        </select>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 py-4">
-                                        <button type="button" class="btn btn-outline-light position-relative me-2"
-                                            data-bs-toggle="button" style="width: 100px;">
-                                            <img class="img-fluid" src="assets/Frame.svg">
-                                            <span
-                                                class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-primary p-2"><span
-                                                    class="visually-hidden">unread
-                                                    messages</span></span>
-                                        </button>
-                                        <button type="button" class="btn btn-outline-light position-relative me-2"
-                                            data-bs-toggle="button" style="width: 100px;">
-                                            <img class="img-fluid" src="assets/target.svg"> <span
-                                                class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-warning p-2"><span
-                                                    class="visually-hidden">unread
-                                                    messages</span></span>
-                                        </button>
-                                        <button type="button" class="btn btn-outline-light position-relative me-2"
-                                            data-bs-toggle="button" style="width: 100px;">
-                                            <img class="img-fluid" src="assets/walmart.svg"> <span
-                                                class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-success p-2"><span
-                                                    class="visually-hidden">unread
-                                                    messages</span></span>
-                                        </button>
+                                    <div class="col-lg-3">
+                                        <label for="formGroupExampleInput" class="form-label">Client Type</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>All
+                                            </option>
+                                            <option value="1">Agency</option>
+                                            <option value="2">Manufacturer</option>
+                                            <option value="2">Retailer</option>
+                                        </select>
                                     </div>
-                                </div>
-                                <div class="row border-bottom border-top py-2 mb-2">
-                                    <div class="col-auto">
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="flexSwitchCheckDefault">
-                                            <label class="form-check-label" for="flexSwitchCheckDefault"> Backup
-                                                Retailers</label>
-                                        </div>
+                                    <div class="col-lg-3">
+                                        <label for="formGroupExampleInput" class="form-label">Authentication</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>All
+                                            </option>
+                                            <option value="1">Standard</option>
+                                            <option value="2">Single Sign-On</option>
+                                            <option value="2">Mixed</option>
+                                        </select>
                                     </div>
-                                </div>
-                                <div class="row border-bottom py-2">
-                                    <div class="col-auto">
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="flexSwitchCheckDefault">
-                                            <label class="form-check-label" for="flexSwitchCheckDefault"> Customer
-                                                Retailer Options</label>
-                                        </div>
+                                    <div class="col-lg-3">
+                                        <label for="formGroupExampleInput" class="form-label">Feature Package</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>
+
+                                            </option>
+                                            <option value="1">
+                                                Manufacturer - SmartLink
+                                            </option>
+                                            <option value="2">
+                                                Agency - Full Product
+                                            </option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <a href="page-link-2.html" class="btn btn-primary rounded-pill">
-                                    Next</a>
+                                <a href="#" class="btn btn-outline-primary rounded-pill">
+                                    Reset</a>
+                                <a href="#" class="btn btn-primary rounded-pill">
+                                    Filter</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--//Page content End//-->
-
                  <!--//Page-footer//-->
                  <footer class="bg-white">
                    <div class="container-fluid py-5">
@@ -461,6 +428,131 @@
                    </div>
                  </footer>
                  <!--/.Page Footer End-->
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">New Client</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form class="row g-5 needs-validation" novalidate>
+                                    <div class="col-md-4">
+                                        <label for="validationCustom01" class="form-label"><span
+                                                class="text-secondary">*</span>Name</label>
+                                        <input type="text" class="form-control" id="validationCustom01" value=""
+                                            required>
+                                        <div class="invalid-feedback">
+                                            *Name Required
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="validationCustom02" class="form-label"><span
+                                                class="text-secondary">*</span>Code</label>
+                                        <input type="text" class="form-control" id="validationCustom02" value=""
+                                            required>
+                                        <div class="invalid-feedback">
+                                            *Code Required
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="validationCustom04" class="form-label"><span
+                                                class="text-secondary">*</span>Client Type</label>
+                                        <select class="form-select" id="validationCustom04" required>
+                                            <option selected disabled value="">
+                                                Choose...</option>
+                                            <option>Agency</option>
+                                            <option>Manufacturer</option>
+                                            <option>Retailer</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a Client Type
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="validationCustom04" class="form-label"><span
+                                                class="text-secondary">*</span>Authentication</label>
+                                        <select class="form-select" id="validationCustom05" required>
+                                            <option selected disabled value="">
+                                                Choose...</option>
+                                            <option>Agency</option>
+                                            <option>Manufacturer</option>
+                                            <option>Retailer</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a Authentication
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="validationCustom04" class="form-label"><span
+                                                class="text-secondary">*</span>Packages</label>
+                                        <select class="form-select" id="validationCustom06" required>
+                                            <option selected disabled value="">
+                                                Choose...</option>
+                                            <option value="1">
+                                                Manufacturer - SmartLink
+                                            </option>
+                                            <option value="2">
+                                                Agency - Full Product
+                                            </option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a Package
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Tracking</label>
+                                        <select class="form-select">
+                                            <option selected disabled value="">
+                                                Do Not Track</option>
+                                            <option>Off</option>
+                                            <option>No Opt In</option>
+                                            <option>Implicit Opt In</option>
+                                            <option>Explicit Opt In</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a Package
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <label class="form-label">GTM Container ID</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label">Action
+                                            Attributes</label>
+                                        <textarea type="text" class="form-control"></textarea>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch"
+                                                id="flexSwitchCheckChecked" checked>
+                                            <label class="form-check-label" for="flexSwitchCheckChecked">Enable
+                                                Transfers' Scrub</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch"
+                                                id="flexSwitchCheckChecked" checked>
+                                            <label class="form-check-label" for="flexSwitchCheckChecked">Enable
+                                                Users'
+                                                Password Reset</label>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-primary rounded-pill"
+                                    data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary rounded-pill">Save</button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </main>
             <!--///////////Page content wrapper End///////////////-->
         </div>

@@ -69,7 +69,7 @@
                     </li>
                     <li class="nav-item">
                         <a data-bs-toggle="collapse"
-                            class="nav-link d-flex align-items-center text-truncate @@if (context.page === 'pages') {active}"
+                            class="nav-link d-flex align-items-center text-truncate @@if (context.makeandmanage === 'pages') {active}"
                             aria-expanded="false" href="#ui-pages">
                             <span class="sidebar-icon">
                                 <i class="fa fa-link"></i>
@@ -78,7 +78,7 @@
                             <span class="sidebar-text">Make & Manage</span>
                         </a>
                         <ul id="ui-pages" class="sidebar-dropdown list-unstyled collapse">
-                            <li class="sidebar-item"><a class="sidebar-link" href="page-search.html">Main</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="index.html">Main</a></li>
                             <li class="sidebar-item"><a class="sidebar-link" href="page-invoice.html">Campaigns</a></li>
                             <li class="sidebar-item"><a class="sidebar-link" href="page-tasks.html">Shopper's Choice</a>
                             </li>
@@ -107,7 +107,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="#settings" data-bs-toggle="collapse"
-                            class="nav-link d-flex align-items-center text-truncate @@if (context.page === 'dashboard') {active}"
+                            class="nav-link d-flex align-items-center text-truncate @@if (context.settings === 'settings') {active}"
                             aria-expanded="false">
                             <span class="sidebar-icon">
                                 <i class="fa fa-gear"></i>
@@ -115,8 +115,9 @@
                             <!--Sidebar nav text-->
                             <span class="sidebar-text">Settings</span>
                         </a>
-                        <ul data-bs-target="#settings" id="settings" class="sidebar-dropdown list-unstyled collapse">
-                            <li class="sidebar-item"><a class="sidebar-link" href="index.html">Default</a></li>
+                        <ul data-bs-target="settings" id="settings" class="sidebar-dropdown list-unstyled collapse">
+                            <li class="sidebar-item"><a class="sidebar-link" href="settings-clients.html">Clients</a>
+                            </li>
                             <li class="sidebar-item"><a class="sidebar-link" href="index-dashboard2.html">Dashboard
                                     2</a></li>
                         </ul>
