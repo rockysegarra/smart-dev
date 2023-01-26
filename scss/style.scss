@@ -18,6 +18,11 @@ a {
     color: $primary;
 }
 
+p {
+    font-size: clamp(14px, 1.11111vw, 16px) !important;
+    line-height: 150% !important;
+}
+
 h1,
 h2,
 h3,
@@ -25,6 +30,7 @@ h4,
 h5,
 h6 {
     color: $dark !important;
+    margin: 0px !important;
 }
 
 .form-select {

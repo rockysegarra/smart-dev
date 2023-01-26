@@ -9,6 +9,11 @@ a {
   color: #4363F9;
 }
 
+p {
+  font-size: clamp(14px, 1.11111vw, 16px) !important;
+  line-height: 150% !important;
+}
+
 h1, .h1,
 h2,
 .h2,
@@ -21,6 +26,7 @@ h5,
 h6,
 .h6 {
   color: #4D4E4E !important;
+  margin: 0px !important;
 }
 
 .form-select {
