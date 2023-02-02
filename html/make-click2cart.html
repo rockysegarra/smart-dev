@@ -14,296 +14,23 @@
     <link rel="stylesheet" href="assets/vendor/css/choices.min.css">
     <link href="assets/vendor/css/quill.snow.css" rel="stylesheet" />
 
-    <!--Font awesome icons-->
-    <link href="assets/fonts/font-awesome5-free/css/all.min.css" rel="stylesheet">
-
-    <!--Google web fonts-->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    @@include('./partials/fonts.html')
     <!--Main style-->
     <link rel="stylesheet" href="assets/css/style.min.css" id="switchThemeStyle">
     <script src="https://kit.fontawesome.com/9b71cccaf3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-      <!--////////////////// PreLoader Start//////////////////////-->
-      <div class="loader">
-        <!--Placeholder animated layout for preloader-->
-        <div class="d-flex flex-column flex-root">
-          <div class="page d-flex flex-row flex-column-fluid">
-
-            <!--Sidebar start-->
-            <aside class="page-sidebar aside-dark placeholder-wave">
-              <div class="placeholder col-12 h-100 bg-gray"></div>
-            </aside>
-            <div class="page-content d-flex flex-column flex-row-fluid">
-              <div
-                class="content flex-column p-4 pb-0 d-flex justify-content-center align-items-center flex-column-fluid position-relative">
-                <div class="w-100 h-100 position-relative d-flex align-items-center justify-content-center">
-                  <i class="anim-spinner fas fa-spinner me-3"></i>
-                  <div>
-                  <span>Loading...</span>
-                </div>
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--////////////////// /.PreLoader END//////////////////////-->
-
+    @@include('./partials/preloader.html')
     <!--App Start-->
     <div class="d-flex flex-column flex-root">
         <!--Page-->
         <div class="page d-flex flex-row flex-column-fluid">
-            <!--///////////Page sidebar begin///////////////-->
-            <aside class="page-sidebar">
-                <div class="h-100 flex-column d-flex" data-simplebar>
-
-                    <!--Aside-logo-->
-                    <div class="aside-logo p-3 position-relative">
-                        <a href="index.html" class="d-block pe-2">
-                            <div class="d-flex align-items-center flex-no-wrap text-truncate">
-                                <!--Sidebar-icon-->
-                                <span class="sidebar-icon">
-                                    <img src="assets/smart-mark.svg">
-                                </span>
-                                <span class="sidebar-text">
-                                    <!--Sidebar-text-->
-                                    <span class="sidebar-text text-truncate fs-4 text-uppercase fw-bolder">
-                                        <img src="assets/smart-logo.svg">
-                                    </span>
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                    <!--Aside-Menu pe-2 -->
-                    <div class="pe-4 ps-4 pt-4 d-lg-none" style="background-color: #252D6C;">
-                        <div class="mb-2"><select class="form-select" aria-label="Default select example">
-                                <option selected>Manufacturer</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select></div>
-                        <div class="mb-2"><select class="form-select" aria-label="Default select example">
-                                <option selected>Procter & Gamber</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select></div>
-                        <div class="mb-2"><select class="form-select" aria-label="Default select example">
-                                <option selected>Pantene - US</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="aside-menu my-auto flex-column-fluid text-white"
-                        style="background-color: #252D6C; padding-left: 10px;">
-                        <nav class="flex-grow-1 h-100" id="page-navbar">
-                            <!--:Sidebar nav-->
-                            <ul class="nav flex-column collapse-group collapse d-flex pt-4">
-                                <!-- <li class="nav-item sidebar-title text-truncate opacity-50 small">
-                                    <i class="fas fa-ellipsis-h align-middle"></i>
-                                    <span>Main</span>
-                                </li> -->
-                                <li class="nav-item">
-                                    <a href="#dashboards" data-bs-toggle="collapse"
-                                        class="nav-link d-flex align-items-center text-truncate "
-                                        aria-expanded="false">
-                                        <span class="sidebar-icon">
-                                            <i class="fa fa-chart-line"></i>
-                                        </span>
-                                        <!--Sidebar nav text-->
-                                        <span class="sidebar-text">Measure</span>
-                                    </a>
-                                    <ul data-bs-target="#dashboards" id="dashboards"
-                                        class="sidebar-dropdown list-unstyled collapse mb-3">
-                                        <li class="sidebar-item"><a class="sidebar-link" href="measure-main.html">Main</a></li>
-                                        <li class="sidebar-item"><a class="sidebar-link" href="index-dashboard2.html">Dashboard
-                                                2</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a data-bs-toggle="collapse"
-                                        class="nav-link d-flex align-items-center text-truncate active"
-                                        aria-expanded="false" href="#ui-pages">
-                                        <span class="sidebar-icon">
-                                            <i class="fa fa-link"></i>
-                                        </span>
-                                        <!--Sidebar nav text-->
-                                        <span class="sidebar-text">Make & Manage</span>
-                                    </a>
-                                    <ul id="ui-pages" class="sidebar-dropdown list-unstyled collapse">
-                                        <li class="sidebar-item"><a class="sidebar-link" href="make-main.html">Main</a></li>
-                                        <li class="sidebar-item"><a class="sidebar-link" href="#">Click2Cart</a></li>
-                                        <li class="sidebar-item"><a class="sidebar-link" href="page-invoice.html">Campaigns</a></li>
-                                        <li class="sidebar-item"><a class="sidebar-link" href="page-tasks.html">Shopper's Choice</a>
-                                        </li>
-                                        <li class="sidebar-item"><a class="sidebar-link" href="page-pricing.html">SmartSite</a></li>
-                                        <li class="sidebar-item"><a class="sidebar-link" href="page-pricing.html">Eshop</a></li>
-                                        <li class="sidebar-item"><a class="sidebar-link" href="page-pricing.html">Catalog</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="maps.html"
-                                        class="nav-link d-flex align-items-center text-truncate ">
-                                        <span class="sidebar-icon">
-                                            <i class="fa fa-book-open"></i>
-                                        </span>
-                                        <span class="sidebar-text">Product Catalog</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="datatables.html"
-                                        class="nav-link d-flex align-items-center text-truncate ">
-                                        <span class="sidebar-icon">
-                                            <i class="fa fa-info"></i>
-                                        </span>
-                                        <span class="sidebar-text">SmartHub</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item d-lg-none">
-                                    <a href="#settings" data-bs-toggle="collapse"
-                                        class="nav-link d-flex align-items-center text-truncate "
-                                        aria-expanded="false">
-                                        <span class="sidebar-icon">
-                                            <i class="fa fa-gear"></i>
-                                        </span>
-                                        <!--Sidebar nav text-->
-                                        <span class="sidebar-text">Settings</span>
-                                    </a>
-                                    <ul data-bs-target="settings" id="settings" class="sidebar-dropdown list-unstyled collapse">
-                                        <li class="sidebar-item"><a class="sidebar-link" href="settings-clients.html">Clients</a>
-                                        </li>
-                                        <li class="sidebar-item"><a class="sidebar-link" href="index-dashboard2.html">Dashboard
-                                                2</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item d-lg-none">
-                                    <a href="page-auth-signin.html"
-                                        class="nav-link d-flex align-items-center text-truncate ">
-                                        <span class="sidebar-icon">
-                                            <i class="fa fa-power-off"></i>
-                                        </span>
-                                        <span class="sidebar-text">Log Out</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <!--Aside-footer-->
-                    <!-- <footer class="aside-footer position-relative p-3">
-                        <div class="p-3 bg-secondary text-white rounded-3 position-relative overflow-hidden">
-                            <div class="position-relative">
-                                <p class="mb-0 pb-2">Release your maximal potencial software</p>
-                                <a href="#!.html" class="btn rounded-pill btn-white text-truncate btn-sm">Upgrade Pro</a>
-                            </div>
-                        </div>
-                    </footer> -->
-                </div>
-            </aside>
-            <!--///////////Page Sidebar End///////////////-->
-
-            <!--///Sidebar close button for 991px or below devices///-->
-            <div class="sidebar-close d-lg-none">
-                <a href="#"></a>
-            </div>
-            <!--///.Sidebar close end///-->
+            @@include('./partials/sidebars/sidebar.html',{"makeandmanage": "pages"} )
 
             <!--///////////Page content wrapper///////////////-->
             <main class="page-content d-flex flex-column flex-row-fluid">
-                <!--//page-header//-->
-                <header class="navbar py-0 page-header border-bottom navbar-expand navbar-light px-4">
-                    <a href="index.html" class="navbar-brand d-block d-lg-none">
-                        <div class="d-flex align-items-center flex-no-wrap text-truncate">
-                            <!--Sidebar-icon-->
-                            <img src="assets/smart-mark.svg">
-                        </div>
-                    </a>
-                    <ul class="navbar-nav d-flex align-items-center h-100">
-                        <li class="nav-item d-none d-lg-flex flex-column h-100 me-lg-2 align-items-center justify-content-center">
-                            <a href="javascript:void(0)"
-                                class="sidebar-trigger nav-link rounded-3 size-35 d-flex align-items-center justify-content-center p-0">
-                                <i class="fa fa-arrow-left"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item d-flex flex-column me-lg-2 h-100 justify-content-center dropdown">
-                            <div class="d-none d-lg-block d-xl-block">
-                                <div class="d-flex">
-                                    <div class="me-1"><select class="form-select" aria-label="Default select example">
-                                            <option selected>Manufacturer</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                        </select></div>
-                                    <div class="me-1"><select class="form-select" aria-label="Default select example">
-                                            <option selected>Procter & Gamber</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                        </select></div>
-                                    <div class="me-1"><select class="form-select" aria-label="Default select example">
-                                            <option selected>Pantene - US</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav ms-auto d-flex align-items-center h-100">
-                        <li class="nav-item d-flex flex-column h-100 justify-content-center dropdown">
-                            <a href="#" data-bs-toggle="dropdown"
-                                class="dropdown-toggle nav-link py-2 px-2 d-flex align-items-center justify-content-center p-0 me-2">
-                                <i class="fa fa-globe fa-2x text-primary" style="margin-top: 0px;"></i>
-                            </a>
-                            <div class="dropdown-menu overflow-hidden mt-0">
-                                <a href="#!" class="dropdown-item active">
-                                    English
-                                </a>
-                                <a href="#!" class="dropdown-item">
-                                    Spanish
-                                </a>
-                                <a href="#!" class="dropdown-item">
-                                    French
-                                </a>
-                            </div>
-                        </li>
-                        <div class="d-none d-lg-block d-xl-block ms-auto d-flex align-items-center h-100">
-                            <div class="dropdown d-flex flex-column h-100 justify-content-center dropdown">
-                                <button data-bs-toggle="dropdown" class="btn btn-outline-primary me-1 dropdown-toggle rounded-pill"><i
-                                        class="fa fa-gear me-1"></i> Settings</button>
-                                <div class="dropdown-menu overflow-hidden mt-0">
-                                    <a href="settings-clients.html" class="dropdown-item active">
-                                        Clients
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-none d-lg-block d-xl-block">
-                            <a href="page-auth-signin.html" class="btn btn-primary rounded-pill">Log out</a>
-                        </div>
-
-                        <li
-                            class="nav-item dropdown ms-1 ms-lg-3 d-flex d-lg-none align-items-center justify-content-center flex-column h-100">
-                            <a href="#"
-                                class="nav-link sidebar-trigger-lg-down p-0 d-flex align-items-center justify-content-center rounded-3">
-                                <i class="fa fa-bars"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </header>
-                <!--Main Header End-->
+                @@include('./partials/header/header.html')
                 <!--//Page Toolbar//-->
                 <div class="toolbar bg-white">
                     <div class="position-relative container-fluid px-0">
@@ -349,7 +76,7 @@
                 <!--//Page content//-->
                 <div class="content p-4 d-flex flex-column-fluid">
                     <div class="container-fluid px-0">
-                        
+                        <!-- @@include('./partials/wizard.html') -->
                         <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
@@ -1279,33 +1006,12 @@
                 </div>
                 <!--//Page content End//-->
 
-                 <!--//Page-footer//-->
-                 <footer class="bg-white">
-                   <div class="container-fluid py-5">
-                     <span class="d-block lh-sm text-center small">
-                       Do you have any questions about the tool? Contact us at: <a href="#"> support@smartcommerce.co</a> or the phone
-                       number:
-                       1-800-571-3520
-                       <!-- &copy;
-                        <script>
-                          document.write(new Date().getFullYear())
-                        </script>. Copyright -->
-                     </span>
-                   </div>
-                 </footer>
-                 <!--/.Page Footer End-->
+                @@include('./partials/footer.html')
             </main>
             <!--///////////Page content wrapper End///////////////-->
         </div>
     </div>
-    
-    <!--////////////Theme Core scripts Start/////////////////-->
-
-    <script src="assets/js/theme.bundle.js"></script>
-    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-    <!--////////////Theme Core scripts End/////////////////-->
-
+    @@include('./partials/core-scripts.html')
 
 </body>
 
