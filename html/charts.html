@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Panel-Admin</title>
+
+        @@include('./partials/fonts.html')
+
+        <!--Simplebar css-->
+        <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css">
+
+        <!--Choices css-->
+        <link rel="stylesheet" href="assets/vendor/css/choices.min.css">
+
+        <!--Main style-->
+        <link rel="stylesheet" href="assets/css/style.min.css" id="switchThemeStyle">
+    </head>
+
+    <body>
+        @@include('./partials/preloader.html')
+        <!--App Start-->
+        <div class="d-flex flex-column flex-root">
+            <!--Page-->
+            <div class="page d-flex flex-row flex-column-fluid">
+
+                @@include('./partials/sidebars/sidebar-default.html',{"page": "charts"} )
+
+                <!--///////////Page content wrapper///////////////-->
+                <main class="page-content d-flex flex-column flex-row-fluid">
+
+                    @@include('./partials/header/header-default.html')
+                    <!--//Page Toolbar//-->
+                    <div class="toolbar p-4">
+                        <div class="position-relative container-fluid px-0">
+                            <div class="row align-items-center position-relative">
+                                <div class="col-md-8 mb-4 mb-md-0">
+                                    <h3 class="mb-0">Charts</h3>
+                                    <p class="mb-0">Modern & Interactive Open-source Charts</p>
+
+                                </div>
+                                <div class="col-md-4 text-md-end">
+                                    <nav aria-label="breadcrumb" class="d-md-flex justify-content-md-end">
+                                        <ol class="breadcrumb mb-0">
+                                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                            <li class="breadcrumb-item active">Charts</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//Page Toolbar End//-->
+
+                    <div class="px-4">
+                        <div class="card card-body">
+                            <h6 class="mb-0">Fully customized according to theme style, Many more amazing examples 👉 <a
+                                    href="https://apexcharts.com/" target="_blank">ApexCharts</a>.</h6>
+                        </div>
+                    </div>
+                    <!--//Page content//-->
+                    <div class="content pb-0 p-4 d-flex flex-column-fluid">
+                        <div class="container-fluid px-0">
+                            <div class="row">
+                                <div class="col-12 col-lg-12 mb-4">
+                                    <div class="card overflow-hidden">
+                                        <div class="card-header">
+                                            <h5 class="mb-0">Area Chart</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div id="chart-area"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-12 mb-4">
+                                    <div class="card overflow-hidden">
+                                        <div class="card-header">
+                                            <h5 class="mb-0">Line Chart</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div id="chart-line"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-12 mb-4">
+                                    <div class="card overflow-hidden">
+                                        <div class="card-header">
+                                            <h5 class="mb-0">Mixed Chart</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div id="chart-mixed"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-12 mb-4">
+                                    <div class="card overflow-hidden">
+                                        <div class="card-header">
+                                            <h5 class="mb-0">Bar Chart</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div id="chart-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4 mb-4">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5 class="mb-0">Radial Bar</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div id="chart-radial-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4 mb-4">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5 class="mb-0">Pie Chart</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div id="chart-pie"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4 mb-4">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5 class="mb-0">Donut Chart</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div id="chart-donut"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 mb-3">
+                                    <h6 class="mb-0">Sparkline charts</h6>
+                                </div>
+
+                                <!--Sparkline charts-->
+                                <div class="col-12 col-lg-3 col-sm-6 mb-4">
+                                    <div class="card-body card">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <span class="d-block">Earnings</span>
+                                                <h4 class="mb-0">$87458</h4>
+                                            </div>
+                                            <div class="flex-grow-1 text-end">
+                                                <i class="fas fa-level-up-alt small text-success me-2"></i>
+                                                <span>2%</span>
+                                            </div>
+                                        </div>
+                                        <div id="spark1"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-3 col-sm-6 mb-4">
+                                    <div class="card-body card">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <span class="d-block">Expenses</span>
+                                                <h4 class="mb-0">$12458</h4>
+                                            </div>
+                                            <div class="flex-grow-1 text-end">
+                                                <i class="fas fa-level-down-alt small text-danger me-2"></i>
+                                                <span>-9%</span>
+                                            </div>
+                                        </div>
+                                        <div id="spark3"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-3 col-sm-6 mb-4">
+                                    <div class="card-body card">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <span class="d-block">Sales</span>
+                                                <h4 class="mb-0">5421</h4>
+                                            </div>
+                                            <div class="flex-grow-1 text-end">
+                                                <i class="fas fa-level-up-alt small text-success me-2"></i>
+                                                <span>5%</span>
+                                            </div>
+                                        </div>
+                                        <div id="spark2"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-3 col-sm-6 mb-4">
+                                    <div class="card-body card">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <span class="d-block">Bounce Rate</span>
+                                                <h4 class="mb-0">34%</h4>
+                                            </div>
+                                        </div>
+                                        <div id="spark4"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//Page content End//-->
+
+                    @@include('./partials/footer.html')
+                </main>
+                <!--///////////Page content wrapper End///////////////-->
+            </div>
+        </div>
+        @@include('./partials/core-scripts.html')
+
+        <!--Charts-->
+        <script src="assets/vendor/apexcharts.min.js"></script>
+        <script>
+            //Init Chart
+       var cPrimary = "#4444ff";
+      var cWarning = "#ff914d";
+      var cSecondary = "#ff5272";
+      var cSuccess = "#07bfa5";
+      var cMuted = "#9d9da7";
+      var cBodycolor = "#626273";
+      var cLight = "#e7e7e9";
+      var cGray = "#ced2e1";
+      var cFont = "$font-family-base";
+            //----------------------Area Chart----------------------
+            new ApexCharts(document.querySelector("#chart-area"), {
+                series: [{
+                    name: "Earnings",
+                    data: [624, 943, 756, 1153, 994, 1478, 1140]
+                },
+                {
+                    name: "Visitors",
+                    data: [302, 625, 445, 756, 502, 987, 612]
+                }
+                ],
+                chart: {
+                    type: 'area',
+                    fontFamily: cFont,
+                    toolbar: false,
+                    height: 350,
+                    zoom: {
+                        enabled: false
+                    }
+                },
+                colors: [cWarning, cPrimary],
+                fill: {
+                    gradient: {
+                        shade: 'dark',
+                        type: "vertical",
+                        shadeIntensity: 0.25,
+                        gradientToColors: undefined,
+                        inverseColors: true,
+                        opacityFrom: .25,
+                        opacityTo: 0,
+                        stops: [0, 75, 100],
+                        colorStops: []
+                    },
+                },
+                grid: {
+                    borderColor: cGray,
+                    strokeDashArray: 6,
+                    padding: {
+                        top: 10,
+                        right: 0,
+                        bottom: 0,
+                        left: 10
+                    },
+                    xaxis: {
+                        lines: {
+                            show: false
+                        }
+                    },
+                    yaxis: {
+                        lines: {
+                            show: true
+                        }
+                    },
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                stroke: {
+                    width: 2,
+                    curve: 'smooth'
+                },
+                labels: ["Mon", "Tue", "Wed", "Thr", "Fri", "Sat", "Sun"],
+                xaxis: {
+                    crosshairs: {
+                        show: false
+                    },
+                    labels: {
+                        style: {
+                            colors: cMuted
+                        }
+                    },
+                    axisTicks: {
+                        show: false,
+                    },
+                    axisBorder: {
+                        show: false,
+                    },
+                    tooltip: {
+                        enabled: true
+                    },
+                },
+                tooltip: {
+                    y: [
+                        {
+                            formatter: function (y) {
+                                if (typeof y !== "undefined") {
+                                    return " $" + y.toFixed(0);
+                                }
+                                return y;
+                            }
+                        }
+                    ]
+                },
+                yaxis: {
+                    labels: {
+                        style: {
+                            colors: cMuted
+                        }
+                    },
+                    crosshairs: {
+                        show: false,
+                        position: 'back',
+                        stroke: {
+                            color: cLight,
+                            width: 1,
+                            dashArray: 6,
+                        },
+                    },
+                },
+                legend: {
+                    position: 'top',
+                    labels: {
+                        colors: cMuted
+                    },
+                }
+            }).render()
+
+
+            //-----------------------Bar Chart------------------
+            new ApexCharts(document.querySelector('#chart-bar'), {
+                chart: {
+                    fontFamily: cFont,
+                    type: 'bar',
+                    height: 350,
+                    toolbar: {
+                        show: false,
+                    }
+                },
+                colors: [cPrimary, cWarning],
+                grid: {
+                    borderColor: cLight,
+                    strokeDashArray: 6,
+                    padding: {
+                        top: 10,
+                        right: 0,
+                        bottom: 0,
+                        left: 10
+                    },
+                    xaxis: {
+                        lines: {
+                            show: true
+                        }
+                    },
+                    yaxis: {
+                        lines: {
+                            show: false
+                        }
+                    },
+                },
+                series: [{
+                    name: 'Revenue',
+                    data: [54717, 62432, 48214, 39214, 51021, 49212, 44247, 66214, 72140]
+                },
+                {
+                    name: 'Payouts',
+                    data: [19134, 18365, 19104, 14194, 16038, 13823, 12061, 16280, 24126]
+                },
+                ],
+                xaxis: {
+                    labels: {
+                        style: {
+                            colors: cMuted,
+                            fontFamily: cFont
+                        }
+                    },
+                    axisTicks: {
+                        show: false,
+                    },
+                    axisBorder: {
+                        show: false,
+                    },
+                    tooltip: {
+                        enabled: false
+                    },
+                    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+                    crosshairs: {
+                        show: true,
+                        opacity: .01,
+                        fill: {
+                            type: 'solid',
+                            color: cPrimary
+                        },
+                        stroke: {
+                            color: cLight,
+                            width: 1,
+                            dashArray: 6,
+                        },
+                    }
+                },
+                yaxis: {
+                    labels: {
+                        style: {
+                            colors: cMuted,
+                            fontFamily: cFont
+                        }
+                    },
+                    crosshairs: {
+                        show: false,
+                    }
+                },
+                plotOptions: {
+                    bar: {
+                        columnWidth: '40%',
+                        borderRadius: 4,
+                    },
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                stroke: {
+                    show: false,
+                },
+                tooltip: {
+                    shared: true,
+                    intersect: false,
+                    y: [
+                        {
+                            formatter: function (y) {
+                                if (typeof y !== "undefined") {
+                                    return " $" + y.toFixed(0);
+                                }
+                                return y;
+                            }
+                        },
+                        {
+                            formatter: function (y) {
+                                if (typeof y !== "undefined") {
+                                    return " $" + y.toFixed(0);
+                                }
+                                return y;
+                            }
+                        }
+                    ]
+                },
+                legend: {
+                    position: 'top',
+                    fontFamily: cFont,
+                    labels: {
+                        colors: cMuted
+                    },
+                    markers: {
+                        width: 12,
+                        height: 12,
+                        radius: 16
+                    }
+                },
+            }).render()
+
+
+            //-------------------------Gradient Line Chart------------
+            new ApexCharts(document.querySelector("#chart-line"), {
+                series: [{
+                    name: "Sales",
+                    data: [140, 220, 180, 110, 90, 70, 40]
+                },
+                {
+                    name: "Earnings",
+                    data: [1150, 1360, 1110, 870, 680, 540, 290]
+                }
+                ],
+                colors: [cWarning, cPrimary],
+                chart: {
+                    fontFamily: cFont,
+                    toolbar: {
+                        show: false
+                    },
+                    height: 350,
+                    type: 'line',
+                    zoom: {
+                        enabled: false
+                    },
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                stroke: {
+                    width: [2, 3],
+                    curve: 'smooth',
+                    dashArray: [0, 6]
+                },
+                legend: {
+                    tooltipHoverFormatter: function (val, opts) {
+                        return val + ' - ' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + ''
+                    },
+                    labels: {
+                        colors: cMuted
+                    },
+                },
+                markers: {
+                    size: 0,
+                    hover: {
+                        sizeOffset: 6
+                    }
+                },
+                xaxis: {
+                    categories: ['Mon', 'Tue', 'Wed', 'Thr', 'Fri', 'Sat', 'Sun'],
+                    labels: {
+                        style: {
+                            colors: cMuted,
+                            fontFamily: cFont
+                        }
+                    },
+                    axisTicks: {
+                        show: false,
+                    },
+                    axisBorder: {
+                        show: false,
+                    },
+                },
+                yaxis: {
+                    labels: {
+                        style: {
+                            colors: cMuted,
+                            fontFamily: cFont
+                        }
+                    },
+                },
+                tooltip: {
+                    y: [
+                        {
+                            formatter: function (y) {
+                                if (typeof y !== "undefined") {
+                                    return y.toFixed(0) + " (Units)";
+                                }
+                                return y;
+                            }
+                        },
+                        {
+                            formatter: function (y) {
+                                if (typeof y !== "undefined") {
+                                    return " $" + y.toFixed(0);
+                                }
+                                return y;
+                            }
+                        }
+                    ]
+                },
+                grid: {
+                    borderColor: cGray,
+                    strokeDashArray: 6,
+                    padding: {
+                        top: 10,
+                        right: 0,
+                        bottom: 0,
+                        left: 10
+                    },
+                    xaxis: {
+                        lines: {
+                            show: false
+                        }
+                    },
+                    yaxis: {
+                        lines: {
+                            show: true
+                        }
+                    },
+                },
+            }).render()
+
+            //-----------------------Radial Bar Chart------------------
+
+            new ApexCharts(document.querySelector('#chart-radial-bar'), {
+                series: [36, 48, 16],
+                chart: {
+                    fontFamily: cFont,
+                    height: 260,
+                    type: 'radialBar',
+                },
+
+                colors: [cSecondary, cWarning, cPrimary],
+                plotOptions: {
+                    radialBar: {
+                        hollow: {
+                            margin: 0,
+                            size: '40%',
+                            background: 'transparent',
+                            dropShadow: {
+                                enabled: true,
+                                top: 2,
+                                left: 0,
+                                blur: 12,
+                                opacity: 0.03
+                            }
+                        },
+                        track: {
+                            show: true,
+                            background: "transparent",
+                        },
+                        dataLabels: {
+                            total: {
+                                show: true,
+                                label: 'Visitors',
+                                color: cMuted,
+                                fontSize: 'inherit',
+                                formatter: function (w) {
+                                    return 249 + "k"
+                                }
+                            },
+                            name: {
+                                show: true,
+                                offsetY: -8
+                            },
+                            value: {
+                                show: true,
+                                offsetY: 7,
+                                fontSize: '1.75rem',
+                                color: cBodycolor
+                            },
+                        }
+                    }
+                },
+                labels: ['Organic', 'Direct', 'Referral'],
+            }).render()
+
+            //-----------------------Bar Chart------------------
+            new ApexCharts(document.querySelector('#chart-mixed'), {
+                series: [{
+                    name: 'Ads',
+                    type: 'column',
+                    data: [340, 305, 214, 271, 127, 213, 101]
+                }, {
+                    name: 'Direct',
+                    type: 'line',
+                    data: [523, 642, 535, 727, 343, 522, 217]
+                }],
+                chart: {
+                    fontFamily: cFont,
+                    toolbar: {
+                        show: false
+                    },
+                    zoom: {
+                        enabled: false
+                    },
+                    height: 350,
+                    type: 'line',
+                },
+
+                stroke: {
+                    width: [0, 4],
+                },
+                colors: [cWarning, cPrimary],
+                dataLabels: {
+                    enabled: false,
+                    enabledOnSeries: [1]
+                },
+
+                xaxis: {
+                    categories: ['Mon', 'Tue', 'Wed', 'Thr', 'Fri', 'Sat', 'Sun'],
+                    crosshairs: {
+                        show: false
+                    },
+                    labels: {
+                        style: {
+                            colors: cMuted
+                        }
+                    },
+                    axisTicks: {
+                        show: false,
+                    },
+                    axisBorder: {
+                        show: false,
+                    },
+                },
+                grid: {
+                    borderColor: cGray,
+                    strokeDashArray: 6,
+                    padding: {
+                        top: 10,
+                        right: 0,
+                        bottom: 0,
+                        left: 10
+                    },
+                    xaxis: {
+                        lines: {
+                            show: false
+                        }
+                    },
+                    yaxis: {
+                        lines: {
+                            show: true
+                        }
+                    },
+                },
+                plotOptions: {
+                    bar: {
+                        columnWidth: '20%',
+                        borderRadius: 2,
+                    },
+                },
+                legend: {
+                    labels: {
+                        colors: cMuted
+                    },
+                }
+            }).render()
+
+            //-----------------------Pie Chart------------------
+            new ApexCharts(document.querySelector('#chart-pie'), {
+                series: [37, 44, 19],
+                chart: {
+                    height: 260,
+                    type: 'pie',
+                    fontFamily: cFont,
+                },
+                dataLabels: {
+                    dropShadow: {
+                        enabled: false,
+                    }
+                },
+                plotOptions: {
+                    pie: {
+                        expandOnClick: false
+                    }
+                },
+                stroke: {
+                    show: false,
+                },
+                colors: [cPrimary, cSuccess, cWarning],
+                legend: {
+                    show: false,
+                },
+                labels: ['Chrome', 'Safari', 'Firefox']
+            }).render()
+
+            //-----------------------Pie Chart------------------
+            new ApexCharts(document.querySelector('#chart-donut'), {
+                series: [37, 44, 19],
+                chart: {
+                    height: 260,
+                    type: 'donut',
+                    fontFamily: cFont,
+                },
+                dataLabels: {
+                    dropShadow: {
+                        enabled: false,
+                    }
+                },
+                stroke: {
+                    show: false,
+                },
+                colors: [cPrimary, cSuccess, cWarning],
+                legend: {
+                    show: false,
+                },
+                plotOptions: {
+                    pie: {
+                        expandOnClick: false
+                    }
+                },
+                labels: ['Chrome', 'Safari', 'Firefox']
+            }).render()
+
+
+            //Sparkline charts
+
+            //Spark1
+            new ApexCharts(document.querySelector('#spark1'), {
+                chart: {
+                    fontFamily: cFont,
+                    type: 'line',
+                    height: 50,
+                    sparkline: {
+                        enabled: true
+                    }
+                },
+                series: [{
+                    name: ["Earnings"],
+                    data: [3545, 5214, 4125, 3959, 5021, 3844, 4712]
+                }],
+                stroke: {
+                    width: 2,
+                    curve: 'smooth'
+                },
+                markers: {
+                    size: 0
+                },
+                grid: {
+                    padding: {
+                        top: 10,
+                        bottom: 0,
+                        right: 7,
+                        left: 7
+                    }
+                },
+                colors: [cPrimary],
+                tooltip: {
+                    x: {
+                        show: false
+                    },
+                    y: [
+                        {
+                            formatter: function (y) {
+                                return " $" + y;
+                            }
+                        }
+                    ]
+                }
+            }).render()
+
+
+            //Spark2
+            new ApexCharts(document.querySelector('#spark2'), {
+                chart: {
+                    fontFamily: cFont,
+                    type: 'line',
+                    height: 50,
+                    sparkline: {
+                        enabled: true
+                    }
+                },
+                series: [{
+                    data: [59, 25, 44, 12, 25, 16, 41,]
+                }],
+                stroke: {
+                    width: 2,
+                    curve: 'smooth'
+                },
+                markers: {
+                    size: 0
+                },
+                grid: {
+                    padding: {
+                        top: 10,
+                        bottom: 0,
+                        right: 7,
+                        left: 7
+                    }
+                },
+                colors: [cSuccess],
+                tooltip: {
+                    x: {
+                        show: false
+                    },
+                    y: {
+                        title: {
+                            formatter: function formatter(val) {
+                                return '';
+                            }
+                        }
+                    }
+                }
+            }).render()
+            //Spark3
+            new ApexCharts(document.querySelector('#spark3'), {
+                chart: {
+                    fontFamily: cFont,
+                    type: 'line',
+                    height: 50,
+                    sparkline: {
+                        enabled: true
+                    }
+                },
+                series: [{
+                    name: ["Expenses"],
+                    data: [1259, 925, 744, 1012, 1325, 916, 741,]
+                }],
+                stroke: {
+                    width: 2,
+                    curve: 'smooth'
+                },
+                markers: {
+                    size: 0
+                },
+                grid: {
+                    padding: {
+                        top: 10,
+                        bottom: 0,
+                        right: 7,
+                        left: 7
+                    }
+                },
+                colors: [cWarning],
+                tooltip: {
+                    x: {
+                        show: false
+                    },
+                    y: [
+                        {
+                            formatter: function (y) {
+                                return " $" + y;
+                            }
+                        }
+                    ]
+                }
+            }).render()
+            //Spark4
+            new ApexCharts(document.querySelector('#spark4'), {
+                chart: {
+                    fontFamily: cFont,
+                    type: 'line',
+                    height: 50,
+                    sparkline: {
+                        enabled: true
+                    }
+                },
+                series: [{
+                    name: ["Bounce"],
+                    data: [4, 4, 7, 3, 6, 9, 8,]
+                }],
+                stroke: {
+                    width: 2,
+                    curve: 'smooth'
+                },
+                markers: {
+                    size: 0
+                },
+                grid: {
+                    padding: {
+                        top: 10,
+                        bottom: 0,
+                        right: 7,
+                        left: 7
+                    }
+                },
+                colors: [cSecondary],
+                tooltip: {
+                    x: {
+                        show: false
+                    },
+                    y: [
+                        {
+                            formatter: function (y) {
+                                return y + "%";
+                            }
+                        }
+                    ]
+                }
+            }).render()
+
+        </script>
+    </body>
+
+</html>

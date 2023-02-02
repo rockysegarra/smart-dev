@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Suite</title>
+
+    <!--Simplebar css-->
+    <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css">
+
+    <!--Choices css-->
+    <link rel="stylesheet" href="assets/vendor/css/choices.min.css">
+
+    <!--Font awesome icons-->
+    <link href="assets/fonts/font-awesome5-free/css/all.min.css" rel="stylesheet">
+
+    <!--Google web fonts-->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!--Main style-->
+    <link rel="stylesheet" href="assets/css/style.min.css" id="switchThemeStyle">
+    <script src="https://kit.fontawesome.com/9b71cccaf3.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <!--Page style = Date range picker-->
+    <link rel="stylesheet" href="assets/vendor/css/daterangepicker.css">
+</head>
+
+<body>
+      <!--////////////////// PreLoader Start//////////////////////-->
+      <div class="loader">
+        <!--Placeholder animated layout for preloader-->
+        <div class="d-flex flex-column flex-root">
+          <div class="page d-flex flex-row flex-column-fluid">
+
+            <!--Sidebar start-->
+            <aside class="page-sidebar aside-dark placeholder-wave">
+              <div class="placeholder col-12 h-100 bg-gray"></div>
+            </aside>
+            <div class="page-content d-flex flex-column flex-row-fluid">
+              <div
+                class="content flex-column p-4 pb-0 d-flex justify-content-center align-items-center flex-column-fluid position-relative">
+                <div class="w-100 h-100 position-relative d-flex align-items-center justify-content-center">
+                  <i class="anim-spinner fas fa-spinner me-3"></i>
+                  <div>
+                  <span>Loading...</span>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--////////////////// /.PreLoader END//////////////////////-->
+
+    <!--App Start-->
+    <div class="d-flex flex-column flex-root">
+        <!--Page-->
+        <div class="page d-flex flex-row flex-column-fluid">
+            <!--///////////Page sidebar begin///////////////-->
+            <aside class="page-sidebar">
+                <div class="h-100 flex-column d-flex" data-simplebar>
+
+                    <!--Aside-logo-->
+                    <div class="aside-logo p-3 position-relative">
+                        <a href="index.html" class="d-block pe-2">
+                            <div class="d-flex align-items-center flex-no-wrap text-truncate">
+                                <!--Sidebar-icon-->
+                                <span class="sidebar-icon">
+                                    <img src="assets/smart-mark.svg">
+                                </span>
+                                <span class="sidebar-text">
+                                    <!--Sidebar-text-->
+                                    <span class="sidebar-text text-truncate fs-4 text-uppercase fw-bolder">
+                                        <img src="assets/smart-logo.svg">
+                                    </span>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <!--Aside-Menu pe-2 -->
+                    <div class="pe-4 ps-4 pt-4 d-lg-none" style="background-color: #252D6C;">
+                        <div class="mb-2"><select class="form-select" aria-label="Default select example">
+                                <option selected>Manufacturer</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select></div>
+                        <div class="mb-2"><select class="form-select" aria-label="Default select example">
+                                <option selected>Procter & Gamber</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select></div>
+                        <div class="mb-2"><select class="form-select" aria-label="Default select example">
+                                <option selected>Pantene - US</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="aside-menu my-auto flex-column-fluid text-white"
+                        style="background-color: #252D6C; padding-left: 10px;">
+                        <nav class="flex-grow-1 h-100" id="page-navbar">
+                            <!--:Sidebar nav-->
+                            <ul class="nav flex-column collapse-group collapse d-flex pt-4">
+                                <!-- <li class="nav-item sidebar-title text-truncate opacity-50 small">
+                                    <i class="fas fa-ellipsis-h align-middle"></i>
+                                    <span>Main</span>
+                                </li> -->
+                                <li class="nav-item">
+                                    <a href="#dashboards" data-bs-toggle="collapse"
+                                        class="nav-link d-flex align-items-center text-truncate active"
+                                        aria-expanded="false">
+                                        <span class="sidebar-icon">
+                                            <i class="fa fa-chart-line"></i>
+                                        </span>
+                                        <!--Sidebar nav text-->
+                                        <span class="sidebar-text">Measure</span>
+                                    </a>
+                                    <ul data-bs-target="#dashboards" id="dashboards"
+                                        class="sidebar-dropdown list-unstyled collapse mb-3">
+                                        <li class="sidebar-item"><a class="sidebar-link" href="measure-main.html">Main</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="index-dashboard2.html">Dashboard
+                                                2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a data-bs-toggle="collapse"
+                                        class="nav-link d-flex align-items-center text-truncate "
+                                        aria-expanded="false" href="#ui-pages">
+                                        <span class="sidebar-icon">
+                                            <i class="fa fa-link"></i>
+                                        </span>
+                                        <!--Sidebar nav text-->
+                                        <span class="sidebar-text">Make & Manage</span>
+                                    </a>
+                                    <ul id="ui-pages" class="sidebar-dropdown list-unstyled collapse">
+                                        <li class="sidebar-item"><a class="sidebar-link" href="make-main.html">Main</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="#">Click2Cart</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="page-invoice.html">Campaigns</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="page-tasks.html">Shopper's Choice</a>
+                                        </li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="page-pricing.html">SmartSite</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="page-pricing.html">Eshop</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="page-pricing.html">Catalog</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="maps.html"
+                                        class="nav-link d-flex align-items-center text-truncate ">
+                                        <span class="sidebar-icon">
+                                            <i class="fa fa-book-open"></i>
+                                        </span>
+                                        <span class="sidebar-text">Product Catalog</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="datatables.html"
+                                        class="nav-link d-flex align-items-center text-truncate ">
+                                        <span class="sidebar-icon">
+                                            <i class="fa fa-info"></i>
+                                        </span>
+                                        <span class="sidebar-text">SmartHub</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item d-lg-none">
+                                    <a href="#settings" data-bs-toggle="collapse"
+                                        class="nav-link d-flex align-items-center text-truncate "
+                                        aria-expanded="false">
+                                        <span class="sidebar-icon">
+                                            <i class="fa fa-gear"></i>
+                                        </span>
+                                        <!--Sidebar nav text-->
+                                        <span class="sidebar-text">Settings</span>
+                                    </a>
+                                    <ul data-bs-target="settings" id="settings" class="sidebar-dropdown list-unstyled collapse">
+                                        <li class="sidebar-item"><a class="sidebar-link" href="settings-clients.html">Clients</a>
+                                        </li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="index-dashboard2.html">Dashboard
+                                                2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item d-lg-none">
+                                    <a href="page-auth-signin.html"
+                                        class="nav-link d-flex align-items-center text-truncate ">
+                                        <span class="sidebar-icon">
+                                            <i class="fa fa-power-off"></i>
+                                        </span>
+                                        <span class="sidebar-text">Log Out</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!--Aside-footer-->
+                    <!-- <footer class="aside-footer position-relative p-3">
+                        <div class="p-3 bg-secondary text-white rounded-3 position-relative overflow-hidden">
+                            <div class="position-relative">
+                                <p class="mb-0 pb-2">Release your maximal potencial software</p>
+                                <a href="#!.html" class="btn rounded-pill btn-white text-truncate btn-sm">Upgrade Pro</a>
+                            </div>
+                        </div>
+                    </footer> -->
+                </div>
+            </aside>
+            <!--///////////Page Sidebar End///////////////-->
+
+            <!--///Sidebar close button for 991px or below devices///-->
+            <div class="sidebar-close d-lg-none">
+                <a href="#"></a>
+            </div>
+            <!--///.Sidebar close end///-->
+            <!--///////////Page content wrapper///////////////-->
+            <main class="page-content d-flex flex-column flex-row-fluid">
+                <!--//page-header//-->
+                <header class="navbar py-0 page-header border-bottom navbar-expand navbar-light px-4">
+                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <div class="d-flex align-items-center flex-no-wrap text-truncate">
+                            <!--Sidebar-icon-->
+                            <img src="assets/smart-mark.svg">
+                        </div>
+                    </a>
+                    <ul class="navbar-nav d-flex align-items-center h-100">
+                        <li class="nav-item d-none d-lg-flex flex-column h-100 me-lg-2 align-items-center justify-content-center">
+                            <a href="javascript:void(0)"
+                                class="sidebar-trigger nav-link rounded-3 size-35 d-flex align-items-center justify-content-center p-0">
+                                <i class="fa fa-arrow-left"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex flex-column me-lg-2 h-100 justify-content-center dropdown">
+                            <div class="d-none d-lg-block d-xl-block">
+                                <div class="d-flex">
+                                    <div class="me-1"><select class="form-select" aria-label="Default select example">
+                                            <option selected>Manufacturer</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select></div>
+                                    <div class="me-1"><select class="form-select" aria-label="Default select example">
+                                            <option selected>Procter & Gamber</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select></div>
+                                    <div class="me-1"><select class="form-select" aria-label="Default select example">
+                                            <option selected>Pantene - US</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto d-flex align-items-center h-100">
+                        <li class="nav-item d-flex flex-column h-100 justify-content-center dropdown">
+                            <a href="#" data-bs-toggle="dropdown"
+                                class="dropdown-toggle nav-link py-2 px-2 d-flex align-items-center justify-content-center p-0 me-2">
+                                <i class="fa fa-globe fa-2x text-primary" style="margin-top: 0px;"></i>
+                            </a>
+                            <div class="dropdown-menu overflow-hidden mt-0">
+                                <a href="#!" class="dropdown-item active">
+                                    English
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                    Spanish
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                    French
+                                </a>
+                            </div>
+                        </li>
+                        <div class="d-none d-lg-block d-xl-block ms-auto d-flex align-items-center h-100">
+                            <div class="dropdown d-flex flex-column h-100 justify-content-center dropdown">
+                                <button data-bs-toggle="dropdown" class="btn btn-outline-primary me-1 dropdown-toggle rounded-pill"><i
+                                        class="fa fa-gear me-1"></i> Settings</button>
+                                <div class="dropdown-menu overflow-hidden mt-0">
+                                    <a href="settings-clients.html" class="dropdown-item active">
+                                        Clients
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-none d-lg-block d-xl-block">
+                            <a href="page-auth-signin.html" class="btn btn-primary rounded-pill">Log out</a>
+                        </div>
+
+                        <li
+                            class="nav-item dropdown ms-1 ms-lg-3 d-flex d-lg-none align-items-center justify-content-center flex-column h-100">
+                            <a href="#"
+                                class="nav-link sidebar-trigger-lg-down p-0 d-flex align-items-center justify-content-center rounded-3">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </header>
+                <!--Main Header End-->
+                <!--//Page Toolbar//-->
+                <div class="toolbar bg-white">
+                    <div class="position-relative container-fluid px-0">
+                        <div class="row position-relative">
+                            <div class="col-md-12 ">
+                                <div class="row g-0">
+                                    <div class="col-6">
+                                        <h3 class="mt-1">Main</h3>
+                                    </div>
+                                    <div class="col-6 text-end">
+                                        <button class="btn btn-outline-primary rounded-pill">
+                                            <i class="fa fa-info me-1"></i> More Info
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" container-fluid text-center border-bottom py-2 px-4 d-none d-lg-block d-xl-block ">
+                    <div class="row">
+                        <div class="col text-center">
+                            <nav aria-label="breadcrumb">
+                                <ol
+                                    class="breadcrumb mb-0 justify-content-end justify-content-lg-center justify-content-sm-end">
+                                    <li class="breadcrumb-item"><a href="#!">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">Meaure</li>
+                                    <li class="breadcrumb-item active">Main</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <!--//Page Toolbar End//-->
+                <!--//Page content//-->
+                <div class="content p-4 d-flex flex-column-fluid">
+                    <div class="container-fluid px-5">
+                        <div class="card shadow-sm mb-5 border-0">
+                            <div class="card-body bg-primary bg-opacity-10">
+                                <div class="row row-cols-auto g-3">
+                                    <div class="col-auto">
+                                        <label class="mb-2">Date</label>
+                                        <div class="input-group">
+                                            <button id="predefineRange" class="form-control text-start">
+                                                <span>January 26, 2023 - February 1, 2023</span>
+                                            </button>
+                                            <button style="min-width: 0;" class="btn btn-primary"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                                </svg></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <label class="mb-2">Transfer
+                                            Filter</label>
+                                        <div class="input-group">
+                                            <select class="form-select" id="inputGroupSelect01">
+                                                <option selected>Show Transfers and Views</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                            <button style="min-width: 0;" class="btn btn-primary"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                                </svg></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <label class="mb-2">Labels</label>
+                                        <div class="input-group">
+                                            <select class="form-select" id="inputGroupSelect01">
+                                                <option selected>Show All</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                            <button style="min-width: 0;" class="btn btn-primary"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                                </svg></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <label class="mb-2">Partners</label>
+                                        <div class="input-group">
+                                            <select class="form-select" id="inputGroupSelect01">
+                                                <option selected>
+                                                    Ours and Partners
+                                                </option>
+                                                <option value="1">
+                                                    One
+                                                </option>
+                                                <option value="2">
+                                                    Two
+                                                </option>
+                                                <option value="3">
+                                                    Three
+                                                </option>
+                                            </select>
+                                            <button style="min-width: 0;" class="btn btn-primary"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                                </svg></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <label class="mb-2">Retailers</label>
+                                        <div class="input-group">
+                                            <select class="form-select" id="inputGroupSelect01">
+                                                <option selected>
+                                                    All
+                                                    Retailers
+                                                </option>
+                                                <option value="1">
+                                                    One
+                                                </option>
+                                                <option value="2">
+                                                    Two
+                                                </option>
+                                                <option value="3">
+                                                    Three
+                                                </option>
+                                            </select>
+                                            <button style="min-width: 0;" class="btn btn-primary"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                                </svg></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="input-group input-group-sm">
+                                            <span class="mt-1 me-3">Advanced Filters</span>
+                                            <button style="min-width: 0;" class="btn btn-outline-primary btn-sm"
+                                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                                aria-controls="offcanvasRight">ON
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-funnel-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z" />
+                                                </svg></button>
+                                            <button style="min-width: 0;" class="btn btn-primary">Reset
+                                                All</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-5">
+                            <div class="col-lg-4">
+                                <div class="card card-body text-center border-0">
+                                    <div class="me-3">
+                                        <div class="h1 text-secondary">
+                                            282,608</div>
+                                        <span class="text-muted">Cart Transfers/Views</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card card-body text-center border-0">
+                                    <div class="me-3">
+                                        <div class="h1 text-secondary">
+                                            $5,601,931.10</div>
+                                        <span class="text-muted">Total Transfers/Views</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card card-body text-center border-0">
+                                    <div class="me-3">
+                                        <div class="h1 text-secondary">
+                                            356,939</div>
+                                        <span class="text-muted">Products Transferred/Viewed</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card border-0 shadow-sm border-0 shadow-sm h-100">
+                                    <div class="card-header h5">Transfer by Type <a href="#" data-bs-container="body"
+                                            data-bs-toggle="popover" data-bs-placement="top"
+                                            data-bs-content="Number of transfers to cart by type and date range."><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                            </svg></a></div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="mb-5" id="chart-bar-1"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-borderless table-card mb-0" style="width:100%">
+                                            <thead class="text-muted text-uppercase small bg-body">
+                                                <tr>
+                                                    <th>Device Type</th>
+                                                    <th class="text-end">Transfer
+                                                        Rate
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="align-middle">
+                                                <tr>
+                                                    <td>Android</td>
+                                                    <td class="text-end">94.9%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>iPhone</td>
+                                                    <td class="text-end">
+                                                        88.5%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Desktop
+                                                    </td>
+                                                    <td class="text-end">
+                                                        91.4%
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Other
+                                                    </td>
+                                                    <td class="text-end">
+                                                        85.1%
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <div class="card-header h5">Transfer by Retailer <a href="#"
+                                            data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
+                                            data-bs-content="Number of transfers to cart by type and date range."><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                            </svg></a></div>
+                                    <div class="card-body">
+                                        <div class="row justify-content-lg-center">
+                                            <div class="col-6">
+                                                <div id="chart-pie"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-borderless table-card mb-0" style="width:100%">
+                                            <thead class="text-muted text-uppercase small bg-body">
+                                                <tr>
+                                                    <th>Device Type</th>
+                                                    <th>Transfers</th>
+                                                    <th>% of Transfers</th>
+                                                    <th class="text-end">Transfer
+                                                        Rate
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="align-middle">
+                                                <tr>
+                                                    <td>Android</td>
+                                                    <td>83,377</td>
+                                                    <td>33.2%</td>
+                                                    <td class="text-end">94.9%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>iPhone</td>
+                                                    <td>58,390</td>
+                                                    <td>23.2%</td>
+                                                    <td class="text-end">
+                                                        88.5%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Desktop
+                                                    </td>
+                                                    <td>44,399
+                                                    </td>
+                                                    <td>17.7%
+                                                    </td>
+                                                    <td class="text-end">
+                                                        91.4%
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Other
+                                                    </td>
+                                                    <td>36,768</td>
+                                                    </td>
+                                                    <td>14.6%
+                                                    </td>
+                                                    <td class="text-end">
+                                                        85.1%
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <div class="card-header">
+                                        <div class="row g-0">
+                                            <div class="col-6">
+                                                <h5 class="mt-2">Transfers by Date <a href="#" data-bs-container="body"
+                                                        data-bs-toggle="popover" data-bs-placement="top"
+                                                        data-bs-content="Number of transfers to cart by type and date range."><svg
+                                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            fill="currentColor" class="bi bi-info-circle-fill"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                                        </svg></a></h5>
+                                            </div>
+                                            <div class="col-6 text-end">
+                                                <form class="row row-cols-lg-auto g-3 justify-content-end">
+                                                    <div class="col-12">
+                                                        <label class="visually-hidden"
+                                                            for="inlineFormSelectPref">Year</label>
+                                                        <select class="form-select" id="inlineFormSelectPref">
+                                                            <option value="1">2023</option>
+                                                            <option value="2">2022</option>
+                                                            <option value="3">2021</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <button type="submit"
+                                                            class="btn btn-primary rounded-pill">Transfers</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="chart-mixed"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card border-0 shadow-sm border-0 shadow-sm h-100">
+                                    <div class="card-header h5">Transfer by Platform <a href="#"
+                                            data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
+                                            data-bs-content="Number of transfers to cart by type and date range."><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                            </svg></a></div>
+                                    <div class="card-body">
+                                        <div class="row justify-content-lg-center">
+                                            <div class="col-6">
+                                                <div class="mb-5" id="pie-platform"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-borderless table-card mb-0" style="width:100%">
+                                            <thead class="text-muted text-uppercase small bg-body">
+                                                <tr>
+                                                    <th>Platform</th>
+                                                    <th>Transfers</th>
+                                                    <th>% of Transfers</th>
+                                                    <th class="text-end">Transfer Rate
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="align-middle">
+                                                <tr>
+                                                    <td>Facebook</td>
+                                                    <td>83,377</td>
+                                                    <td>33.2%</td>
+                                                    <td class="text-end">94.9%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Google</td>
+                                                    <td>58,390</td>
+                                                    <td>23.2%</td>
+                                                    <td class="text-end">
+                                                        88.5%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>YouTube
+                                                    </td>
+                                                    <td>44,399
+                                                    </td>
+                                                    <td>17.7%
+                                                    </td>
+                                                    <td class="text-end">
+                                                        91.4%
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Pinterest
+                                                    </td>
+                                                    <td>36,768</td>
+                                                    </td>
+                                                    <td>14.6%
+                                                    </td>
+                                                    <td class="text-end">
+                                                        85.1%
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <div class="card-header h5">Transfer by Device <a href="#" data-bs-container="body"
+                                            data-bs-toggle="popover" data-bs-placement="top"
+                                            data-bs-content="Number of transfers to cart by type and date range."><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                            </svg></a></div>
+                                    <div class="card-body">
+                                        <div class="row justify-content-lg-center">
+                                            <div class="col-6">
+                                                <div id="pie-devices"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-borderless table-card mb-0" style="width:100%">
+                                            <thead class="text-muted text-uppercase small bg-body">
+                                                <tr>
+                                                    <th>Device Type</th>
+                                                    <th>Transfers</th>
+                                                    <th>% of Transfers</th>
+                                                    <th class="text-end">Transfer
+                                                        Rate
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="align-middle">
+                                                <tr>
+                                                    <td>Android</td>
+                                                    <td>83,377</td>
+                                                    <td>33.2%</td>
+                                                    <td class="text-end">94.9%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>iPhone</td>
+                                                    <td>58,390</td>
+                                                    <td>23.2%</td>
+                                                    <td class="text-end">
+                                                        88.5%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Desktop
+                                                    </td>
+                                                    <td>44,399
+                                                    </td>
+                                                    <td>17.7%
+                                                    </td>
+                                                    <td class="text-end">
+                                                        91.4%
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Other
+                                                    </td>
+                                                    <td>36,768</td>
+                                                    </td>
+                                                    <td>14.6%
+                                                    </td>
+                                                    <td class="text-end">
+                                                        85.1%
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="card shadow-sm overflow-hidden h-100">
+                                    <div class="card-header">
+                                        <div class="row g-0">
+                                            <div class="col-6">
+                                                <h5 class="mt-2">Agency Generated Transfers, by Campaign <a href="#"
+                                                        data-bs-container="body" data-bs-toggle="popover"
+                                                        data-bs-placement="top"
+                                                        data-bs-content="Number of transfers to cart by type and date range."><svg
+                                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            fill="currentColor" class="bi bi-info-circle-fill"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                                        </svg></a>
+                                                </h5>
+                                            </div>
+                                            <div class="col-6 text-end">
+                                                <form class="row row-cols-lg-auto g-3 justify-content-end">
+                                                    <div class="col-12">
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option selected>Campaigns
+                                                            </option>
+                                                            <option value="1">Links</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-borderless table-card mb-0" style="width:100%">
+                                            <thead class="text-muted text-uppercase small bg-body">
+                                                <tr>
+                                                    <th class="ps-3">
+                                                        Image</th>
+                                                    <th>Title</th>
+                                                    <th>Partner</th>
+                                                    <th>Campaign ID</th>
+                                                    <th>Total Product</th>
+                                                    <th>Total Transfer Value</th>
+                                                    <th>Retailer</th>
+                                                    <th>Raw Clicks</th>
+                                                    <th>OOA</th>
+                                                    <th>OOS</th>
+                                                    <th>Pr. Closed</th>
+                                                    <th>Views</th>
+                                                    <th>Transfers</th>
+                                                    <th>Last Transfer</th>
+                                                    <th>Launch Date</th>
+                                                    <th class="text-end">End Date</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="align-middle">
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <a href="#!.html"><img src="assets/media/products/6.png"
+                                                                    class="avatar p-1 border rounded-2 me-2 align-middle"
+                                                                    alt=""></a>
+                                                        </div>
+                                                    </td>
+                                                    <td></td>
+                                                    <td>Brandshare</td>
+                                                    <td><a href="#">5458</a></td>
+                                                    <td>31</td>
+                                                    <td>$243.69</td>
+                                                    <td>Walgreens</td>
+                                                    <td>22</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td><a href="#">19</a></td>
+                                                    <td>2022-09-07 16:26:34</td>
+                                                    <td></td>
+                                                    <td class="text-end"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="card shadow-sm overflow-hidden h-100">
+                                    <div class="card-header">
+                                        <div class="row g-0">
+                                            <div class="col-6">
+                                                <h5 class="mt-2">Transfers, by Product <a href="#"
+                                                        data-bs-container="body" data-bs-toggle="popover"
+                                                        data-bs-placement="top"
+                                                        data-bs-content="Number of transfers to cart by type and date range."><svg
+                                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            fill="currentColor" class="bi bi-info-circle-fill"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                                        </svg></a>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-borderless table-card mb-0" style="width:100%">
+                                            <thead class="text-muted text-uppercase small bg-body">
+                                                <tr>
+                                                    <th class="ps-3" style="width:190px">Image</th>
+                                                    <th>Product</th>
+                                                    <th>Brand</th>
+                                                    <th>Products Transferred</th>
+                                                    <th>Total Price</th>
+                                                    <th>Average Price</th>
+                                                    <th class="text-end">UPC</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="align-middle">
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <a href="#!.html"><img src="assets/media/products/6.png"
+                                                                    class="avatar p-1 border rounded-2 me-2 align-middle"
+                                                                    alt=""></a>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        Pantene Advanced Care Shampoo 38.2 fl oz bottle
+                                                    </td>
+                                                    <td>Pantene</td>
+                                                    <td><a href="#">97099</a></td>
+                                                    <td>$1,118,223.51</td>
+                                                    <td>$11.52</td>
+                                                    <td class="text-end">080878191352</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <a href="#!.html"><img src="assets/media/products/6.png"
+                                                                    class="avatar p-1 border rounded-2 me-2 align-middle"
+                                                                    alt=""></a>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        Pantene Advanced
+                                                        Care Shampoo
+                                                        38.2 fl oz
+                                                        bottle
+                                                    </td>
+                                                    <td>Pantene</td>
+                                                    <td><a href="#">97099</a>
+                                                    </td>
+                                                    <td>$1,118,223.51
+                                                    </td>
+                                                    <td>$11.52</td>
+                                                    <td class="text-end">
+                                                        080878191352
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <a href="#!.html"><img src="assets/media/products/6.png"
+                                                                    class="avatar p-1 border rounded-2 me-2 align-middle"
+                                                                    alt=""></a>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        Pantene
+                                                        Advanced
+                                                        Care
+                                                        Shampoo
+                                                        38.2
+                                                        fl
+                                                        oz
+                                                        bottle
+                                                    </td>
+                                                    <td>Pantene
+                                                    </td>
+                                                    <td><a href="#">97099</a>
+                                                    </td>
+                                                    <td>$1,118,223.51
+                                                    </td>
+                                                    <td>$11.52
+                                                    </td>
+                                                    <td class="text-end">
+                                                        080878191352
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <a href="#!.html"><img src="assets/media/products/6.png"
+                                                                    class="avatar p-1 border rounded-2 me-2 align-middle"
+                                                                    alt=""></a>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        Pantene
+                                                        Advanced
+                                                        Care
+                                                        Shampoo
+                                                        38.2
+                                                        fl
+                                                        oz
+                                                        bottle
+                                                    </td>
+                                                    <td>Pantene
+                                                    </td>
+                                                    <td><a href="#">97099</a>
+                                                    </td>
+                                                    <td>$1,118,223.51
+                                                    </td>
+                                                    <td>$11.52
+                                                    </td>
+                                                    <td class="text-end">
+                                                        080878191352
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <a href="#!.html"><img src="assets/media/products/6.png"
+                                                                    class="avatar p-1 border rounded-2 me-2 align-middle"
+                                                                    alt=""></a>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        Pantene
+                                                        Advanced
+                                                        Care
+                                                        Shampoo
+                                                        38.2
+                                                        fl
+                                                        oz
+                                                        bottle
+                                                    </td>
+                                                    <td>Pantene
+                                                    </td>
+                                                    <td><a href="#">97099</a>
+                                                    </td>
+                                                    <td>$1,118,223.51
+                                                    </td>
+                                                    <td>$11.52
+                                                    </td>
+                                                    <td class="text-end">
+                                                        080878191352
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--//Page content End//-->
+                 <!--//Page-footer//-->
+                 <footer class="bg-white">
+                   <div class="container-fluid py-5">
+                     <span class="d-block lh-sm text-center small">
+                       Do you have any questions about the tool? Contact us at: <a href="#"> support@smartcommerce.co</a> or the phone
+                       number:
+                       1-800-571-3520
+                       <!-- &copy;
+                        <script>
+                          document.write(new Date().getFullYear())
+                        </script>. Copyright -->
+                     </span>
+                   </div>
+                 </footer>
+                 <!--/.Page Footer End-->
+            </main>
+            <!-- Advanced Filters  -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Advanced Filters</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="dropdown">
+                        <div>
+                            <div class="card card-body">
+                                <label for="predefineRange" class="form-label">Date</label>
+                                <button id="predefineRange" class="form-control text-start">
+                                    <span>January 26, 2023 - February 1, 2023</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3">
+                        <label class="mb-3">Transfer filter</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                                checked>
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Show Transfers Only
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Show Transfers and Views
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-2">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option selected>All</option>
+                            <option value="1">By Labels</option>
+                        </select>
+                        <label for="floatingSelect">Labels</label>
+                    </div>
+                    <div class="form-floating mb-2">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option selected>Ours and Partners</option>
+                            <option value="1">Ours Only</option>
+                            <option value="2">Partners Only</option>
+                        </select>
+                        <label for="floatingSelect">Scope</label>
+                    </div>
+                    <select class="form-select mb-3" id="inputGroupSelect01" disabled>
+                        <option selected>Chooose</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <div class="form-floating mb-2">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option selected>Choose..</option>
+                            <option value="1">Pinterest</option>
+                        </select>
+                        <label for="floatingSelect">Partners</label>
+                    </div>
+                    <div class="form-floating mb-2">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option selected>All Retailers</option>
+                            <option value="1">Selected Retailers</option>
+                        </select>
+                        <label for="floatingSelect">Retailers</label>
+                    </div>
+                    <select class="form-select mb-3" id="inputGroupSelect01" disabled>
+                        <option selected>Chooose</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <div class="form-floating mb-3">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option selected>
+                                All
+                            </option>
+                            <option value="1">
+                                One
+                            </option>
+                            <option value="2">
+                                Two
+                            </option>
+                            <option value="3">
+                                Three
+                            </option>
+                        </select>
+                        <label for="floatingSelect">UTM Paremeters</label>
+                    </div>
+                    <hr>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="button">Filter</button>
+                        <button class="btn btn-outline-primary" type="button">Reset</button>
+                    </div>
+                </div>
+            </div>
+            <!--///////////Page content wrapper End///////////////-->
+        </div>
+    </div>
+    
+    <!--////////////Theme Core scripts Start/////////////////-->
+
+    <script src="assets/js/theme.bundle.js"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!--////////////Theme Core scripts End/////////////////-->
+
+    <!--Charts-->
+    <script src="assets/vendor/apexcharts.min.js"></script>
+    <script>
+        //Init Chart
+        var cPrimary = "#4363F9";
+        var cWarning = "#FFC107";
+        var cSecondary = "#F26B21";
+        var cSuccess = "#60D084";
+        var cMuted = "#9d9da7";
+        var cBodycolor = "#626273";
+        var cLight = "#e7e7e9";
+        var cGray = "#ced2e1";
+        var cFont = "$font-family-base";
+
+        new ApexCharts(document.querySelector("#chart-bar-1"), {
+            series: [{
+                data: [400, 430, 448, 470]
+            }],
+            chart: {
+                type: 'bar',
+                height: 250
+            },
+            plotOptions: {
+                bar: {
+                    borderRadius: 4,
+                    horizontal: true,
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            xaxis: {
+                categories: ['Click2Cart', 'Shoppers Choice', 'SmartSite', 'Eshop'],
+            }
+        }).render()
+
+        new ApexCharts(document.querySelector('#chart-mixed'), {
+            series: [{
+                name: "Transfers",
+                data: [10000, 20000, 28000, 15000, 12000, 45000, 41000, 25000, 38000]
+            }],
+            chart: {
+                height: 350,
+                type: 'line',
+                zoom: {
+                    enabled: false
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                curve: 'straight'
+            },
+            title: {
+                text: 'Product Trends by Month',
+                align: 'left'
+            },
+            grid: {
+                row: {
+                    colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+                    opacity: 0.5
+                },
+            },
+            xaxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+            }
+        }).render()
+
+        new ApexCharts(document.querySelector('#chart-pie'), {
+            series: [10, 49.2, 34, 1.3],
+            chart: {
+                width: 380,
+                type: 'donut',
+            },
+            dataLabels: {
+                enabled: false
+            },
+            labels: ['Walwart 10.0%', 'Costco: 49.2', 'Amazon: 34.0%', 'Walgreens: 1.3%', 'Target: 2.4'],
+            responsive: [{
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        width: 200
+                    },
+                    legend: {
+                        show: false
+                    }
+                }
+            }],
+            legend: {
+                position: 'right',
+                offsetY: 0,
+                height: 230,
+            }
+        }).render()
+
+        new ApexCharts(document.querySelector('#pie-platform'), {
+            series: [83377, 583990, 44399, 36768],
+            chart: {
+                width: 380,
+                type: 'donut',
+            },
+            dataLabels: {
+                enabled: false
+            },
+            labels: ['Facebook (33.2%)', 'Google (23.2%)', 'YouTube (17.7%)',
+                'Pinterest (14.6%)'
+            ],
+            responsive: [{
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        width: 200
+                    },
+                    legend: {
+                        show: false
+                    }
+                }
+            }],
+            legend: {
+                position: 'right',
+                offsetY: 0,
+                height: 230,
+            }
+        }).render()
+
+        new ApexCharts(document.querySelector('#pie-devices'), {
+            series: [44, 55, 13, 33],
+            chart: {
+                width: 380,
+                type: 'donut',
+            },
+            dataLabels: {
+                enabled: false
+            },
+            labels: ['Android (33.2%)', 'iPhone (33.2%)', 'Desktop (33.2%)', 'Other (33.2%)'],
+            responsive: [{
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        width: 200
+                    },
+                    legend: {
+                        show: false
+                    }
+                }
+            }],
+            legend: {
+                position: 'right',
+                offsetY: 0,
+                height: 230,
+            }
+        }).render()
+    </script>
+    <script src="assets/vendor/moment.min.js"></script>
+    <script src="assets/vendor/daterangepicker.js"></script>
+    <script>
+        $(function () {
+            var start = moment().subtract(6, 'days');
+            var end = moment();
+
+            function cb(start, end) {
+                $('#predefineRange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format(
+                    'MMMM D, YYYY'));
+            }
+
+            $('#predefineRange').daterangepicker({
+                startDate: start,
+                endDate: end,
+                ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment()
+                        .subtract(1, 'month').endOf('month')
+                    ]
+                }
+            }, cb);
+
+            cb(start, end);
+
+        });
+    </script>
+    <script>
+        $(function () {
+            $('#singleDatePicker').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                minYear: 1901,
+                maxYear: parseInt(moment().format('YYYY'), 10)
+            });
+        });
+    </script>
+    <!--Date range picker with time-->
+    <script>
+        $(function () {
+            $('#datetimes').daterangepicker({
+                timePicker: true,
+                startDate: moment().startOf('hour'),
+                endDate: moment().startOf('hour').add(32, 'hour'),
+                locale: {
+                    format: 'M/DD hh:mm A'
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

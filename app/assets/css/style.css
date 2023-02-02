@@ -14,6 +14,22 @@ p {
   line-height: 150% !important;
 }
 
+tr .btn {
+  border-radius: 0.375rem !important;
+}
+
+.btn-success {
+  color: white !important;
+}
+
+.btn-outline-success.active {
+  color: white !important;
+}
+
+.btn-outline-success:hover {
+  color: white !important;
+}
+
 h1, .h1,
 h2,
 .h2,
@@ -29,11 +45,8 @@ h6,
   margin: 0px !important;
 }
 
-.form-select {
-  border-radius: 20px !important;
-}
-
 .form-control {
+  border-radius: 0rem !important;
   border-top: 0px solid !important;
   border-right: 0px solid !important;
   border-bottom: solid #4363F9 !important;

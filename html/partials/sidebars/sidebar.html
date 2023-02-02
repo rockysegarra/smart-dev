@@ -52,7 +52,7 @@
                     </li> -->
                     <li class="nav-item">
                         <a href="#dashboards" data-bs-toggle="collapse"
-                            class="nav-link d-flex align-items-center text-truncate @@if (context.page === 'dashboard') {active}"
+                            class="nav-link d-flex align-items-center text-truncate @@if (context.measure === 'pages') {active}"
                             aria-expanded="false">
                             <span class="sidebar-icon">
                                 <i class="fa fa-chart-line"></i>
@@ -62,7 +62,7 @@
                         </a>
                         <ul data-bs-target="#dashboards" id="dashboards"
                             class="sidebar-dropdown list-unstyled collapse mb-3">
-                            <li class="sidebar-item"><a class="sidebar-link" href="index.html">Default</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="measure-main.html">Main</a></li>
                             <li class="sidebar-item"><a class="sidebar-link" href="index-dashboard2.html">Dashboard
                                     2</a></li>
                         </ul>
@@ -106,7 +106,7 @@
                             <span class="sidebar-text">SmartHub</span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item d-lg-none">
                         <a href="#settings" data-bs-toggle="collapse"
                             class="nav-link d-flex align-items-center text-truncate @@if (context.settings === 'settings') {active}"
                             aria-expanded="false">

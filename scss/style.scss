@@ -23,6 +23,22 @@ p {
     line-height: 150% !important;
 }
 
+tr .btn {
+    border-radius: .375rem !important;
+}
+
+.btn-success {
+    color: white !important;
+}
+
+.btn-outline-success.active {
+    color: white !important;
+}
+
+.btn-outline-success:hover {
+    color: white !important;
+}
+
 h1,
 h2,
 h3,
@@ -34,10 +50,11 @@ h6 {
 }
 
 .form-select {
-    border-radius: 20px !important;
+    // border-radius: 20px !important;
 }
 
 .form-control {
+    border-radius: 0rem !important;
     border-top: 0px solid !important;
     border-right: 0px solid !important;
     border-bottom: solid $primary !important;
