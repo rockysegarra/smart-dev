@@ -27,6 +27,25 @@ tr .btn {
     border-radius: .375rem !important;
 }
 
+table td {
+    font-size: 14px;
+}
+
+// .btn {
+//     min-width: 0px !important;
+// }
+
+.btn-circle {
+    width: 30px !important;
+    height: 30px !important;
+    padding: 6px 0px !important;
+    border-radius: 15px !important;
+    text-align: center !important;
+    font-size: 12px !important;
+    line-height: 1.42857 !important;
+    min-width: 0px !important;
+}
+
 .btn-success {
     color: white !important;
 }
@@ -47,6 +66,7 @@ h5,
 h6 {
     color: $dark !important;
     margin: 0px !important;
+    line-height: 150% !important;
 }
 
 .form-select {

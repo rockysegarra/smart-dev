@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Suite</title>
+
+    <!--Simplebar css-->
+    <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css" />
+
+    <!--Choices css-->
+    <link rel="stylesheet" href="assets/vendor/css/choices.min.css" />
+
+    <!--Font awesome icons-->
+    <link href="assets/fonts/font-awesome5-free/css/all.min.css" rel="stylesheet">
+
+    <!--Google web fonts-->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!--Main style-->
+    <link
+      rel="stylesheet"
+      href="assets/css/style.min.css"
+      id="switchThemeStyle"
+    />
+    <script
+      src="https://kit.fontawesome.com/9b71cccaf3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+      <!--////////////////// PreLoader Start//////////////////////-->
+      <div class="loader">
+          <!--Placeholder animated layout for preloader-->
+          <div
+              class="content flex-column p-4 pb-0 d-flex justify-content-center align-items-center flex-column-fluid position-relative">
+              <div class="w-100 h-100 position-relative d-flex align-items-center justify-content-center">
+                  <i class="anim-spinner fas fa-spinner me-3"></i>
+                  <div>
+                      <span>Loading....</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!--////////////////// /.PreLoader END//////////////////////-->
+    <!--App Start-->
+    <!--Page-->
+    <div class="page">
+      <main>
+        <div class="container-fluid p-5">
+          <div class="row g-3">
+            <div class="col-lg-3 col-sm-5">
+              <div class="card">
+                <div class="card-header">
+                  <h1 class="text-uppercase h6">Find your product</h1>
+                </div>
+                <div class="card-body">
+                  <div class="row g-5">
+                    <div class="col-lg-12 col-sm-12 py-0 py-lg-3 col-4">
+                      <img
+                        src="https://designs.smartcommerce.co/storelocator/img/img.png"
+                        class="img-fluid"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="col-lg-12 col-sm-12 col-8 mt-3">
+                      <h1 class="h5">
+                        <strong
+                          >Hungry-Man, Hungry-Man Selects, Spicy Classic Fried
+                          Chicken</strong
+                        >
+                      </h1>
+                    </div>
+                    <div class="col-12 mt-3">
+                      <div class="form-floating mb-2">
+                        <select
+                          class="form-select"
+                          id="floatingSelect"
+                          aria-label="Floating label select example"
+                        >
+                          <option selected>All</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                        <label for="floatingSelect">Category</label>
+                      </div>
+                      <div class="form-floating">
+                        <select
+                          class="form-select"
+                          id="floatingSelect"
+                          aria-label="Floating label select example"
+                        >
+                          <option selected>All</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                        <label for="floatingSelect">Product</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-9 col-sm-7 bg-light">
+              <div class="card-header bg-white py-3 py-lg-3">
+                <div class="row g-2">
+                  <div class="col">
+                    <div class="p-0 px-2 p-lg-2 px-lg-0 pt-2">
+                      <div>
+                        <strong>6 stores </strong>within a
+                        <strong>50 mile</strong> radius of postal code
+                        <strong>10025</strong>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4 d-none d-lg-block d-xl-block">
+                    <div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="floatingInput"
+                        placeholder="32724"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <button
+                      class="btn btn-primary d-lg-none rounded"
+                      style="min-width: 0"
+                      type="button"
+                      id="button-addon2"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#offcanvasExample"
+                      aria-controls="offcanvasExample"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-filter-square"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                        />
+                        <path
+                          d="M6 11.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      class="btn btn-primary dropdown-toggle d-none d-lg-block d-xl-block"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <svg
+                        class="me-2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-filter-square"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                        />
+                        <path
+                          d="M6 11.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+                        />
+                      </svg>
+                      Display Options
+                    </button>
+                    <form class="dropdown-menu p-3" style="width: 250px">
+                      <div class="form-floating mt-2">
+                        <select
+                          class="form-select"
+                          id="floatingSelect"
+                          aria-label="Floating label select example"
+                        >
+                          <option value="1">within 5 miles</option>
+                          <option value="2">within 10 miles</option>
+                          <option value="3">within 25 miles</option>
+                          <option value="4">within 50 miles</option>
+                          <option value="5">within 100 miles</option>
+                        </select>
+                        <label for="floatingSelect">Distance</label>
+                      </div>
+                      <div class="form-floating mt-2">
+                        <select
+                          class="form-select"
+                          id="floatingSelect"
+                          aria-label="Floating label select example"
+                        >
+                          <option value="1">5 stores</option>
+                          <option value="2">10 stores</option>
+                          <option value="3">25 stores</option>
+                          <option value="4">50 stores</option>
+                          <option value="5">100 stores</option>
+                        </select>
+                        <label for="floatingSelect">Stores to Show</label>
+                      </div>
+                      <button type="submit" class="btn btn-primary btn-sm mt-3">
+                        Refresh
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3">
+                <div class="card-body m-0 p-0">
+                  <div id="map" style="width: 100%; height: 300px"></div>
+                  <script>
+                    mapboxgl.accessToken =
+                      "pk.eyJ1IjoicnNlZ2FycmEiLCJhIjoiY2xkb3k4aWl5MHM5eTN6cWVyaDdsMWd6byJ9.fSp4kG6JszQhOj-m3kfWqw";
+                    var map = new mapboxgl.Map({
+                      container: "map",
+                      style: "mapbox://styles/mapbox/streets-v11",
+                    });
+                  </script>
+                </div>
+                <div class="card-body">
+                  <div class="col-12">
+                    <div class="row">
+                      <div class="col">
+                        <button class="btn btn-primary rounded-pill">
+                          All
+                        </button>
+                        <button
+                          class="btn btn-white rounded-pill"
+                          style="
+                            text-align: left;
+                            padding: 0.25rem 1rem 0.25rem 0.25rem;
+                          "
+                        >
+                          <img
+                            width="30px"
+                            class="me-2"
+                            src="http://rockys24.sg-host.com/path-to-purchase/assets/amazon-mark.svg"
+                          />Amazon
+                        </button>
+                        <button
+                          class="btn btn-white rounded-pill"
+                          style="
+                            text-align: left;
+                            padding: 0.25rem 1rem 0.25rem 0.25rem;
+                          "
+                        >
+                          <img
+                            style="border-radius: 50%"
+                            width="30px"
+                            class="me-2"
+                            src="https://images.basketful.co/ui-images/retailers/1x1/instacart.png"
+                          />Instacart
+                        </button>
+                        <button
+                          class="btn btn-white rounded-pill"
+                          style="
+                            text-align: left;
+                            padding: 0.25rem 1rem 0.25rem 0.25rem;
+                          "
+                        >
+                          <img
+                            style="border-radius: 50%"
+                            width="30px"
+                            class="me-2"
+                            src="https://images.basketful.co/ui-images/retailers/1x1/publix_instacart.png"
+                          />Publix
+                        </button>
+                        <button
+                          class="btn btn-white rounded-pill"
+                          style="
+                            text-align: left;
+                            padding: 0.25rem 1rem 0.25rem 0.25rem;
+                          "
+                        >
+                          <img
+                            style="border-radius: 50%"
+                            width="30px"
+                            class="me-2"
+                            src="https://images.basketful.co/ui-images/retailers/1x1/shipt.png"
+                          />Shipt
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="row row-cols-2 row-cols-lg-4 g-4">
+                      <div class="col-12">
+                        <div class="card h-100">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-9">
+                                <h1 class="h5">Amazon</h1>
+                                <p>
+                                  299 E International Speedway Boulevard De
+                                  Land, FL 32724
+                                </p>
+                                <div class="text-muted"> 1.33mi</div>
+                                <a href="#">Directions</a>
+                              </div>
+                              <div class="col-3">
+                                <img
+                                  class="img-fluid"
+                                  style="border-radius: 50%"
+                                  src="http://rockys24.sg-host.com/path-to-purchase/assets/amazon-mark.svg"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-footer border-top-0">
+                            <div class="d-grid gap-2">
+                              <button
+                                class="btn btn-primary rounded-pill"
+                                type="button"
+                              >
+                                Add to Cart
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="card h-100">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-9">
+                                <h1 class="h5">Instacart</h1>
+                                <p>
+                                  299 E International Speedway Boulevard De
+                                  Land, FL 32724
+                                </p>
+                                <div class="text-muted"> 1.33mi</div>
+                                <a href="#">Directions</a>
+                              </div>
+                              <div class="col-3">
+                                <img
+                                  class="img-fluid"
+                                  style="border-radius: 50%"
+                                  src="https://images.basketful.co/ui-images/retailers/1x1/instacart.png"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-footer border-top-0">
+                            <div class="d-grid gap-2">
+                              <button
+                                class="btn btn-primary rounded-pill"
+                                type="button"
+                              >
+                                Add to Cart
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="card h-100">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-9">
+                                <h1 class="h5">Publix</h1>
+                                <p>
+                                  299 E International Speedway Boulevard De
+                                  Land, FL 32724
+                                </p>
+                                <div class="text-muted"> 1.33mi</div>
+                                <a href="#">Directions</a>
+                              </div>
+                              <div class="col-3">
+                                <img
+                                  class="img-fluid"
+                                  style="border-radius: 50%"
+                                  src="https://images.basketful.co/ui-images/retailers/1x1/publix_instacart.png"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="card h-100">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-9">
+                                <h1 class="h5">Shipt</h1>
+                                <p class="card-text">
+                                  299 E International Speedway Boulevard De
+                                  Land, FL 32724
+                                </p>
+                                <div class="text-muted"> 1.33mi</div>
+                                <a href="#">Directions</a>
+                              </div>
+                              <div class="col-3">
+                                <img
+                                  class="img-fluid"
+                                  style="border-radius: 50%"
+                                  src="https://images.basketful.co/ui-images/retailers/1x1/shipt.png"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-footer border-top-0">
+                            <div class="d-grid gap-2">
+                              <button
+                                class="btn btn-primary rounded-pill"
+                                type="button"
+                              >
+                                Add to Cart
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div
+      class="offcanvas offcanvas-start show"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+      aria-modal="true"
+      role="dialog"
+      style="visibility: visible"
+    >
+      <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+          Display Options
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          <div>
+            <div class="form-floating mb-2 mb-lg-0">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="32724"
+              />
+              <label for="floatingInput">Add Postal Code or City</label>
+            </div>
+            <div class="form-floating mt-2">
+              <select
+                class="form-select"
+                id="floatingSelect"
+                aria-label="Floating label select example"
+              >
+                <option value="1">within 5 miles</option>
+                <option value="2">within 10 miles</option>
+                <option value="3">within 25 miles</option>
+                <option value="4">within 50 miles</option>
+                <option value="5">within 100 miles</option>
+              </select>
+              <label for="floatingSelect">Distance</label>
+            </div>
+            <div class="form-floating mt-2">
+              <select
+                class="form-select"
+                id="floatingSelect"
+                aria-label="Floating label select example"
+              >
+                <option value="1">5 stores</option>
+                <option value="2">10 stores</option>
+                <option value="3">25 stores</option>
+                <option value="4">50 stores</option>
+                <option value="5">100 stores</option>
+              </select>
+              <label for="floatingSelect">Stores to Show</label>
+            </div>
+          </div>
+          <div class="card-footer bg-white py-3">
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" type="button">Refresh</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--////////////Theme Core scripts Start/////////////////-->
+
+    <script src="assets/js/theme.bundle.js"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!--////////////Theme Core scripts End/////////////////-->
+
+  </body>
+</html>
