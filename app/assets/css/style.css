@@ -82,6 +82,29 @@ h6,
   padding: 12px 20px;
 }
 
+.scroller-side {
+  height: 500px;
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+}
+
+.scroller {
+  height: 460px;
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+}
+
+.list-group-item.active {
+  z-index: 2;
+  color: #3a3a49;
+  background-color: white !important;
+  border-color: #4363F9 !important;
+  border-width: 1px !important;
+  color: #4363F9 !important;
+}
+
 body[data-aos-duration="50"] [data-aos], [data-aos][data-aos][data-aos-duration="50"] {
   transition-duration: 50ms;
 }

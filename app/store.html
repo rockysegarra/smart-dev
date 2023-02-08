@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Suite</title>
+
+    <!--Simplebar css-->
+    <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css" />
+
+    <!--Choices css-->
+    <link rel="stylesheet" href="assets/vendor/css/choices.min.css" />
+
+    <!--Font awesome icons-->
+    <link href="assets/fonts/font-awesome5-free/css/all.min.css" rel="stylesheet">
+
+    <!--Google web fonts-->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!--Main style-->
+    <link rel="stylesheet" href="assets/css/style.min.css" id="switchThemeStyle" />
+    <script src="https://kit.fontawesome.com/9b71cccaf3.js" crossorigin="anonymous"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css" rel="stylesheet" />
+</head>
+
+<body>
+      <!--////////////////// PreLoader Start//////////////////////-->
+      <div class="loader">
+          <!--Placeholder animated layout for preloader-->
+          <div
+              class="content flex-column p-4 pb-0 d-flex justify-content-center align-items-center flex-column-fluid position-relative">
+              <div class="w-100 h-100 position-relative d-flex align-items-center justify-content-center">
+                  <i class="anim-spinner fas fa-spinner me-3"></i>
+                  <div>
+                      <span>Loading....</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!--////////////////// /.PreLoader END//////////////////////-->
+    <!--App Start-->
+    <!--Page-->
+    <div class="page">
+        <main>
+            <div class="container-fluid p-5">
+                <div class="row g-3">
+                    <div class="col-lg-3 col-sm-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <small>Find your product</small>
+                                    <div class="col-12">
+                                        <div class="form-floating mb-2">
+                                            <input type="text" class="form-control" id="floatingInputGroup2"
+                                                placeholder="Username" required>
+                                            <label for="floatingInputGroup2">Add Postal Code or City</label>
+                                        </div>
+                                        <select class="form-select d-lg-block" aria-label="Default select example">
+                                            <option value="1">within 5 miles</option>
+                                            <option value="2">within 10 miles</option>
+                                            <option value="3">within 25 miles</option>
+                                            <option value="4">within 50 miles</option>
+                                            <option value="5">within 100 miles</option>
+                                        </select>
+                                        <hr>
+                                        <!-- <div class="mb-3">
+                                            <a href="#"><small><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                        height="16" fill="currentColor" class="bi bi-arrow-left"
+                                                        viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                                                    </svg> Select a product</small></a>
+                                        </div> -->
+                                        
+                                        <!-- <div class="form-floating mb-2">
+                                            <select class="form-select" id="floatingSelect"
+                                                aria-label="Floating label select example">
+                                                <option selected>All</option>
+                                                <option value="1">8 pack</option>
+                                                <option value="2">24 Pack</option>
+                                                <option value="3">30</option>
+                                            </select>
+                                            <label for="floatingSelect">Category</label>
+                                        </div> -->
+                                    </div>
+                                    <div class="col-12 border-top-0 mt-0">
+                                        <!-- <div class="form-floating mb-2">
+                                            <input type="text" class="form-control" id="floatingInputGroup2"
+                                                placeholder="Username" required>
+                                            <label for="floatingInputGroup2">Filter Products</label>
+                                        </div> -->
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-sm-7 bg-light">
+                        <div class="card mb-3">
+                            <div class="card-body m-0 p-0">
+                                <div id="map" style="width: 100%; height: 300px"></div>
+                                <script>
+                                    mapboxgl.accessToken =
+                                        "pk.eyJ1IjoicnNlZ2FycmEiLCJhIjoiY2xkb3k4aWl5MHM5eTN6cWVyaDdsMWd6byJ9.fSp4kG6JszQhOj-m3kfWqw";
+                                    var map = new mapboxgl.Map({
+                                        container: "map",
+                                        style: "mapbox://styles/mapbox/streets-v11",
+                                    });
+                                </script>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                      <button class="btn btn-primary rounded-pill" disabled>
+                                        All (0 Stores)
+                                      </button>
+                                      <!-- <button class="btn btn-light rounded-pill" style="
+                                                                text-align: left;
+                                                                padding: 0.25rem 1rem 0.25rem 0.25rem;
+                                                              ">
+                                        <img width="30px" class="me-2" src="https://images.basketful.co/ui-images/retailers/1x1/target.png" />Target
+                                        <button class="btn btn-light rounded-pill" style="
+                                                                text-align: left;
+                                                                padding: 0.25rem 1rem 0.25rem 0.25rem;
+                                                              ">
+                                          <img style="border-radius: 50%" width="30px" class="me-2"
+                                            src="http://rockys24.sg-host.com/path-to-purchase/assets/walmart-mark.svg" />Walmart
+                                        </button>
+                                        <button class="btn btn-light rounded-pill" style="
+                                                                text-align: left;
+                                                                padding: 0.25rem 1rem 0.25rem 0.25rem;
+                                                              ">
+                                          <img style="border-radius: 50%" width="30px" class="me-2"
+                                            src="https://images.basketful.co/ui-images/retailers/1x1/publix_instacart.png" />Publix
+                                        </button> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-cols-lg-4 g-4">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- <div class="offcanvas offcanvas-start show" tabindex="-1" id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel" aria-modal="true" role="dialog" style="visibility: visible">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                Display Options
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                <div>
+                    <div class="form-floating mb-2 mb-lg-0">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="32724" />
+                        <label for="floatingInput">Add Postal Code or City</label>
+                    </div>
+                    <div class="form-floating mt-2">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option value="1">within 5 miles</option>
+                            <option value="2">within 10 miles</option>
+                            <option value="3">within 25 miles</option>
+                            <option value="4">within 50 miles</option>
+                            <option value="5">within 100 miles</option>
+                        </select>
+                        <label for="floatingSelect">Distance</label>
+                    </div>
+                    <div class="form-floating mt-2">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option value="1">5 stores</option>
+                            <option value="2">10 stores</option>
+                            <option value="3">25 stores</option>
+                            <option value="4">50 stores</option>
+                            <option value="5">100 stores</option>
+                        </select>
+                        <label for="floatingSelect">Stores to Show</label>
+                    </div>
+                </div>
+                <div class="card-footer bg-white py-3">
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="button">Refresh</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    
+    <!--////////////Theme Core scripts Start/////////////////-->
+
+    <script src="assets/js/theme.bundle.js"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!--////////////Theme Core scripts End/////////////////-->
+
+</body>
+
+</html>
