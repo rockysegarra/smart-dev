@@ -109,6 +109,13 @@ h6 {
   scrollbar-width: thin;
 }
 
+.scroller-product {
+  height: 260px;
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+}
+
 // .list-group {
 //     border-radius: 4px !important;
 // }

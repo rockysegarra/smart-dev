@@ -96,6 +96,13 @@ h6,
   scrollbar-width: thin;
 }
 
+.scroller-product {
+  height: 260px;
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+}
+
 .list-group-item.active {
   z-index: 2;
   color: #3a3a49;
