@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Suite</title>
+
+    <!--Simplebar css-->
+    <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css">
+
+    <!--Choices css-->
+    <link rel="stylesheet" href="assets/vendor/css/choices.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>
+
+    <!--Font awesome icons-->
+    <link href="assets/fonts/font-awesome5-free/css/all.min.css" rel="stylesheet">
+
+    <!--Google web fonts-->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!--Main style-->
+    <link rel="stylesheet" href="assets/css/style.min.css" id="switchThemeStyle">
+    <script src="https://kit.fontawesome.com/9b71cccaf3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+      <!--////////////////// PreLoader Start//////////////////////-->
+      <div class="loader">
+        <!--Placeholder animated layout for preloader-->
+        <div class="d-flex flex-column flex-root">
+          <div class="page d-flex flex-row flex-column-fluid">
+
+            <!--Sidebar start-->
+            <aside class="page-sidebar aside-dark placeholder-wave">
+              <div class="placeholder col-12 h-100 bg-gray"></div>
+            </aside>
+            <div class="page-content d-flex flex-column flex-row-fluid">
+              <div
+                class="content flex-column p-4 pb-0 d-flex justify-content-center align-items-center flex-column-fluid position-relative">
+                <div class="w-100 h-100 position-relative d-flex align-items-center justify-content-center">
+                  <i class="anim-spinner fas fa-spinner me-3"></i>
+                  <div>
+                  <span>Loading...</span>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--////////////////// /.PreLoader END//////////////////////-->
+
+    <!--App Start-->
+    <div class="d-flex flex-column flex-root">
+        <!--Page-->
+        <div class="page d-flex flex-row flex-column-fluid">
+            <!--///////////Page sidebar begin///////////////-->
+            <aside class="page-sidebar">
+                <div class="h-100 flex-column d-flex" data-simplebar>
+
+                    <!--Aside-logo-->
+                    <div class="aside-logo p-3 position-relative">
+                        <a href="index.html" class="d-block pe-2">
+                            <div class="d-flex align-items-center flex-no-wrap text-truncate">
+                                <!--Sidebar-icon-->
+                                <span class="sidebar-icon">
+                                    <img src="assets/smart-mark.svg">
+                                </span>
+                                <span class="sidebar-text">
+                                    <!--Sidebar-text-->
+                                    <span class="sidebar-text text-truncate fs-4 text-uppercase fw-bolder">
+                                        <img src="assets/smart-logo.svg">
+                                    </span>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <!--Aside-Menu pe-2 -->
+                    <div class="pe-4 ps-4 pt-4 d-lg-none" style="background-color: #252D6C;">
+                        <div class="mb-2"><select class="form-select" aria-label="Default select example">
+                                <option selected>Manufacturer</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select></div>
+                        <div class="mb-2"><select class="form-select" aria-label="Default select example">
+                                <option selected>Procter & Gamber</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select></div>
+                        <div class="mb-2"><select class="form-select" aria-label="Default select example">
+                                <option selected>Pantene - US</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="aside-menu my-auto flex-column-fluid text-white"
+                        style="background-color: #252D6C; padding-left: 10px;">
+                        <nav class="flex-grow-1 h-100" id="page-navbar">
+                            <!--:Sidebar nav-->
+                            <ul class="nav flex-column collapse-group collapse d-flex pt-4">
+                                <!-- <li class="nav-item sidebar-title text-truncate opacity-50 small">
+                                    <i class="fas fa-ellipsis-h align-middle"></i>
+                                    <span>Main</span>
+                                </li> -->
+                                <li class="nav-item">
+                                    <a href="#dashboards" data-bs-toggle="collapse"
+                                        class="nav-link d-flex align-items-center text-truncate "
+                                        aria-expanded="false">
+                                        <span class="sidebar-icon">
+                                            <i class="fa fa-chart-line"></i>
+                                        </span>
+                                        <!--Sidebar nav text-->
+                                        <span class="sidebar-text">Measure</span>
+                                    </a>
+                                    <ul data-bs-target="#dashboards" id="dashboards"
+                                        class="sidebar-dropdown list-unstyled collapse mb-3">
+                                        <li class="sidebar-item"><a class="sidebar-link" href="measure-main.html">Main</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a data-bs-toggle="collapse"
+                                        class="nav-link d-flex align-items-center text-truncate "
+                                        aria-expanded="false" href="#ui-pages">
+                                        <span class="sidebar-icon">
+                                            <i class="fa fa-link"></i>
+                                        </span>
+                                        <!--Sidebar nav text-->
+                                        <span class="sidebar-text">Make & Manage</span>
+                                    </a>
+                                    <ul id="ui-pages" class="sidebar-dropdown list-unstyled collapse">
+                                        <li class="sidebar-item"><a class="sidebar-link" href="make-main.html">Main</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="make-click2cart.html">Click2Cart</a>
+                                        </li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="#">Campaigns</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="#">Shopper's Choice</a>
+                                        </li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="#">SmartSite</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="#">Eshop</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="make-catalog.html">Catalog</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="maps.html"
+                                        class="nav-link d-flex align-items-center text-truncate ">
+                                        <span class="sidebar-icon">
+                                            <i class="fa fa-book-open"></i>
+                                        </span>
+                                        <span class="sidebar-text">Product Catalog</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="datatables.html"
+                                        class="nav-link d-flex align-items-center text-truncate ">
+                                        <span class="sidebar-icon">
+                                            <i class="fa fa-info"></i>
+                                        </span>
+                                        <span class="sidebar-text">SmartHub</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item d-lg-none">
+                                    <a href="#settings" data-bs-toggle="collapse"
+                                        class="nav-link d-flex align-items-center text-truncate active"
+                                        aria-expanded="false">
+                                        <span class="sidebar-icon">
+                                            <i class="fa fa-gear"></i>
+                                        </span>
+                                        <!--Sidebar nav text-->
+                                        <span class="sidebar-text">Settings</span>
+                                    </a>
+                                    <ul data-bs-target="settings" id="settings" class="sidebar-dropdown list-unstyled collapse">
+                                        <li class="sidebar-item"><a class="sidebar-link" href="settings-clients.html">Clients</a>
+                                        </li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="index-dashboard2.html">Dashboard
+                                                2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item d-lg-none">
+                                    <a href="page-auth-signin.html"
+                                        class="nav-link d-flex align-items-center text-truncate ">
+                                        <span class="sidebar-icon">
+                                            <i class="fa fa-power-off"></i>
+                                        </span>
+                                        <span class="sidebar-text">Log Out</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!--Aside-footer-->
+                    <!-- <footer class="aside-footer position-relative p-3">
+                        <div class="p-3 bg-secondary text-white rounded-3 position-relative overflow-hidden">
+                            <div class="position-relative">
+                                <p class="mb-0 pb-2">Release your maximal potencial software</p>
+                                <a href="#!.html" class="btn rounded-pill btn-white text-truncate btn-sm">Upgrade Pro</a>
+                            </div>
+                        </div>
+                    </footer> -->
+                </div>
+            </aside>
+            <!--///////////Page Sidebar End///////////////-->
+
+            <!--///Sidebar close button for 991px or below devices///-->
+            <div class="sidebar-close d-lg-none">
+                <a href="#"></a>
+            </div>
+            <!--///.Sidebar close end///-->
+
+            <!--///////////Page content wrapper///////////////-->
+            <main class="page-content d-flex flex-column flex-row-fluid">
+                <!--//page-header//-->
+                <header class="navbar py-0 page-header border-bottom navbar-expand navbar-light px-4">
+                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <div class="d-flex align-items-center flex-no-wrap text-truncate">
+                            <!--Sidebar-icon-->
+                            <img src="assets/smart-mark.svg">
+                        </div>
+                    </a>
+                    <ul class="navbar-nav d-flex align-items-center h-100">
+                        <li class="nav-item d-none d-lg-flex flex-column h-100 me-lg-2 align-items-center justify-content-center">
+                            <a href="javascript:void(0)"
+                                class="sidebar-trigger nav-link rounded-3 size-35 d-flex align-items-center justify-content-center p-0">
+                                <i class="fa fa-arrow-left"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex flex-column me-lg-2 h-100 justify-content-center dropdown">
+                            <div class="d-none d-lg-block d-xl-block">
+                                <div class="d-flex">
+                                    <div class="me-1"><select class="form-select" aria-label="Default select example">
+                                            <option selected>Manufacturer</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select></div>
+                                    <div class="me-1"><select class="form-select" aria-label="Default select example">
+                                            <option selected>Procter & Gamber</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select></div>
+                                    <div class="me-1"><select class="form-select" aria-label="Default select example">
+                                            <option selected>Pantene - US</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto d-flex align-items-center h-100">
+                        <li class="nav-item d-flex flex-column h-100 justify-content-center dropdown">
+                            <a href="#" data-bs-toggle="dropdown"
+                                class="dropdown-toggle nav-link py-2 px-2 d-flex align-items-center justify-content-center p-0 me-2">
+                                <i class="fa fa-globe fa-2x text-primary" style="margin-top: 0px;"></i>
+                            </a>
+                            <div class="dropdown-menu overflow-hidden mt-0">
+                                <a href="#!" class="dropdown-item active">
+                                    English
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                    Spanish
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                    French
+                                </a>
+                            </div>
+                        </li>
+                        <div class="d-none d-lg-block d-xl-block ms-auto d-flex align-items-center h-100">
+                            <div class="dropdown d-flex flex-column h-100 justify-content-center dropdown">
+                                <button data-bs-toggle="dropdown" class="btn btn-outline-primary me-1 dropdown-toggle rounded-pill"><i
+                                        class="fa fa-gear me-1"></i> Settings</button>
+                                <div class="dropdown-menu overflow-hidden mt-0">
+                                    <a href="settings-clients.html" class="dropdown-item active">
+                                        Clients
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-none d-lg-block d-xl-block">
+                            <a href="page-auth-signin.html" class="btn btn-primary rounded-pill">Log out</a>
+                        </div>
+
+                        <li
+                            class="nav-item dropdown ms-1 ms-lg-3 d-flex d-lg-none align-items-center justify-content-center flex-column h-100">
+                            <a href="#"
+                                class="nav-link sidebar-trigger-lg-down p-0 d-flex align-items-center justify-content-center rounded-3">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </header>
+                <!--Main Header End-->
+                <!--//Page Toolbar//-->
+                <div class="toolbar bg-white">
+                    <div class="position-relative container-fluid px-0">
+                        <div class="row position-relative">
+                            <div class="col-md-12 ">
+                                <div class="row g-0">
+                                    <div class="col-6">
+                                        <h5 class="mt-2">Campaigns</h5>
+                                    </div>
+                                    <div class="col-6 text-end">
+                                        <button class="btn btn-outline-primary rounded-pill" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal">
+                                            New Client
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" container-fluid text-center border-bottom py-2 px-4">
+
+                    <div class="row justify-content-center">
+                        <div class="col-auto text-center d-none d-lg-block d-xl-block">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb mb-0 justify-content-center">
+                                    <li class="breadcrumb-item"><a href="#!">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item active"><a href="#!">Make & Manage</a></li>
+                                    <li class="breadcrumb-item active">Campaigns</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <!--//Page Toolbar End//-->
+                <!--//Page content//-->
+                <div class="content p-4 d-flex flex-column-fluid">
+                    <div class="container-fluid px-0">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card shadow-sm mb-5 border-0">
+                                    <div class="card-body bg-primary bg-opacity-10">
+                                        <div class="row row-cols-auto g-3">
+                                            <div class="col-auto">
+                                                <label class="mb-2">Date</label>
+                                                <div class="input-group">
+                                                    <button id="predefineRange" class="form-control text-start">
+                                                        <span>January 26, 2023 - February 1, 2023</span>
+                                                    </button>
+                                                    <button style="min-width: 0;" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                                        </svg></button>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <label class="mb-2">Transfer
+                                                    Filter</label>
+                                                <div class="input-group">
+                                                    <select class="form-select" id="inputGroupSelect01">
+                                                        <option selected>Show Transfers and Views</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                    <button style="min-width: 0;" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                                        </svg></button>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <label class="mb-2">Labels</label>
+                                                <div class="input-group">
+                                                    <select class="form-select" id="inputGroupSelect01">
+                                                        <option selected>Show All</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                    <button style="min-width: 0;" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                                        </svg></button>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <label class="mb-2">Partners</label>
+                                                <div class="input-group">
+                                                    <select class="form-select" id="inputGroupSelect01">
+                                                        <option selected>
+                                                            Ours and Partners
+                                                        </option>
+                                                        <option value="1">
+                                                            One
+                                                        </option>
+                                                        <option value="2">
+                                                            Two
+                                                        </option>
+                                                        <option value="3">
+                                                            Three
+                                                        </option>
+                                                    </select>
+                                                    <button style="min-width: 0;" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                                        </svg></button>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <label class="mb-2">Retailers</label>
+                                                <div class="input-group">
+                                                    <select class="form-select" id="inputGroupSelect01">
+                                                        <option selected>
+                                                            All
+                                                            Retailers
+                                                        </option>
+                                                        <option value="1">
+                                                            One
+                                                        </option>
+                                                        <option value="2">
+                                                            Two
+                                                        </option>
+                                                        <option value="3">
+                                                            Three
+                                                        </option>
+                                                    </select>
+                                                    <button style="min-width: 0;" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                                        </svg></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="input-group input-group-sm">
+                                                    <span class="mt-1 me-3">Advanced Filters</span>
+                                                    <button style="min-width: 0;" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas"
+                                                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">ON
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                            class="bi bi-funnel-fill" viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z" />
+                                                        </svg></button>
+                                                    <button style="min-width: 0;" class="btn btn-primary">Reset
+                                                        All</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive bg-white">
+                            <table class="table table-borderless table-card mb-0" style="width:100%">
+                                <thead class="text-muted text-uppercase small bg-body">
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Campaign ID</th>
+                                        <th>Partner</th>
+                                        <th>Brand (Not Sorted)</th>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Results</th>
+                                        <th>Status</th>
+                                        <th>Created</th>
+                                        <th>Launch</th>
+                                        <th>End</th>
+                                        <th class="text-end">Last Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="align-middle">
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <a href="#!.html"><img src="assets/Frame.svg"
+                                                        class="avatar p-1 border rounded-2 me-2 align-middle"
+                                                        alt="" /></a>
+                                            </div>
+                                        </td>
+                                        <td>6686</td>
+                                        <td>Saatchi & Saatchi X</td>
+                                        <td>Pantene - US</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><a href="#">47518 0 Views $2,779,072.43</a></td>
+                                        <td>Active</td>
+                                        <td>2023-02-01 16:18:33</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td class="text-end">2023-02-14 12:58:29</td>
+                                        <!-- <td class="text-end">
+                                            <button type="button" class="btn btn-outline-primary btn-circle"
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-title="Deactivate"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="16" height="16" fill="currentColor"
+                                                    class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                                </svg>
+                                            </button>
+                                            <button type="button" class="btn btn-outline-primary btn-circle"
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-title="Activate"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="16" height="16" fill="currentColor" class="bi bi-dash"
+                                                    viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                                </svg>
+                                            </button>
+                                            <button type="button" class="btn btn-outline-primary btn-circle"
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-title="Edit"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                    height="16" fill="currentColor" class="bi bi-pencil-fill"
+                                                    viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+                                                </svg></button>
+                                            <button type="button" class="btn btn-outline-primary btn-circle"
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-title="Delete"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="16" height="16" fill="currentColor" class="bi bi-trash"
+                                                    viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                                </svg>
+                                            </button>
+                                        </td> -->
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <a href="#!.html"><img src="assets/Frame.svg"
+                                                        class="avatar p-1 border rounded-2 me-2 align-middle"
+                                                        alt="" /></a>
+                                            </div>
+                                        </td>
+                                        <td>6686</td>
+                                        <td>Saatchi & Saatchi X</td>
+                                        <td>Pantene - US</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><a href="#">47518 0 Views $2,779,072.43</a></td>
+                                        <td>Active</td>
+                                        <td>2023-02-01 16:18:33</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td class="text-end">2023-02-14 12:58:29</td>
+                                        <!-- <td class="text-end">
+                                                                                                                    <button type="button" class="btn btn-outline-primary btn-circle"
+                                                                                                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                                                                        data-bs-title="Deactivate"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                                                            width="16" height="16" fill="currentColor"
+                                                                                                                            class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                                                                                                            <path
+                                                                                                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                                                                                                        </svg>
+                                                                                                                    </button>
+                                                                                                                    <button type="button" class="btn btn-outline-primary btn-circle"
+                                                                                                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                                                                        data-bs-title="Activate"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                                                            width="16" height="16" fill="currentColor" class="bi bi-dash"
+                                                                                                                            viewBox="0 0 16 16">
+                                                                                                                            <path
+                                                                                                                                d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                                                                                                        </svg>
+                                                                                                                    </button>
+                                                                                                                    <button type="button" class="btn btn-outline-primary btn-circle"
+                                                                                                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                                                                        data-bs-title="Edit"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                                                                            height="16" fill="currentColor" class="bi bi-pencil-fill"
+                                                                                                                            viewBox="0 0 16 16">
+                                                                                                                            <path
+                                                                                                                                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+                                                                                                                        </svg></button>
+                                                                                                                    <button type="button" class="btn btn-outline-primary btn-circle"
+                                                                                                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                                                                        data-bs-title="Delete"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                                                            width="16" height="16" fill="currentColor" class="bi bi-trash"
+                                                                                                                            viewBox="0 0 16 16">
+                                                                                                                            <path
+                                                                                                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                                                                                                            <path fill-rule="evenodd"
+                                                                                                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                                                                                                        </svg>
+                                                                                                                    </button>
+                                                                                                                </td> -->
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--//Page content End//-->
+                 <!--//Page-footer//-->
+                 <footer class="bg-white">
+                   <div class="container-fluid py-5">
+                     <span class="d-block lh-sm text-center small">
+                       Do you have any questions about the tool? Contact us at: <a href="#"> support@smartcommerce.co</a> or the phone
+                       number:
+                       1-800-571-3520
+                       <!-- &copy;
+                        <script>
+                          document.write(new Date().getFullYear())
+                        </script>. Copyright -->
+                     </span>
+                   </div>
+                 </footer>
+                 <!--/.Page Footer End-->
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">New Client</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form class="row g-5 needs-validation" novalidate>
+                                    <div class="col-md-4">
+                                        <label for="validationCustom01" class="form-label"><span
+                                                class="text-secondary">*</span>Name</label>
+                                        <input type="text" class="form-control" id="validationCustom01" value=""
+                                            required>
+                                        <div class="invalid-feedback">
+                                            *Name Required
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="validationCustom02" class="form-label"><span
+                                                class="text-secondary">*</span>Code</label>
+                                        <input type="text" class="form-control" id="validationCustom02" value=""
+                                            required>
+                                        <div class="invalid-feedback">
+                                            *Code Required
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="validationCustom04" class="form-label"><span
+                                                class="text-secondary">*</span>Client Type</label>
+                                        <select class="form-select" id="validationCustom04" required>
+                                            <option selected disabled value="">
+                                                Choose...</option>
+                                            <option>Agency</option>
+                                            <option>Manufacturer</option>
+                                            <option>Retailer</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a Client Type
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="validationCustom04" class="form-label"><span
+                                                class="text-secondary">*</span>Authentication</label>
+                                        <select class="form-select" id="validationCustom05" required>
+                                            <option selected disabled value="">
+                                                Choose...</option>
+                                            <option>Agency</option>
+                                            <option>Manufacturer</option>
+                                            <option>Retailer</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a Authentication
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="validationCustom04" class="form-label"><span
+                                                class="text-secondary">*</span>Packages</label>
+                                        <select class="form-select" multiple>
+                                            <option value="1">Manufacturer - SmartLink - Standard</option>
+                                            <option value="2">Manufacturer - SmartLink - Standard</option>
+                                            <option value="3">Manufacturer - SmartLink - Standard</option>
+                                            <option value="4">Manufacturer - SmartLink - Standard</option>
+                                            <option value="5">Manufacturer - SmartLink - Standard</option>
+                                            <option value="6">Manufacturer - SmartLink - Standard</option>
+                                        </select>
+                                        <div class="form-text">This is a multiselector field, press key 'Ctrl' + click
+                                            to select more than one value in the box</div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Tracking</label>
+                                        <select class="form-select">
+                                            <option selected disabled value="">
+                                                Do Not Track</option>
+                                            <option>Off</option>
+                                            <option>No Opt In</option>
+                                            <option>Implicit Opt In</option>
+                                            <option>Explicit Opt In</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a Package
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <label class="form-label">GTM Container ID</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label">Action
+                                            Attributes</label>
+                                        <textarea type="text" class="form-control"></textarea>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch"
+                                                id="flexSwitchCheckChecked" checked>
+                                            <label class="form-check-label" for="flexSwitchCheckChecked">Enable
+                                                Transfers' Scrub</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch"
+                                                id="flexSwitchCheckChecked" checked>
+                                            <label class="form-check-label" for="flexSwitchCheckChecked">Enable
+                                                Users'
+                                                Password Reset</label>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-primary rounded-pill"
+                                    data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary rounded-pill">Save</button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!--///////////Page content wrapper End///////////////-->
+        </div>
+    </div>
+    
+    <!--////////////Theme Core scripts Start/////////////////-->
+
+    <script src="assets/js/theme.bundle.js"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!--////////////Theme Core scripts End/////////////////-->
+
+
+</body>
+
+</html>
