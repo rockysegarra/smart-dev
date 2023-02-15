@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Suite</title>
+
+    <!--Simplebar css-->
+    <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css">
+
+    <!--Choices css-->
+    <link rel="stylesheet" href="assets/vendor/css/choices.min.css">
+    <link href="assets/vendor/css/quill.snow.css" rel="stylesheet" />
+
+    <!--Font awesome icons-->
+    <link href="assets/fonts/font-awesome5-free/css/all.min.css" rel="stylesheet">
+
+    <!--Google web fonts-->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!--Main style-->
+    <link rel="stylesheet" href="assets/css/style.min.css" id="switchThemeStyle">
+    <script src="https://kit.fontawesome.com/9b71cccaf3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+      <!--////////////////// PreLoader Start//////////////////////-->
+      <div class="loader">
+        <!--Placeholder animated layout for preloader-->
+        <div class="d-flex flex-column flex-root">
+          <div class="page d-flex flex-row flex-column-fluid">
+
+            <!--Sidebar start-->
+            <aside class="page-sidebar aside-dark placeholder-wave">
+              <div class="placeholder col-12 h-100 bg-gray"></div>
+            </aside>
+            <div class="page-content d-flex flex-column flex-row-fluid">
+              <div
+                class="content flex-column p-4 pb-0 d-flex justify-content-center align-items-center flex-column-fluid position-relative">
+                <div class="w-100 h-100 position-relative d-flex align-items-center justify-content-center">
+                  <i class="anim-spinner fas fa-spinner me-3"></i>
+                  <div>
+                  <span>Loading...</span>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--////////////////// /.PreLoader END//////////////////////-->
+
+    <!--App Start-->
+    <div class="d-flex flex-column flex-root">
+        <!--Page-->
+        <div class="page d-flex flex-row flex-column-fluid">
+            <!--///////////Page sidebar begin///////////////-->
+            <aside class="page-sidebar">
+                <div class="h-100 flex-column d-flex" data-simplebar>
+
+                    <!--Aside-logo-->
+                    <div class="aside-logo p-3 position-relative">
+                        <a href="index.html" class="d-block pe-2">
+                            <div class="d-flex align-items-center flex-no-wrap text-truncate">
+                                <!--Sidebar-icon-->
+                                <span class="sidebar-icon">
+                                    <img src="assets/smart-mark.svg">
+                                </span>
+                                <span class="sidebar-text">
+                                    <!--Sidebar-text-->
+                                    <span class="sidebar-text text-truncate fs-4 text-uppercase fw-bolder">
+                                        <img src="assets/smart-logo.svg">
+                                    </span>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <!--Aside-Menu pe-2 -->
+                    <div class="pe-4 ps-4 pt-4 d-lg-none" style="background-color: #252D6C;">
+                        <div class="mb-2"><select class="form-select" aria-label="Default select example">
+                                <option selected>Manufacturer</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select></div>
+                        <div class="mb-2"><select class="form-select" aria-label="Default select example">
+                                <option selected>Procter & Gamber</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select></div>
+                        <div class="mb-2"><select class="form-select" aria-label="Default select example">
+                                <option selected>Pantene - US</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="aside-menu my-auto flex-column-fluid text-white"
+                        style="background-color: #252D6C; padding-left: 10px;">
+                        <nav class="flex-grow-1 h-100" id="page-navbar">
+                            <!--:Sidebar nav-->
+                            <ul class="nav flex-column collapse-group collapse d-flex pt-4">
+                                <!-- <li class="nav-item sidebar-title text-truncate opacity-50 small">
+                                    <i class="fas fa-ellipsis-h align-middle"></i>
+                                    <span>Main</span>
+                                </li> -->
+                                <li class="nav-item">
+                                    <a href="#dashboards" data-bs-toggle="collapse"
+                                        class="nav-link d-flex align-items-center text-truncate "
+                                        aria-expanded="false">
+                                        <span class="sidebar-icon">
+                                            <i class="fa fa-chart-line"></i>
+                                        </span>
+                                        <!--Sidebar nav text-->
+                                        <span class="sidebar-text">Measure</span>
+                                    </a>
+                                    <ul data-bs-target="#dashboards" id="dashboards"
+                                        class="sidebar-dropdown list-unstyled collapse mb-3">
+                                        <li class="sidebar-item"><a class="sidebar-link" href="measure-main.html">Main</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a data-bs-toggle="collapse"
+                                        class="nav-link d-flex align-items-center text-truncate active"
+                                        aria-expanded="false" href="#ui-pages">
+                                        <span class="sidebar-icon">
+                                            <i class="fa fa-link"></i>
+                                        </span>
+                                        <!--Sidebar nav text-->
+                                        <span class="sidebar-text">Make & Manage</span>
+                                    </a>
+                                    <ul id="ui-pages" class="sidebar-dropdown list-unstyled collapse">
+                                        <li class="sidebar-item"><a class="sidebar-link" href="make-main.html">Main</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="make-click2cart.html">Click2Cart</a>
+                                        </li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="make-campaigns.html">Campaigns</a>
+                                        </li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="#">Shopper's Choice</a>
+                                        </li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="#">SmartSite</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="#">Eshop</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="make-catalog.html">Catalog</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="maps.html"
+                                        class="nav-link d-flex align-items-center text-truncate ">
+                                        <span class="sidebar-icon">
+                                            <i class="fa fa-book-open"></i>
+                                        </span>
+                                        <span class="sidebar-text">Product Catalog</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="datatables.html"
+                                        class="nav-link d-flex align-items-center text-truncate ">
+                                        <span class="sidebar-icon">
+                                            <i class="fa fa-info"></i>
+                                        </span>
+                                        <span class="sidebar-text">SmartHub</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item d-lg-none">
+                                    <a href="#settings" data-bs-toggle="collapse"
+                                        class="nav-link d-flex align-items-center text-truncate "
+                                        aria-expanded="false">
+                                        <span class="sidebar-icon">
+                                            <i class="fa fa-gear"></i>
+                                        </span>
+                                        <!--Sidebar nav text-->
+                                        <span class="sidebar-text">Settings</span>
+                                    </a>
+                                    <ul data-bs-target="settings" id="settings" class="sidebar-dropdown list-unstyled collapse">
+                                        <li class="sidebar-item"><a class="sidebar-link" href="settings-clients.html">Clients</a>
+                                        </li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="index-dashboard2.html">Dashboard
+                                                2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item d-lg-none">
+                                    <a href="page-auth-signin.html"
+                                        class="nav-link d-flex align-items-center text-truncate ">
+                                        <span class="sidebar-icon">
+                                            <i class="fa fa-power-off"></i>
+                                        </span>
+                                        <span class="sidebar-text">Log Out</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!--Aside-footer-->
+                    <!-- <footer class="aside-footer position-relative p-3">
+                        <div class="p-3 bg-secondary text-white rounded-3 position-relative overflow-hidden">
+                            <div class="position-relative">
+                                <p class="mb-0 pb-2">Release your maximal potencial software</p>
+                                <a href="#!.html" class="btn rounded-pill btn-white text-truncate btn-sm">Upgrade Pro</a>
+                            </div>
+                        </div>
+                    </footer> -->
+                </div>
+            </aside>
+            <!--///////////Page Sidebar End///////////////-->
+
+            <!--///Sidebar close button for 991px or below devices///-->
+            <div class="sidebar-close d-lg-none">
+                <a href="#"></a>
+            </div>
+            <!--///.Sidebar close end///-->
+
+            <!--///////////Page content wrapper///////////////-->
+            <main class="page-content d-flex flex-column flex-row-fluid">
+                <!--//page-header//-->
+                <header class="navbar py-0 page-header border-bottom navbar-expand navbar-light px-4">
+                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <div class="d-flex align-items-center flex-no-wrap text-truncate">
+                            <!--Sidebar-icon-->
+                            <img src="assets/smart-mark.svg">
+                        </div>
+                    </a>
+                    <ul class="navbar-nav d-flex align-items-center h-100">
+                        <li class="nav-item d-none d-lg-flex flex-column h-100 me-lg-2 align-items-center justify-content-center">
+                            <a href="javascript:void(0)"
+                                class="sidebar-trigger nav-link rounded-3 size-35 d-flex align-items-center justify-content-center p-0">
+                                <i class="fa fa-arrow-left"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex flex-column me-lg-2 h-100 justify-content-center dropdown">
+                            <div class="d-none d-lg-block d-xl-block">
+                                <div class="d-flex">
+                                    <div class="me-1"><select class="form-select" aria-label="Default select example">
+                                            <option selected>Manufacturer</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select></div>
+                                    <div class="me-1"><select class="form-select" aria-label="Default select example">
+                                            <option selected>Procter & Gamber</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select></div>
+                                    <div class="me-1"><select class="form-select" aria-label="Default select example">
+                                            <option selected>Pantene - US</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto d-flex align-items-center h-100">
+                        <li class="nav-item d-flex flex-column h-100 justify-content-center dropdown">
+                            <a href="#" data-bs-toggle="dropdown"
+                                class="dropdown-toggle nav-link py-2 px-2 d-flex align-items-center justify-content-center p-0 me-2">
+                                <i class="fa fa-globe fa-2x text-primary" style="margin-top: 0px;"></i>
+                            </a>
+                            <div class="dropdown-menu overflow-hidden mt-0">
+                                <a href="#!" class="dropdown-item active">
+                                    English
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                    Spanish
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                    French
+                                </a>
+                            </div>
+                        </li>
+                        <div class="d-none d-lg-block d-xl-block ms-auto d-flex align-items-center h-100">
+                            <div class="dropdown d-flex flex-column h-100 justify-content-center dropdown">
+                                <button data-bs-toggle="dropdown" class="btn btn-outline-primary me-1 dropdown-toggle rounded-pill"><i
+                                        class="fa fa-gear me-1"></i> Settings</button>
+                                <div class="dropdown-menu overflow-hidden mt-0">
+                                    <a href="settings-clients.html" class="dropdown-item active">
+                                        Clients
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-none d-lg-block d-xl-block">
+                            <a href="page-auth-signin.html" class="btn btn-primary rounded-pill">Log out</a>
+                        </div>
+
+                        <li
+                            class="nav-item dropdown ms-1 ms-lg-3 d-flex d-lg-none align-items-center justify-content-center flex-column h-100">
+                            <a href="#"
+                                class="nav-link sidebar-trigger-lg-down p-0 d-flex align-items-center justify-content-center rounded-3">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </header>
+                <!--Main Header End-->
+                <!--//Page Toolbar//-->
+                <div class="toolbar bg-white">
+                    <div class="position-relative container-fluid px-0">
+                        <div class="row position-relative">
+                            <div class="col-md-12 ">
+                                <div class="row g-0">
+                                    <div class="col-6">
+                                        <h5 class="mt-2">Click2Cart</h5>
+                                    </div>
+                                    <div class="col-6 text-end">
+                                        <button class="btn btn-outline-primary rounded-pill">
+                                            <i class="fa fa-info me-1"></i> More Info
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" container-fluid text-center border-bottom py-2 px-4">
+                    <div class="row justify-content-md-center">
+                        <div class="col text-start align-self-start">
+                            <a href="#">
+                                <i class="fa fa-arrow-left me-2"></i>
+                                Return to list
+                            </a>
+                        </div>
+                        <div class="col-auto text-center d-none d-lg-block d-xl-block">
+                            <nav aria-label="breadcrumb">
+                                <ol
+                                    class="breadcrumb mb-0 justify-content-end justify-content-lg-center justify-content-sm-end">
+                                    <li class="breadcrumb-item"><a href="#!">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">Pages</li>
+                                    <li class="breadcrumb-item active">Blank</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="col text-end"></div>
+                    </div>
+                </div>
+                <!--//Page Toolbar End//-->
+                <!--//Page content//-->
+                <div class="content p-4 d-flex flex-column-fluid">
+                    <div class="container-fluid px-0">
+                        
+                        <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                    data-bs-target="#home-tab-pane" type="button" role="tab"
+                                    aria-controls="home-tab-pane" aria-selected="true"> <small>STEP 1</small><span
+                                        class="d-none d-lg-block d-xl-block">
+                                        Choose the lead
+                                        retailer</span></button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                    aria-controls="profile-tab-pane" aria-selected="false"><small>STEP 2</small><span
+                                        class="d-none d-lg-block d-xl-block">
+                                        Search and choose
+                                        products</span></button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                    data-bs-target="#contact-tab-pane" type="button" role="tab"
+                                    aria-controls="contact-tab-pane" aria-selected="false"><small>STEP 3</small><span
+                                        class="d-none d-lg-block d-xl-block">
+                                        Customize your
+                                        Messaging</span></button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="disabled-tab" data-bs-toggle="tab"
+                                    data-bs-target="#disabled-tab-pane" type="button" role="tab"
+                                    aria-controls="disabled-tab-pane" aria-selected="false"><small>STEP 4</small><span
+                                        class="d-none d-lg-block d-xl-block">
+                                        Save &
+                                        Preview</span></button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                                aria-labelledby="home-tab" tabindex="0">
+                                <div class="card border-0 overflow-hidden">
+                                    <div class="card-header d-lg-none">
+                                        <div class="hstack gap-3">
+                                            <div class="bg-body-tertiary">
+                                                <h5 class="mb-0">Choose the lead retailer
+                                                </h5>
+                                            </div>
+                                            <div class="bg-body-tertiary ms-auto">
+                                                <h5 class="mb-0">
+                                                    <span class="badge bg-light text-dark">1
+                                                        of 4</span>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body" style="min-height: 5rem;">
+                                        <div class="row border-bottom pb-2 mb-2">
+                                            <div class="col-auto">
+                                                <div class="form-check form-switch mb-3 mb-lg-0">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="flexSwitchCheckDefault" checked>
+                                                    <label class="form-check-label" for="flexSwitchCheckDefault">
+                                                        <i class="fa fa-circle text-primary"></i>
+                                                        National
+                                                        Retailers</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="form-check form-switch mb-2 mb-lg-0">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="flexSwitchCheckDefault" checked>
+                                                    <label class="form-check-label" for="flexSwitchCheckDefault">
+                                                        <i class="fa fa-circle text-warning"></i>
+                                                        Local
+                                                        Retailers</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="form-check form-switch mb-3 mb-lg-0">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="flexSwitchCheckDefault">
+                                                    <label class="form-check-label" for="flexSwitchCheckDefault">
+                                                        <i class="fa fa-circle text-success"></i>
+                                                        PDP
+                                                        Retailers</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row pb-4 pt-2">
+                                            <div class="col-auto mb-2">
+                                                <div class="d-flex flex-column" style="width: 100px;">
+                                                    <div class="text-end">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            fill="currentColor" class="bi bi-circle-fill text-primary"
+                                                            viewBox="0 0 16 16">
+                                                            <circle cx="8" cy="8" r="8" />
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            fill="currentColor" class="bi bi-circle-fill text-warning"
+                                                            viewBox="0 0 16 16">
+                                                            <circle cx="8" cy="8" r="8" />
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            fill="currentColor" class="bi bi-circle-fill text-success"
+                                                            viewBox="0 0 16 16">
+                                                            <circle cx="8" cy="8" r="8" />
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <button type="button"
+                                                            class="btn btn-outline-light position-relative me-2"
+                                                            data-bs-toggle="button" style="width: 100px;">
+                                                            <img class="img-fluid" src="assets/Frame.svg">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto mb-2">
+                                                <div class="d-flex flex-column" style="width: 100px;">
+                                                    <div class="text-end">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            fill="currentColor" class="bi bi-circle-fill text-primary"
+                                                            viewBox="0 0 16 16">
+                                                            <circle cx="8" cy="8" r="8" />
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            fill="currentColor" class="bi bi-circle-fill text-warning"
+                                                            viewBox="0 0 16 16">
+                                                            <circle cx="8" cy="8" r="8" />
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            fill="currentColor" class="bi bi-circle-fill text-success"
+                                                            viewBox="0 0 16 16">
+                                                            <circle cx="8" cy="8" r="8" />
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <button type="button"
+                                                            class="btn btn-outline-light position-relative me-2"
+                                                            data-bs-toggle="button" style="width: 100px;">
+                                                            <img class="img-fluid" src="assets/Frame.svg">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto mb-2">
+                                                <div class="d-flex flex-column" style="width: 100px;">
+                                                    <div class="text-end">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            fill="currentColor" class="bi bi-circle-fill text-primary"
+                                                            viewBox="0 0 16 16">
+                                                            <circle cx="8" cy="8" r="8" />
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            fill="currentColor" class="bi bi-circle-fill text-warning"
+                                                            viewBox="0 0 16 16">
+                                                            <circle cx="8" cy="8" r="8" />
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            fill="currentColor" class="bi bi-circle-fill text-success"
+                                                            viewBox="0 0 16 16">
+                                                            <circle cx="8" cy="8" r="8" />
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <button type="button"
+                                                            class="btn btn-outline-light position-relative me-2"
+                                                            data-bs-toggle="button" style="width: 100px;">
+                                                            <img class="img-fluid" src="assets/Frame.svg">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto mb-2">
+                                                <div class="d-flex flex-column" style="width: 100px;">
+                                                    <div class="text-end">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            fill="currentColor" class="bi bi-circle-fill text-primary"
+                                                            viewBox="0 0 16 16">
+                                                            <circle cx="8" cy="8" r="8" />
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            fill="currentColor" class="bi bi-circle-fill text-warning"
+                                                            viewBox="0 0 16 16">
+                                                            <circle cx="8" cy="8" r="8" />
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            fill="currentColor" class="bi bi-circle-fill text-success"
+                                                            viewBox="0 0 16 16">
+                                                            <circle cx="8" cy="8" r="8" />
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <button type="button"
+                                                            class="btn btn-outline-light position-relative me-2"
+                                                            data-bs-toggle="button" style="width: 100px;">
+                                                            <img class="img-fluid" src="assets/Frame.svg">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto mb-2">
+                                                <div class="d-flex flex-column" style="width: 100px;">
+                                                    <div class="text-end">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            fill="currentColor" class="bi bi-circle-fill text-primary"
+                                                            viewBox="0 0 16 16">
+                                                            <circle cx="8" cy="8" r="8" />
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            fill="currentColor" class="bi bi-circle-fill text-warning"
+                                                            viewBox="0 0 16 16">
+                                                            <circle cx="8" cy="8" r="8" />
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            fill="currentColor" class="bi bi-circle-fill text-success"
+                                                            viewBox="0 0 16 16">
+                                                            <circle cx="8" cy="8" r="8" />
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <button type="button"
+                                                            class="btn btn-outline-light position-relative me-2"
+                                                            data-bs-toggle="button" style="width: 100px;">
+                                                            <img class="img-fluid" src="assets/Frame.svg">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row border-bottom border-top py-2 mb-2">
+                                            <div class="col-auto">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="flexSwitchCheckDefault">
+                                                    <label class="form-check-label" for="flexSwitchCheckDefault"> Backup
+                                                        Retailers</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row border-bottom py-2">
+                                            <div class="col-auto">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="flexSwitchCheckDefault">
+                                                    <label class="form-check-label" for="flexSwitchCheckDefault">
+                                                        Customer
+                                                        Retailer Options</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="nav nav-tabs mt-5" id="myTab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#home-tab-pane-1" type="button" role="tab"
+                                                    aria-controls="home-tab-pane" aria-selected="true">
+                                                    <span class="px-5">Select
+                                                        Retailers</span></button>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content" id="myTabContent">
+                                            <div class="tab-pane fade show active" id="home-tab-pane-1" role="tabpanel"
+                                                aria-labelledby="home-tab" tabindex="0">
+                                                <div class="card border-0 overflow-hidden">
+                                                    <div class="card-body p-0" style="min-height: 5rem;">
+                                                        <div class="table-responsive mt-3">
+                                                            <table
+                                                                class="table table-borderless table-nowrap table-card mb-0"
+                                                                style="width: 100%">
+                                                                <thead
+                                                                    class="text-muted text-uppercase small bg-body bg-opacity-50">
+                                                                    <tr>
+                                                                        <th>Retailer Logo</th>
+                                                                        <th>Retailer Name</th>
+                                                                        <th>Type</th>
+                                                                        <th>Carting Type</th>
+                                                                        <th>Retailer Carting Parameters</th>
+                                                                        <th class="text-end">Actions
+                                                                        </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody class="align-middle">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="d-flex align-items-center">
+                                                                                <a href="#!.html"><img
+                                                                                        src="assets/Frame.svg"
+                                                                                        class="avatar p-1 border rounded-2 me-2 align-middle"
+                                                                                        alt="" /></a>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+
+                                                                        </td>
+                                                                        <td>National PDP Retailer</td>
+                                                                        <td>
+                                                                            PDP
+                                                                        </td>
+                                                                        <td></td>
+                                                                        <td class="text-end">
+                                                                            <button type="button"
+                                                                                class="btn btn-outline-primary btn-circle"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#exampleModal"><svg
+                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                    width="16" height="16"
+                                                                                    fill="currentColor"
+                                                                                    class="bi bi-pencil-fill"
+                                                                                    viewBox="0 0 16 16">
+                                                                                    <path
+                                                                                        d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+                                                                                </svg></button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="#" class="btn btn-primary rounded-pill">
+                                            Next</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
+                                aria-labelledby="profile-tab" tabindex="0">
+                                <div class="card border-0 overflow-hidden">
+                                    <div class="card-header d-lg-none">
+                                        <div class="hstack gap-3">
+                                            <div class="bg-body-tertiary">
+                                                <h5 class="mb-0">Search and choose products
+                                                </h5>
+                                            </div>
+                                            <div class="bg-body-tertiary ms-auto">
+                                                <h5 class="mb-0">
+                                                    <span class="badge bg-light text-dark">2
+                                                        of 4</span>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body" style="min-height: 5rem">
+                                        <div class="row border-bottom pb-2 mb-2">
+                                            <div class="row">
+                                                <div class="col-lg-5 col-md-6 mb-3">
+                                                    <div class="hstack gap-3">
+                                                        <input class="form-control me-auto" type="text"
+                                                            placeholder="Search" aria-label="Search" />
+                                                        <button type="button" class="btn btn-primary rounded-pill">
+                                                            Submit
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-7 col-md-6 ms-auto">
+                                                    <div class="d-flex justify-content-end">
+                                                        <div class="form-check form-switch mb-3 mb-lg-0 me-4">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                role="switch" id="flexSwitchCheckDefault" checked />
+                                                            <label class="form-check-label"
+                                                                for="flexSwitchCheckDefault">
+                                                                Available Products</label>
+                                                        </div>
+                                                        <div class="form-check form-switch mb-3 mb-lg-0">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                role="switch" id="flexSwitchCheckDefault" checked />
+                                                            <label class="form-check-label"
+                                                                for="flexSwitchCheckDefault">
+                                                                Related Products</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 py-4">
+                                                <div class="row row-cols-2 row-cols-md-5 g-4">
+                                                    <div class="col">
+                                                        <div class="card h-100">
+                                                            <div class="card-body">
+                                                                <img src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
+                                                                    class="card-img-top img-fluid p-5" alt="..." />
+                                                            </div>
+                                                            <div class="card-footer border-top-0">
+                                                                <p class="card-text">
+                                                                    Pantene - Pantene Beautiful
+                                                                    Lengths Conditioner
+                                                                    23.7 fl oz bottle
+                                                                </p>
+                                                                <button
+                                                                    class="btn btn-link dropdown-toggle p-0 m-0 text-primary"
+                                                                    type="button" data-bs-toggle="dropdown"
+                                                                    aria-expanded="false">
+                                                                    See related products (1)
+                                                                </button>
+                                                                <ul class="dropdown-menu p-0 border-0">
+                                                                    <div class="scroller-product">
+                                                                        <div class="card mb-1">
+                                                                            <div class="row g-3 p-3">
+                                                                                <div class="col-md-4">
+                                                                                    <img src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
+                                                                                        class="img-fluid" alt="...">
+                                                                                </div>
+                                                                                <div class="col-md-8">
+                                                                                    <small>Pantene - Pantene
+                                                                                        Beautiful
+                                                                                        Lengths Conditioner 23.7 fl
+                                                                                        oz
+                                                                                        bottle</small>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="card mb-1">
+                                                                            <div class="row g-3 py-3">
+                                                                                <div class="col-md-4">
+                                                                                    <img src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
+                                                                                        class="img-fluid" alt="...">
+                                                                                </div>
+                                                                                <div class="col-md-8">
+                                                                                    <small>Pantene - Pantene
+                                                                                        Beautiful
+                                                                                        Lengths Conditioner 23.7 fl
+                                                                                        oz
+                                                                                        bottle</small>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="card">
+                                                                            <div class="row g-3 py-3">
+                                                                                <div class="col-md-4">
+                                                                                    <img src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
+                                                                                        class="img-fluid" alt="...">
+                                                                                </div>
+                                                                                <div class="col-md-8">
+                                                                                    <small>Pantene - Pantene
+                                                                                        Beautiful
+                                                                                        Lengths Conditioner 23.7 fl
+                                                                                        oz
+                                                                                        bottle</small>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </ul>
+                                                                <div class="d-grid gap-2 mt-3">
+                                                                    <button class="btn btn-outline-primary rounded-pill"
+                                                                        type="button">
+                                                                        Add +
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-footer">
+                                                                <div class="row justify-content-center">
+                                                                    <div class="col-4">
+                                                                        <img class="img-fluid" src="assets/Frame.svg" />
+                                                                    </div>
+                                                                    <div class="col-4">
+                                                                        <img class="img-fluid"
+                                                                            src="assets/target.svg" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="card h-100">
+                                                            <div class="card-body">
+                                                                <img src="https://www.instacart.com/image-server/394x394/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_0df07909-4c21-4556-8754-9f11c2c5fce8.jpg"
+                                                                    class="card-img-top img-fluid p-5" alt="..." />
+                                                            </div>
+                                                            <div class="card-footer border-top-0">
+                                                                <p class="card-text">
+                                                                    Pantene - Pantene Beautiful
+                                                                    Lengths Conditioner
+                                                                    23.7 fl oz bottle
+                                                                </p>
+                                                                <button
+                                                                    class="btn btn-link dropdown-toggle p-0 m-0 text-primary"
+                                                                    type="button" data-bs-toggle="dropdown"
+                                                                    aria-expanded="false">
+                                                                    See related products (1)
+                                                                </button>
+                                                                <ul class="dropdown-menu p-0 border-0">
+                                                                    <div class="scroller-product">
+                                                                        <div class="card mb-1">
+                                                                            <div class="row g-3 p-3">
+                                                                                <div class="col-md-4">
+                                                                                    <img src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
+                                                                                        class="img-fluid" alt="...">
+                                                                                </div>
+                                                                                <div class="col-md-8">
+                                                                                    <small>Pantene - Pantene
+                                                                                        Beautiful
+                                                                                        Lengths Conditioner 23.7 fl
+                                                                                        oz
+                                                                                        bottle</small>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="card mb-1">
+                                                                            <div class="row g-3 py-3">
+                                                                                <div class="col-md-4">
+                                                                                    <img src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
+                                                                                        class="img-fluid" alt="...">
+                                                                                </div>
+                                                                                <div class="col-md-8">
+                                                                                    <small>Pantene - Pantene
+                                                                                        Beautiful
+                                                                                        Lengths Conditioner 23.7 fl
+                                                                                        oz
+                                                                                        bottle</small>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="card">
+                                                                            <div class="row g-3 py-3">
+                                                                                <div class="col-md-4">
+                                                                                    <img src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
+                                                                                        class="img-fluid" alt="...">
+                                                                                </div>
+                                                                                <div class="col-md-8">
+                                                                                    <small>Pantene - Pantene
+                                                                                        Beautiful
+                                                                                        Lengths Conditioner 23.7 fl
+                                                                                        oz
+                                                                                        bottle</small>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </ul>
+                                                                <div class="d-grid gap-2 mt-3">
+                                                                    <button class="btn btn-outline-primary rounded-pill"
+                                                                        type="button">
+                                                                        Add +
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-footer">
+                                                                <div class="row justify-content-center">
+                                                                    <div class="col-4">
+                                                                        <img class="img-fluid" src="assets/Frame.svg" />
+                                                                    </div>
+                                                                    <div class="col-4">
+                                                                        <img class="img-fluid"
+                                                                            src="assets/target.svg" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="card h-100">
+                                                            <div class="card-body">
+                                                                <img src="https://www.instacart.com/image-server/394x394/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_0df07909-4c21-4556-8754-9f11c2c5fce8.jpg"
+                                                                    class="card-img-top img-fluid p-5" alt="..." />
+                                                            </div>
+                                                            <div class="card-footer border-top-0">
+                                                                <p class="card-text">
+                                                                    Pantene - Pantene Beautiful
+                                                                    Lengths Conditioner
+                                                                    23.7 fl oz bottle
+                                                                </p>
+                                                                <button
+                                                                    class="btn btn-link dropdown-toggle p-0 m-0 text-primary"
+                                                                    type="button" data-bs-toggle="dropdown"
+                                                                    aria-expanded="false">
+                                                                    See related products (1)
+                                                                </button>
+                                                                <div class="d-grid gap-2 mt-3">
+                                                                    <button class="btn btn-outline-primary rounded-pill"
+                                                                        type="button">
+                                                                        Add +
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-footer">
+                                                                <div class="row justify-content-center">
+                                                                    <div class="col-4">
+                                                                        <img class="img-fluid" src="assets/Frame.svg" />
+                                                                    </div>
+                                                                    <div class="col-4">
+                                                                        <img class="img-fluid"
+                                                                            src="assets/target.svg" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="card h-100">
+                                                            <div class="card-body">
+                                                                <img src="https://www.instacart.com/image-server/394x394/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_0df07909-4c21-4556-8754-9f11c2c5fce8.jpg"
+                                                                    class="card-img-top img-fluid p-5" alt="..." />
+                                                            </div>
+                                                            <div class="card-footer border-top-0">
+                                                                <p class="card-text">
+                                                                    Pantene - Pantene Beautiful
+                                                                    Lengths Conditioner
+                                                                    23.7 fl oz bottle
+                                                                </p>
+                                                                <button
+                                                                    class="btn btn-link dropdown-toggle p-0 m-0 text-primary"
+                                                                    type="button" data-bs-toggle="dropdown"
+                                                                    aria-expanded="false">
+                                                                    See related products (1)
+                                                                </button>
+                                                                <div class="d-grid gap-2 mt-3">
+                                                                    <button class="btn btn-outline-primary rounded-pill"
+                                                                        type="button">
+                                                                        Add +
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-footer">
+                                                                <div class="row justify-content-center">
+                                                                    <div class="col-4">
+                                                                        <img class="img-fluid" src="assets/Frame.svg" />
+                                                                    </div>
+                                                                    <div class="col-4">
+                                                                        <img class="img-fluid"
+                                                                            src="assets/target.svg" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="card h-100">
+                                                            <div class="card-body">
+                                                                <img style="height: 100px;"
+                                                                    src="https://www.instacart.com/image-server/394x394/filters:fill(FFF,true):format(jpg)/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_0df07909-4c21-4556-8754-9f11c2c5fce8.jpg"
+                                                                    class="card-img-top img-fluid p-5" alt="..." />
+                                                            </div>
+                                                            <div class="card-footer border-top-0">
+                                                                <p class="card-text">
+                                                                    Pantene - Pantene Beautiful
+                                                                    Lengths Conditioner
+                                                                    23.7 fl oz bottle
+                                                                </p>
+                                                                <button
+                                                                    class="btn btn-link dropdown-toggle p-0 m-0 text-primary"
+                                                                    type="button" data-bs-toggle="dropdown"
+                                                                    aria-expanded="false">
+                                                                    See related products (1)
+                                                                </button>
+                                                                <div class="d-grid gap-2 mt-3">
+                                                                    <button class="btn btn-outline-primary rounded-pill"
+                                                                        type="button">
+                                                                        Add +
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-footer">
+                                                                <div class="row justify-content-center">
+                                                                    <div class="col-4">
+                                                                        <img class="img-fluid" src="assets/Frame.svg" />
+                                                                    </div>
+                                                                    <div class="col-4">
+                                                                        <img class="img-fluid"
+                                                                            src="assets/target.svg" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="table-responsive">
+                                                    <table class="table table-borderless table-nowrap table-card mb-0"
+                                                        style="width: 100%">
+                                                        <thead
+                                                            class="text-muted text-uppercase small bg-body bg-opacity-50">
+                                                            <tr>
+                                                                <th>Order</th>
+                                                                <th>Product</th>
+                                                                <th style="width: 8rem; text-align: center">
+                                                                    Quantity
+                                                                </th>
+                                                                <th>Retailers</th>
+                                                                <th>Stock</th>
+                                                                <th>Product Substitutions</th>
+                                                                <th class="text-end">Actions
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="align-middle">
+                                                            <tr>
+                                                                <td>#1</td>
+                                                                <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <a href="#!.html"><img
+                                                                                src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
+                                                                                class="avatar p-1 border rounded-2 me-2 align-middle"
+                                                                                alt="" /></a>
+                                                                        <p class="mb-0 text-truncate">
+                                                                            <a href="#!.html" class="text-reset">Pantene
+                                                                                -
+                                                                                Pantene
+                                                                                Beautiful
+                                                                                Lengths
+                                                                                Conditioner 23.7
+                                                                                fl oz bottle</a>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <span class="me-2">
+                                                                            <input type="number"
+                                                                                class="form-control text-center"
+                                                                                id="exampleFormControlInput1"
+                                                                                placeholder="1" /></span>
+                                                                    </div>
+                                                                </td>
+                                                                <td>Walmart, Amazon</td>
+                                                                <td>
+                                                                    <span
+                                                                        class="badge rounded-pill bg-success p-2 text-uppercase">In
+                                                                        Stock</span>
+                                                                </td>
+                                                                <td>Direct</td>
+                                                                <td class="text-end">
+                                                                    <a href="#" class="me-2"><i
+                                                                            class="fa fa-pen"></i></a>
+                                                                    <a href="#" class="me-2"><i
+                                                                            class="fa fa-trash"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#1</td>
+                                                                <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <a href="#!.html"><img
+                                                                                src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
+                                                                                class="avatar p-1 border rounded-2 me-2 align-middle"
+                                                                                alt="" /></a>
+                                                                        <p class="mb-0 text-truncate">
+                                                                            <a href="#!.html" class="text-reset">Pantene
+                                                                                -
+                                                                                Pantene
+                                                                                Beautiful
+                                                                                Lengths
+                                                                                Conditioner 23.7
+                                                                                fl oz bottle</a>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <span class="me-2">
+                                                                            <input type="number"
+                                                                                class="form-control text-center"
+                                                                                id="exampleFormControlInput1"
+                                                                                placeholder="1" /></span>
+                                                                    </div>
+                                                                </td>
+                                                                <td>Walmart, Amazon</td>
+                                                                <td>
+                                                                    <span
+                                                                        class="badge rounded-pill bg-success p-2 text-uppercase">In
+                                                                        Stock</span>
+                                                                </td>
+                                                                <td>Direct</td>
+                                                                <td class="text-end">
+                                                                    <a href="#" class="me-2"><i
+                                                                            class="fa fa-pen"></i></a>
+                                                                    <a href="#" class="me-2"><i
+                                                                            class="fa fa-trash"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#1</td>
+                                                                <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <a href="#!.html"><img
+                                                                                src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
+                                                                                class="avatar p-1 border rounded-2 me-2 align-middle"
+                                                                                alt="" /></a>
+                                                                        <p class="mb-0 text-truncate">
+                                                                            <a href="#!.html" class="text-reset">Pantene
+                                                                                -
+                                                                                Pantene
+                                                                                Beautiful
+                                                                                Lengths
+                                                                                Conditioner 23.7
+                                                                                fl oz bottle</a>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <span class="me-2">
+                                                                            <input type="number"
+                                                                                class="form-control text-center"
+                                                                                id="exampleFormControlInput1"
+                                                                                placeholder="1" /></span>
+                                                                    </div>
+                                                                </td>
+                                                                <td>Walmart, Amazon</td>
+                                                                <td>
+                                                                    <span
+                                                                        class="badge rounded-pill bg-success p-2 text-uppercase">In
+                                                                        Stock</span>
+                                                                </td>
+                                                                <td>Direct</td>
+                                                                <td class="text-end">
+                                                                    <a href="#" class="me-2"><i
+                                                                            class="fa fa-pen"></i></a>
+                                                                    <a href="#" class="me-2"><i
+                                                                            class="fa fa-trash"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="#" class="btn btn-outline-primary rounded-pill">
+                                            Previous</a>
+                                        <a href="#" class="btn btn-primary rounded-pill">
+                                            Next</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel"
+                                aria-labelledby="contact-tab" tabindex="0">
+                                <div class="card border-0 overflow-hidden">
+                                    <div class="card-header d-lg-none">
+                                        <div class="hstack gap-3">
+                                            <div class="bg-body-tertiary">
+                                                <h5 class="mb-0">Customize your Messaging</h5>
+                                            </div>
+                                            <div class="bg-body-tertiary ms-auto">
+                                                <h5 class="mb-0">
+                                                    <span class="badge bg-light text-dark">3 of 4</span>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row border-bottom pb-3 mb-2">
+                                            <div class="col">
+                                                <form class="row g-3">
+                                                    <div class="col-auto">
+                                                        <label for="staticEmail2" class="visually-hidden">Email</label>
+                                                        <input type="text" readonly class="form-control-plaintext"
+                                                            id="staticEmail2" value="email@example.com" />
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option selected>Error Page</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 py-2">
+                                                <div class="row">
+                                                    <div class="col-lg-3">
+                                                        <small>Title message 255 characters maximum</small>
+                                                    </div>
+                                                    <div class="col-lg-9">
+                                                        <div class="col-12 col-md-12 mb-4">
+                                                            <!--Quill editor-->
+                                                            <div class="ql-toolbar ql-snow">
+                                                                <span class="ql-formats"><span
+                                                                        class="ql-header ql-picker"><span
+                                                                            class="ql-picker-label" tabindex="0"
+                                                                            role="button" aria-expanded="false"
+                                                                            aria-controls="ql-picker-options-0"><svg
+                                                                                viewBox="0 0 18 18">
+                                                                                <polygon class="ql-stroke"
+                                                                                    points="7 11 9 13 11 11 7 11">
+                                                                                </polygon>
+                                                                                <polygon class="ql-stroke"
+                                                                                    points="7 7 9 5 11 7 7 7"></polygon>
+                                                                            </svg></span><span class="ql-picker-options"
+                                                                            aria-hidden="true" tabindex="-1"
+                                                                            id="ql-picker-options-0"><span tabindex="0"
+                                                                                role="button" class="ql-picker-item"
+                                                                                data-value="1"></span><span tabindex="0"
+                                                                                role="button" class="ql-picker-item"
+                                                                                data-value="2"></span><span tabindex="0"
+                                                                                role="button"
+                                                                                class="ql-picker-item"></span></span></span><select
+                                                                        class="ql-header" style="display: none">
+                                                                        <option value="1"></option>
+                                                                        <option value="2"></option>
+                                                                        <option selected="selected"></option>
+                                                                    </select></span><span class="ql-formats"><button
+                                                                        type="button" class="ql-bold">
+                                                                        <svg viewBox="0 0 18 18">
+                                                                            <path class="ql-stroke"
+                                                                                d="M5,4H9.5A2.5,2.5,0,0,1,12,6.5v0A2.5,2.5,0,0,1,9.5,9H5A0,0,0,0,1,5,9V4A0,0,0,0,1,5,4Z">
+                                                                            </path>
+                                                                            <path class="ql-stroke"
+                                                                                d="M5,9h5.5A2.5,2.5,0,0,1,13,11.5v0A2.5,2.5,0,0,1,10.5,14H5a0,0,0,0,1,0,0V9A0,0,0,0,1,5,9Z">
+                                                                            </path>
+                                                                        </svg></button><button type="button"
+                                                                        class="ql-underline">
+                                                                        <svg viewBox="0 0 18 18">
+                                                                            <path class="ql-stroke"
+                                                                                d="M5,3V9a4.012,4.012,0,0,0,4,4H9a4.012,4.012,0,0,0,4-4V3">
+                                                                            </path>
+                                                                            <rect class="ql-fill" height="1" rx="0.5"
+                                                                                ry="0.5" width="12" x="3" y="15"></rect>
+                                                                        </svg></button></span><span
+                                                                    class="ql-formats"><button type="button"
+                                                                        class="ql-link">
+                                                                        <svg viewBox="0 0 18 18">
+                                                                            <line class="ql-stroke" x1="7" x2="11"
+                                                                                y1="7" y2="11"></line>
+                                                                            <path class="ql-even ql-stroke"
+                                                                                d="M8.9,4.577a3.476,3.476,0,0,1,.36,4.679A3.476,3.476,0,0,1,4.577,8.9C3.185,7.5,2.035,6.4,4.217,4.217S7.5,3.185,8.9,4.577Z">
+                                                                            </path>
+                                                                            <path class="ql-even ql-stroke"
+                                                                                d="M13.423,9.1a3.476,3.476,0,0,0-4.679-.36,3.476,3.476,0,0,0,.36,4.679c1.392,1.392,2.5,2.542,4.679.36S14.815,10.5,13.423,9.1Z">
+                                                                            </path>
+                                                                        </svg></button><button type="button"
+                                                                        class="ql-blockquote">
+                                                                        <svg viewBox="0 0 18 18">
+                                                                            <rect class="ql-fill ql-stroke" height="3"
+                                                                                width="3" x="4" y="5"></rect>
+                                                                            <rect class="ql-fill ql-stroke" height="3"
+                                                                                width="3" x="11" y="5"></rect>
+                                                                            <path class="ql-even ql-fill ql-stroke"
+                                                                                d="M7,8c0,4.031-3,5-3,5"></path>
+                                                                            <path class="ql-even ql-fill ql-stroke"
+                                                                                d="M14,8c0,4.031-3,5-3,5"></path>
+                                                                        </svg></button><button type="button"
+                                                                        class="ql-code">
+                                                                        <svg viewBox="0 0 18 18">
+                                                                            <polyline class="ql-even ql-stroke"
+                                                                                points="5 7 3 9 5 11"></polyline>
+                                                                            <polyline class="ql-even ql-stroke"
+                                                                                points="13 7 15 9 13 11"></polyline>
+                                                                            <line class="ql-stroke" x1="10" x2="8"
+                                                                                y1="5" y2="13"></line>
+                                                                        </svg></button><button type="button"
+                                                                        class="ql-image">
+                                                                        <svg viewBox="0 0 18 18">
+                                                                            <rect class="ql-stroke" height="10"
+                                                                                width="12" x="3" y="4"></rect>
+                                                                            <circle class="ql-fill" cx="6" cy="7" r="1">
+                                                                            </circle>
+                                                                            <polyline class="ql-even ql-fill"
+                                                                                points="5 12 5 11 7 9 8 10 11 7 13 9 13 12 5 12">
+                                                                            </polyline>
+                                                                        </svg></button></span><span
+                                                                    class="ql-formats"><button type="button"
+                                                                        class="ql-list" value="ordered">
+                                                                        <svg viewBox="0 0 18 18">
+                                                                            <line class="ql-stroke" x1="7" x2="15"
+                                                                                y1="4" y2="4"></line>
+                                                                            <line class="ql-stroke" x1="7" x2="15"
+                                                                                y1="9" y2="9"></line>
+                                                                            <line class="ql-stroke" x1="7" x2="15"
+                                                                                y1="14" y2="14"></line>
+                                                                            <line class="ql-stroke ql-thin" x1="2.5"
+                                                                                x2="4.5" y1="5.5" y2="5.5"></line>
+                                                                            <path class="ql-fill"
+                                                                                d="M3.5,6A0.5,0.5,0,0,1,3,5.5V3.085l-0.276.138A0.5,0.5,0,0,1,2.053,3c-0.124-.247-0.023-0.324.224-0.447l1-.5A0.5,0.5,0,0,1,4,2.5v3A0.5,0.5,0,0,1,3.5,6Z">
+                                                                            </path>
+                                                                            <path class="ql-stroke ql-thin"
+                                                                                d="M4.5,10.5h-2c0-.234,1.85-1.076,1.85-2.234A0.959,0.959,0,0,0,2.5,8.156">
+                                                                            </path>
+                                                                            <path class="ql-stroke ql-thin"
+                                                                                d="M2.5,14.846a0.959,0.959,0,0,0,1.85-.109A0.7,0.7,0,0,0,3.75,14a0.688,0.688,0,0,0,.6-0.736,0.959,0.959,0,0,0-1.85-.109">
+                                                                            </path>
+                                                                        </svg></button><button type="button"
+                                                                        class="ql-list" value="bullet">
+                                                                        <svg viewBox="0 0 18 18">
+                                                                            <line class="ql-stroke" x1="6" x2="15"
+                                                                                y1="4" y2="4"></line>
+                                                                            <line class="ql-stroke" x1="6" x2="15"
+                                                                                y1="9" y2="9"></line>
+                                                                            <line class="ql-stroke" x1="6" x2="15"
+                                                                                y1="14" y2="14"></line>
+                                                                            <line class="ql-stroke" x1="3" x2="3" y1="4"
+                                                                                y2="4">
+                                                                            </line>
+                                                                            <line class="ql-stroke" x1="3" x2="3" y1="9"
+                                                                                y2="9">
+                                                                            </line>
+                                                                            <line class="ql-stroke" x1="3" x2="3"
+                                                                                y1="14" y2="14"></line>
+                                                                        </svg></button></span>
+                                                            </div>
+                                                            <div data-quill='{"placeholder": "Quill WYSIWYG"}'
+                                                                class="ql-container ql-snow">
+                                                                <div class="ql-editor" data-gramm="false"
+                                                                    contenteditable="true"
+                                                                    data-placeholder="Quill WYSIWYG"></div>
+                                                                <div class="ql-clipboard" contenteditable="true"
+                                                                    tabindex="-1">
+                                                                </div>
+                                                                <div class="ql-tooltip ql-hidden">
+                                                                    <a class="ql-preview" rel="noopener noreferrer"
+                                                                        target="_blank" href="about:blank"></a><input
+                                                                        type="text" data-formula="e=mc^2"
+                                                                        data-link="https://quilljs.com"
+                                                                        data-video="Embed URL" /><a
+                                                                        class="ql-action"></a><a class="ql-remove"></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div class="col-12 py-2">
+                                                <div class="row">
+                                                    <div class="col-lg-3">
+                                                        <small>Redirect Message 400 characters maximum</small>
+                                                    </div>
+                                                    <div class="col-lg-9">
+                                                        <div class="col-12 col-md-12 mb-4">
+                                                            <!--Quill editor-->
+                                                            <div class="ql-toolbar ql-snow">
+                                                                <span class="ql-formats"><span
+                                                                        class="ql-header ql-picker"><span
+                                                                            class="ql-picker-label" tabindex="0"
+                                                                            role="button" aria-expanded="false"
+                                                                            aria-controls="ql-picker-options-0"><svg
+                                                                                viewBox="0 0 18 18">
+                                                                                <polygon class="ql-stroke"
+                                                                                    points="7 11 9 13 11 11 7 11">
+                                                                                </polygon>
+                                                                                <polygon class="ql-stroke"
+                                                                                    points="7 7 9 5 11 7 7 7"></polygon>
+                                                                            </svg></span><span class="ql-picker-options"
+                                                                            aria-hidden="true" tabindex="-1"
+                                                                            id="ql-picker-options-0"><span tabindex="0"
+                                                                                role="button" class="ql-picker-item"
+                                                                                data-value="1"></span><span tabindex="0"
+                                                                                role="button" class="ql-picker-item"
+                                                                                data-value="2"></span><span tabindex="0"
+                                                                                role="button"
+                                                                                class="ql-picker-item"></span></span></span><select
+                                                                        class="ql-header" style="display: none">
+                                                                        <option value="1"></option>
+                                                                        <option value="2"></option>
+                                                                        <option selected="selected"></option>
+                                                                    </select></span><span class="ql-formats"><button
+                                                                        type="button" class="ql-bold">
+                                                                        <svg viewBox="0 0 18 18">
+                                                                            <path class="ql-stroke"
+                                                                                d="M5,4H9.5A2.5,2.5,0,0,1,12,6.5v0A2.5,2.5,0,0,1,9.5,9H5A0,0,0,0,1,5,9V4A0,0,0,0,1,5,4Z">
+                                                                            </path>
+                                                                            <path class="ql-stroke"
+                                                                                d="M5,9h5.5A2.5,2.5,0,0,1,13,11.5v0A2.5,2.5,0,0,1,10.5,14H5a0,0,0,0,1,0,0V9A0,0,0,0,1,5,9Z">
+                                                                            </path>
+                                                                        </svg></button><button type="button"
+                                                                        class="ql-underline">
+                                                                        <svg viewBox="0 0 18 18">
+                                                                            <path class="ql-stroke"
+                                                                                d="M5,3V9a4.012,4.012,0,0,0,4,4H9a4.012,4.012,0,0,0,4-4V3">
+                                                                            </path>
+                                                                            <rect class="ql-fill" height="1" rx="0.5"
+                                                                                ry="0.5" width="12" x="3" y="15"></rect>
+                                                                        </svg></button></span><span
+                                                                    class="ql-formats"><button type="button"
+                                                                        class="ql-link">
+                                                                        <svg viewBox="0 0 18 18">
+                                                                            <line class="ql-stroke" x1="7" x2="11"
+                                                                                y1="7" y2="11"></line>
+                                                                            <path class="ql-even ql-stroke"
+                                                                                d="M8.9,4.577a3.476,3.476,0,0,1,.36,4.679A3.476,3.476,0,0,1,4.577,8.9C3.185,7.5,2.035,6.4,4.217,4.217S7.5,3.185,8.9,4.577Z">
+                                                                            </path>
+                                                                            <path class="ql-even ql-stroke"
+                                                                                d="M13.423,9.1a3.476,3.476,0,0,0-4.679-.36,3.476,3.476,0,0,0,.36,4.679c1.392,1.392,2.5,2.542,4.679.36S14.815,10.5,13.423,9.1Z">
+                                                                            </path>
+                                                                        </svg></button><button type="button"
+                                                                        class="ql-blockquote">
+                                                                        <svg viewBox="0 0 18 18">
+                                                                            <rect class="ql-fill ql-stroke" height="3"
+                                                                                width="3" x="4" y="5"></rect>
+                                                                            <rect class="ql-fill ql-stroke" height="3"
+                                                                                width="3" x="11" y="5"></rect>
+                                                                            <path class="ql-even ql-fill ql-stroke"
+                                                                                d="M7,8c0,4.031-3,5-3,5"></path>
+                                                                            <path class="ql-even ql-fill ql-stroke"
+                                                                                d="M14,8c0,4.031-3,5-3,5"></path>
+                                                                        </svg></button><button type="button"
+                                                                        class="ql-code">
+                                                                        <svg viewBox="0 0 18 18">
+                                                                            <polyline class="ql-even ql-stroke"
+                                                                                points="5 7 3 9 5 11"></polyline>
+                                                                            <polyline class="ql-even ql-stroke"
+                                                                                points="13 7 15 9 13 11"></polyline>
+                                                                            <line class="ql-stroke" x1="10" x2="8"
+                                                                                y1="5" y2="13"></line>
+                                                                        </svg></button><button type="button"
+                                                                        class="ql-image">
+                                                                        <svg viewBox="0 0 18 18">
+                                                                            <rect class="ql-stroke" height="10"
+                                                                                width="12" x="3" y="4"></rect>
+                                                                            <circle class="ql-fill" cx="6" cy="7" r="1">
+                                                                            </circle>
+                                                                            <polyline class="ql-even ql-fill"
+                                                                                points="5 12 5 11 7 9 8 10 11 7 13 9 13 12 5 12">
+                                                                            </polyline>
+                                                                        </svg></button></span><span
+                                                                    class="ql-formats"><button type="button"
+                                                                        class="ql-list" value="ordered">
+                                                                        <svg viewBox="0 0 18 18">
+                                                                            <line class="ql-stroke" x1="7" x2="15"
+                                                                                y1="4" y2="4"></line>
+                                                                            <line class="ql-stroke" x1="7" x2="15"
+                                                                                y1="9" y2="9"></line>
+                                                                            <line class="ql-stroke" x1="7" x2="15"
+                                                                                y1="14" y2="14"></line>
+                                                                            <line class="ql-stroke ql-thin" x1="2.5"
+                                                                                x2="4.5" y1="5.5" y2="5.5"></line>
+                                                                            <path class="ql-fill"
+                                                                                d="M3.5,6A0.5,0.5,0,0,1,3,5.5V3.085l-0.276.138A0.5,0.5,0,0,1,2.053,3c-0.124-.247-0.023-0.324.224-0.447l1-.5A0.5,0.5,0,0,1,4,2.5v3A0.5,0.5,0,0,1,3.5,6Z">
+                                                                            </path>
+                                                                            <path class="ql-stroke ql-thin"
+                                                                                d="M4.5,10.5h-2c0-.234,1.85-1.076,1.85-2.234A0.959,0.959,0,0,0,2.5,8.156">
+                                                                            </path>
+                                                                            <path class="ql-stroke ql-thin"
+                                                                                d="M2.5,14.846a0.959,0.959,0,0,0,1.85-.109A0.7,0.7,0,0,0,3.75,14a0.688,0.688,0,0,0,.6-0.736,0.959,0.959,0,0,0-1.85-.109">
+                                                                            </path>
+                                                                        </svg></button><button type="button"
+                                                                        class="ql-list" value="bullet">
+                                                                        <svg viewBox="0 0 18 18">
+                                                                            <line class="ql-stroke" x1="6" x2="15"
+                                                                                y1="4" y2="4"></line>
+                                                                            <line class="ql-stroke" x1="6" x2="15"
+                                                                                y1="9" y2="9"></line>
+                                                                            <line class="ql-stroke" x1="6" x2="15"
+                                                                                y1="14" y2="14"></line>
+                                                                            <line class="ql-stroke" x1="3" x2="3" y1="4"
+                                                                                y2="4">
+                                                                            </line>
+                                                                            <line class="ql-stroke" x1="3" x2="3" y1="9"
+                                                                                y2="9">
+                                                                            </line>
+                                                                            <line class="ql-stroke" x1="3" x2="3"
+                                                                                y1="14" y2="14"></line>
+                                                                        </svg></button></span>
+                                                            </div>
+                                                            <div data-quill='{"placeholder": "Quill WYSIWYG"}'
+                                                                class="ql-container ql-snow">
+                                                                <div class="ql-editor" data-gramm="false"
+                                                                    contenteditable="true"
+                                                                    data-placeholder="Quill WYSIWYG"></div>
+                                                                <div class="ql-clipboard" contenteditable="true"
+                                                                    tabindex="-1">
+                                                                </div>
+                                                                <div class="ql-tooltip ql-hidden">
+                                                                    <a class="ql-preview" rel="noopener noreferrer"
+                                                                        target="_blank" href="about:blank"></a><input
+                                                                        type="text" data-formula="e=mc^2"
+                                                                        data-link="https://quilljs.com"
+                                                                        data-video="Embed URL" /><a
+                                                                        class="ql-action"></a><a class="ql-remove"></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body border-top">
+                                        <div class="mb-4">
+                                            <span class="me-1">Background Image</span>
+                                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                    <path
+                                                        d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                                </svg></a>
+                                        </div>
+                                        <div>
+                                            <div class="row">
+                                                <div class="col-auto">
+                                                    <div class="card" style="width: 18rem">
+                                                        <img src="https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2352&q=80"
+                                                            class="card-img-top" alt="..." />
+                                                        <div class="card-body">
+                                                            <p class="card-text text-uppercase">
+                                                                Default Image
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a class="btn btn-primary rounded-pill">
+                                                        Add Background +</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="page-link-2.html" class="btn btn-outline-primary rounded-pill">
+                                            Previous</a>
+                                        <a class="btn btn-primary rounded-pill"> Next</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel"
+                                aria-labelledby="disabled-tab" tabindex="0">
+                                <div class="card overflow-hidden">
+                                    <div class="card-header d-lg-none">
+                                        <div class="hstack gap-3">
+                                            <div class="bg-body-tertiary">
+                                                <h5 class="mb-0">Save & Preview</h5>
+                                            </div>
+                                            <div class="bg-body-tertiary ms-auto">
+                                                <h5 class="mb-0">
+                                                    <span class="badge bg-light text-dark">4 of 4</span>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body" style="min-height: 5rem;">
+                                        <div class="row">
+                                            <div class="col-md-6 justify-content-start">
+                                                <div class="row g-5">
+                                                    <div class="col-lg-12">
+                                                        <label for="formGroupExampleInput" class="form-label">Internal
+                                                            Name
+                                                            of
+                                                            URL</label>
+                                                        <input type="text" class="form-control" placeholder=""
+                                                            aria-label="First name">
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <label for="formGroupExampleInput"
+                                                            class="form-label">Labels</label>
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option selected>Choose Label
+                                                            </option>
+                                                            <option value="1">Agency</option>
+                                                            <option value="2">Manufacturer</option>
+                                                            <option value="2">Retailer</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <label for="formGroupExampleInput" class="form-label">Tracking
+                                                            Status</label>
+                                                        <div class="small text-danger"><svg
+                                                                xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor"
+                                                                class="bi bi-exclamation-triangle-fill"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                                            </svg> Tracking disabled by implementation settings
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <label for="formGroupExampleInput"
+                                                            class="form-label">Tracking</label>
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            disabled>
+                                                            <option selected>Inherit
+                                                            </option>
+                                                            <option value="1">Inactive</option>
+                                                            <option value="2">Active</option>
+                                                        </select>
+                                                        <div class="form-text text-dark">Implementation:
+                                                            <strong class="text-danger">Off</strong>
+                                                            < Client: <strong class="text-danger">Do not Track</strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <label for="formGroupExampleInput" class="form-label">Geological
+                                                            Provider</label>
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option selected>All
+                                                            </option>
+                                                            <option value="1">Agency</option>
+                                                            <option value="2">Manufacturer</option>
+                                                            <option value="2">Retailer</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <label for="formGroupExampleInput" class="form-label">Last Date
+                                                            of
+                                                            Link <a href="#" data-bs-container="body"
+                                                                data-bs-toggle="popover" data-bs-placement="top"
+                                                                data-bs-content="Eric ?"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                    height="16" fill="currentColor"
+                                                                    class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                                                    <path
+                                                                        d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                                                </svg></a></label>
+                                                        <input type="date" class="form-control" placeholder=""
+                                                            aria-label="First name">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!--//Page content End//-->
+     <!--//Page-footer//-->
+     <footer class="bg-white">
+       <div class="container-fluid py-5">
+         <span class="d-block lh-sm text-center small">
+           Do you have any questions about the tool? Contact us at: <a href="#"> support@smartcommerce.co</a> or the phone
+           number:
+           1-800-571-3520
+           <!-- &copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script>. Copyright -->
+         </span>
+       </div>
+     </footer>
+     <!--/.Page Footer End-->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Retailer Configuration</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="mb-3">Default Properties</h5>
+                    <div class="table-responsive mb-5">
+                        <table class="table table-borderless table-nowrap mb-0" style="width: 100%">
+                            <thead class="text-muted text-uppercase small bg-body bg-opacity-50">
+                                <tr>
+                                    <th>Retailer Name</th>
+                                    <th>Retailer Type</th>
+                                </tr>
+                            </thead>
+                            <tbody class="align-middle">
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <a href="#!.html"><img src="assets/Frame.svg"
+                                                    class="avatar p-1 border rounded-2 me-2 align-middle" alt="" /></a>
+                                        </div>
+                                    </td>
+                                    <td>National PDP Retailer</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h5 class="mb-0 pb-0">Overrides</h5>
+                    <hr>
+                    <form class="row g-5">
+                        <div class="col-md-12">
+                            <label class="form-label"><span class="text-secondary">*</span>Retailer
+                                Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Carting Type</label>
+                            <select class="form-select">
+                                <option selected disabled value="">
+                                    Costco</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <div class="row mt-">
+                                <div class="col-12"><label class="form-label">Retailer
+                                        Carting Parameters</label></div>
+                                <div class="col"><input type="text" class="form-control"></div>
+                                <div class="col"><input type="text" class="form-control"></div>
+                                <div class="col-auto"><button class="btn btn-outline-primary rounded-pill"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                            <path
+                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                            <path fill-rule="evenodd"
+                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                        </svg></button></div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-outline-primary rounded-pill">Add New</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary rounded-pill"
+                        data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary rounded-pill">Save</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </main>
+    <!--///////////Page content wrapper End///////////////-->
+    </div>
+    </div>
+    
+    <!--////////////Theme Core scripts Start/////////////////-->
+
+    <script src="assets/js/theme.bundle.js"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!--////////////Theme Core scripts End/////////////////-->
+
+
+</body>
+
+</html>
