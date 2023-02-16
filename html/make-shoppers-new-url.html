@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Suite</title>
+
+    <!--Simplebar css-->
+    <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css">
+
+    <!--Choices css-->
+    <link rel="stylesheet" href="assets/vendor/css/choices.min.css">
+    <link href="assets/vendor/css/quill.snow.css" rel="stylesheet" />
+
+    @@include('./partials/fonts.html')
+    <!--Main style-->
+    <link rel="stylesheet" href="assets/css/style.min.css" id="switchThemeStyle">
+    <script src="https://kit.fontawesome.com/9b71cccaf3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    @@include('./partials/preloader.html')
+    <!--App Start-->
+    <div class="d-flex flex-column flex-root">
+        <!--Page-->
+        <div class="page d-flex flex-row flex-column-fluid">
+            @@include('./partials/sidebars/sidebar.html',{"makeandmanage": "pages"} )
+            <!--///////////Page content wrapper///////////////-->
+            <main class="page-content d-flex flex-column flex-row-fluid">
+                @@include('./partials/header/header.html')
+                <!--//Page Toolbar//-->
+                <div class="toolbar bg-white">
+                    <div class="position-relative container-fluid px-0">
+                        <div class="row position-relative">
+                            <div class="col-md-12 ">
+                                <div class="row g-0">
+                                    <div class="col-6">
+                                        <h5 class="mt-2">Shopper's Choice</h5>
+                                    </div>
+                                    <div class="col-6 text-end">
+                                        <button class="btn btn-outline-primary rounded-pill" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal">
+                                            <i class="fa fa-info me-1"></i> More Info
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" container-fluid text-center border-bottom py-2 px-4">
+                    <div class="row justify-content-md-center">
+                        <div class="col text-start align-self-start">
+                            <a href="make-shoppers.html">
+                                <i class="fa fa-arrow-left me-2"></i>
+                                Return to list
+                            </a>
+                        </div>
+                        <div class="col-auto text-center d-none d-lg-block d-xl-block">
+                            <nav aria-label="breadcrumb">
+                                <ol
+                                    class="breadcrumb mb-0 justify-content-end justify-content-lg-center justify-content-sm-end">
+                                    <li class="breadcrumb-item"><a href="#!">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">Pages</li>
+                                    <li class="breadcrumb-item active">Blank</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="col text-end"></div>
+                    </div>
+                </div>
+                <!--//Page Toolbar End//-->
+                <!--//Page content//-->
+                <div class="content p-4 d-flex flex-column-fluid">
+                    <div class="container-fluid px-0">
+                        <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="step-one" data-bs-toggle="tab"
+                                    data-bs-target="#step-one-pane" type="button" role="tab"
+                                    aria-controls="step-one-pane" aria-selected="true"> <small>STEP 1</small><span
+                                        class="d-none d-lg-block d-xl-block">
+                                        Pick your UI Type</span></button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="home-tab" data-bs-toggle="tab"
+                                    data-bs-target="#home-tab-pane" type="button" role="tab"
+                                    aria-controls="home-tab-pane" aria-selected="true"> <small>STEP 2</small><span
+                                        class="d-none d-lg-block d-xl-block">
+                                        Pick Your Retailers</span></button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                    aria-controls="profile-tab-pane" aria-selected="false"><small>STEP 3</small><span
+                                        class="d-none d-lg-block d-xl-block">
+                                        Pick your Products</span></button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                    data-bs-target="#contact-tab-pane" type="button" role="tab"
+                                    aria-controls="contact-tab-pane" aria-selected="false"><small>STEP 4</small><span
+                                        class="d-none d-lg-block d-xl-block">
+                                        Customize your
+                                        Messaging</span></button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="display-tab" data-bs-toggle="tab"
+                                    data-bs-target="#display-tab-pane" type="button" role="tab"
+                                    aria-controls="display-tab-pane" aria-selected="false"><small>STEP 5</small><span
+                                        class="d-none d-lg-block d-xl-block">
+                                        Set your Display</span></button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="disabled-tab" data-bs-toggle="tab"
+                                    data-bs-target="#disabled-tab-pane" type="button" role="tab"
+                                    aria-controls="disabled-tab-pane" aria-selected="false"><small>STEP 6</small><span
+                                        class="d-none d-lg-block d-xl-block">
+                                        Save &
+                                        Preview</span></button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="step-one-pane" role="tabpanel"
+                                aria-labelledby="step-one" tabindex="0">
+                                <div class="card">
+                                    <div class="card-header d-lg-none">
+                                        <div class="hstack gap-3">
+                                            <div class="bg-body-tertiary">
+                                                <h5 class="mb-0">Pick your UI Type
+                                                </h5>
+                                            </div>
+                                            <div class="bg-body-tertiary ms-auto">
+                                                <h5 class="mb-0">
+                                                    <span class="badge bg-light text-dark">1
+                                                        of 4</span>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <div class="card border-0">
+                                                    <div class="card-header"><strong>Branded UI</strong> <a href="#"
+                                                            data-bs-toggle="modal" data-bs-target="#brandedui"><svg
+                                                                xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor"
+                                                                class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                                            </svg></a></div>
+                                                    <div class="card-body">
+                                                        <div class="row g-5 text-center">
+                                                            <div class="col-lg-4">
+                                                                <img class="img-fluid mb-5"
+                                                                    src="https://smartsuite.co/images/pages/url_generator/branded_retailer_choice.png">
+                                                                <h5>Retailer Choice</h5>
+                                                            </div>
+                                                            <div class="col-lg-4">
+                                                                <img class="img-fluid mb-5"
+                                                                    src="https://smartsuite.co/images/pages/url_generator/branded_product_choice.png">
+                                                                <h5>Product choices</h5>
+                                                            </div>
+                                                            <div class="col-lg-4">
+                                                                <img class="img-fluid mb-5"
+                                                                    src="https://smartsuite.co/images/pages/url_generator/branded_retailer_product_choice.png">
+                                                                <h5>Retailer & Product Choice</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="card border-0">
+                                                    <div class="card-header"><strong>Simple UI</strong> <a href="#"
+                                                            data-bs-toggle="modal" data-bs-target="#simpleui"><svg
+                                                                xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor"
+                                                                class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                                            </svg></a></div>
+                                                    <div class="card-body">
+                                                        <div class="row g-5 text-center">
+                                                            <div class="col-lg-12">
+                                                                <img style="width: 289px;" class="img-fluid"
+                                                                    src="https://smartsuite.co/images/pages/url_generator/simple_retailer_choice.png">
+                                                                <div class="py-3">Retailer choice</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer"><button class="btn btn-primary rounded-pill">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                                tabindex="0">
+                                @@include('./partials/newurl/pickyourretailer.html')
+                            </div>
+                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
+                                aria-labelledby="profile-tab" tabindex="0">
+                                @@include('./partials/newurl/searchproducts.html')
+                            </div>
+                            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel"
+                                aria-labelledby="contact-tab" tabindex="0">
+                                @@include('./partials/newurl/customizeyourmessaging.html')
+                            </div>
+                            <div class="tab-pane fade" id="display-tab-pane" role="tabpanel"
+                                aria-labelledby="display-tab" tabindex="0">
+                                @@include('./partials/newurl/setyourdisplay.html')
+                            </div>
+                            <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel"
+                                aria-labelledby="disabled-tab" tabindex="0">
+                                @@include('./partials/newurl/saveandpreview.html')</div>
+
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </main>
+    </div>
+    </div>
+    <!--//Page content End//-->
+    @@include('./partials/footer.html')
+    <!-- Modal -->
+    @@include('./partials/modal/brandedui.html')
+    @@include('./partials/modal/simpleui.html')
+    @@include('./partials/modal/modal-moreinfo.html')
+    @@include('./partials/modal/retailconfiguration.html')
+    <!--///////////Page content wrapper End///////////////-->
+    @@include('./partials/core-scripts.html')
+</body>
+
+</html>

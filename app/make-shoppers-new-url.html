@@ -311,10 +311,11 @@
                             <div class="col-md-12 ">
                                 <div class="row g-0">
                                     <div class="col-6">
-                                        <h5 class="mt-2">Click2Cart</h5>
+                                        <h5 class="mt-2">Shopper's Choice</h5>
                                     </div>
                                     <div class="col-6 text-end">
-                                        <button class="btn btn-outline-primary rounded-pill">
+                                        <button class="btn btn-outline-primary rounded-pill" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal">
                                             <i class="fa fa-info me-1"></i> More Info
                                         </button>
                                     </div>
@@ -326,7 +327,7 @@
                 <div class=" container-fluid text-center border-bottom py-2 px-4">
                     <div class="row justify-content-md-center">
                         <div class="col text-start align-self-start">
-                            <a href="make-click2cart.html">
+                            <a href="make-shoppers.html">
                                 <i class="fa fa-arrow-left me-2"></i>
                                 Return to list
                             </a>
@@ -349,44 +350,132 @@
                 <!--//Page content//-->
                 <div class="content p-4 d-flex flex-column-fluid">
                     <div class="container-fluid px-0">
-                        
                         <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
-                                    data-bs-target="#home-tab-pane" type="button" role="tab"
-                                    aria-controls="home-tab-pane" aria-selected="true"> <small>STEP 1</small><span
+                                <button class="nav-link active" id="step-one" data-bs-toggle="tab"
+                                    data-bs-target="#step-one-pane" type="button" role="tab"
+                                    aria-controls="step-one-pane" aria-selected="true"> <small>STEP 1</small><span
                                         class="d-none d-lg-block d-xl-block">
-                                        Choose the lead
-                                        retailer</span></button>
+                                        Pick your UI Type</span></button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="home-tab" data-bs-toggle="tab"
+                                    data-bs-target="#home-tab-pane" type="button" role="tab"
+                                    aria-controls="home-tab-pane" aria-selected="true"> <small>STEP 2</small><span
+                                        class="d-none d-lg-block d-xl-block">
+                                        Pick Your Retailers</span></button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
                                     data-bs-target="#profile-tab-pane" type="button" role="tab"
-                                    aria-controls="profile-tab-pane" aria-selected="false"><small>STEP 2</small><span
+                                    aria-controls="profile-tab-pane" aria-selected="false"><small>STEP 3</small><span
                                         class="d-none d-lg-block d-xl-block">
-                                        Search and choose
-                                        products</span></button>
+                                        Pick your Products</span></button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
                                     data-bs-target="#contact-tab-pane" type="button" role="tab"
-                                    aria-controls="contact-tab-pane" aria-selected="false"><small>STEP 3</small><span
+                                    aria-controls="contact-tab-pane" aria-selected="false"><small>STEP 4</small><span
                                         class="d-none d-lg-block d-xl-block">
                                         Customize your
                                         Messaging</span></button>
                             </li>
                             <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="display-tab" data-bs-toggle="tab"
+                                    data-bs-target="#display-tab-pane" type="button" role="tab"
+                                    aria-controls="display-tab-pane" aria-selected="false"><small>STEP 5</small><span
+                                        class="d-none d-lg-block d-xl-block">
+                                        Set your Display</span></button>
+                            </li>
+                            <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="disabled-tab" data-bs-toggle="tab"
                                     data-bs-target="#disabled-tab-pane" type="button" role="tab"
-                                    aria-controls="disabled-tab-pane" aria-selected="false"><small>STEP 4</small><span
+                                    aria-controls="disabled-tab-pane" aria-selected="false"><small>STEP 6</small><span
                                         class="d-none d-lg-block d-xl-block">
                                         Save &
                                         Preview</span></button>
                             </li>
                         </ul>
                         <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
-                                aria-labelledby="home-tab" tabindex="0">
+                            <div class="tab-pane fade show active" id="step-one-pane" role="tabpanel"
+                                aria-labelledby="step-one" tabindex="0">
+                                <div class="card">
+                                    <div class="card-header d-lg-none">
+                                        <div class="hstack gap-3">
+                                            <div class="bg-body-tertiary">
+                                                <h5 class="mb-0">Pick your UI Type
+                                                </h5>
+                                            </div>
+                                            <div class="bg-body-tertiary ms-auto">
+                                                <h5 class="mb-0">
+                                                    <span class="badge bg-light text-dark">1
+                                                        of 4</span>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <div class="card border-0">
+                                                    <div class="card-header"><strong>Branded UI</strong> <a href="#"
+                                                            data-bs-toggle="modal" data-bs-target="#brandedui"><svg
+                                                                xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor"
+                                                                class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                                            </svg></a></div>
+                                                    <div class="card-body">
+                                                        <div class="row g-5 text-center">
+                                                            <div class="col-lg-4">
+                                                                <img class="img-fluid mb-5"
+                                                                    src="https://smartsuite.co/images/pages/url_generator/branded_retailer_choice.png">
+                                                                <h5>Retailer Choice</h5>
+                                                            </div>
+                                                            <div class="col-lg-4">
+                                                                <img class="img-fluid mb-5"
+                                                                    src="https://smartsuite.co/images/pages/url_generator/branded_product_choice.png">
+                                                                <h5>Product choices</h5>
+                                                            </div>
+                                                            <div class="col-lg-4">
+                                                                <img class="img-fluid mb-5"
+                                                                    src="https://smartsuite.co/images/pages/url_generator/branded_retailer_product_choice.png">
+                                                                <h5>Retailer & Product Choice</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="card border-0">
+                                                    <div class="card-header"><strong>Simple UI</strong> <a href="#"
+                                                            data-bs-toggle="modal" data-bs-target="#simpleui"><svg
+                                                                xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor"
+                                                                class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                                            </svg></a></div>
+                                                    <div class="card-body">
+                                                        <div class="row g-5 text-center">
+                                                            <div class="col-lg-12">
+                                                                <img style="width: 289px;" class="img-fluid"
+                                                                    src="https://smartsuite.co/images/pages/url_generator/simple_retailer_choice.png">
+                                                                <div class="py-3">Retailer choice</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer"><button class="btn btn-primary rounded-pill">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                                tabindex="0">
                                 <div class="card border-0 overflow-hidden">
                                     <div class="card-header d-lg-none">
                                         <div class="hstack gap-3">
@@ -1404,6 +1493,245 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="tab-pane fade" id="display-tab-pane" role="tabpanel"
+                                aria-labelledby="display-tab" tabindex="0">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>1. Customize your display options</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexSwitchCheckChecked">Show
+                                                        Prices</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexSwitchCheckChecked">Display
+                                                        retailers in carousel</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-header border-top">
+                                        <h5>2. Customize your text options</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="mb-3 row">
+                                                    <label for="inputPassword" class="col-sm-2 col-form-label">Heading
+                                                        Text color:</label>
+                                                    <div class="col-sm-4">
+                                                        <div class="input-group mb-3">
+                                                            <input type="text" class="form-control" placeholder="" aria-label=""
+                                                                aria-describedby="button-addon2">
+                                                            <button class="btn btn-primary" style="min-width: 0;" type="button" id="button-addon2"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                                    class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                                                    <path fill-rule="evenodd"
+                                                                        d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
+                                                                    <path
+                                                                        d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
+                                                                </svg></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="mb-3 row">
+                                                    <label for="inputPassword" class="col-sm-2 col-form-label">Secondary
+                                                        Heading Text color:</label>
+                                                    <div class="col-sm-4">
+                                                        <div class="input-group mb-3">
+                                                            <input type="text" class="form-control" placeholder="" aria-label=""
+                                                                aria-describedby="button-addon2">
+                                                            <button class="btn btn-primary" style="min-width: 0;" type="button" id="button-addon2"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                                    class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                                                    <path fill-rule="evenodd"
+                                                                        d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
+                                                                    <path
+                                                                        d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
+                                                                </svg></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="mb-3 row">
+                                                    <label for="inputPassword" class="col-sm-2 col-form-label">Bottom
+                                                        Text color:</label>
+                                                    <div class="col-sm-4">
+                                                        <div class="input-group mb-3">
+                                                            <input type="text" class="form-control" placeholder="" aria-label=""
+                                                                aria-describedby="button-addon2">
+                                                            <button class="btn btn-primary" style="min-width: 0;" type="button" id="button-addon2"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                                    class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                                                    <path fill-rule="evenodd"
+                                                                        d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
+                                                                    <path
+                                                                        d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
+                                                                </svg></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="mb-3 row">
+                                                    <label for="inputPassword" class="col-sm-2 col-form-label">Hyperlink
+                                                        color:</label>
+                                                    <div class="col-sm-4">
+                                                        <div class="input-group mb-3">
+                                                            <input type="text" class="form-control" placeholder="" aria-label=""
+                                                                aria-describedby="button-addon2">
+                                                            <button class="btn btn-primary" style="min-width: 0;" type="button" id="button-addon2"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                                    class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                                                    <path fill-rule="evenodd"
+                                                                        d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
+                                                                    <path
+                                                                        d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
+                                                                </svg></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-header border-top">
+                                        <h5>3. Customize your background</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row g-5">
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <label for="inputPassword" class="col-sm-2 col-form-label">Background color:</label>
+                                                    <div class="col-sm-4">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="" aria-label=""
+                                                                aria-describedby="button-addon2">
+                                                            <button class="btn btn-primary" style="min-width: 0;" type="button" id="button-addon2"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                                    class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                                                    <path fill-rule="evenodd"
+                                                                        d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
+                                                                    <path
+                                                                        d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
+                                                                </svg></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexSwitchCheckChecked">Show
+                                                        Border</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                    <label class="form-check-label" for="inlineCheckbox1">No inner
+                                                        background</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                                    <label class="form-check-label" for="inlineCheckbox2">Select an
+                                                        inner background color</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option2">
+                                                    <label class="form-check-label" for="inlineCheckbox3">Select an
+                                                        inner background image <a href="#" data-bs-container="body" data-bs-toggle="popover"
+                                                            data-bs-placement="top"
+                                                            data-bs-content="Display size: 450x325, Maximum file size: 10mb for MP4, Accepted file formats: Uploaded MP4 file or URL link to MP4; YouTube; Vimeo; Facebook. "><svg
+                                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                                class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                                            </svg></a></label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="mb-3 row">
+                                                    <label for="inputPassword" class="col-sm-2 col-form-label">Inner
+                                                        background color:</label>
+                                                    <div class="col-sm-4">
+                                                        <div class="input-group mb-3">
+                                                            <input type="text" class="form-control" placeholder="" aria-label=""
+                                                                aria-describedby="button-addon2">
+                                                            <button class="btn btn-primary" style="min-width: 0;" type="button" id="button-addon2"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                                    class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                                                    <path fill-rule="evenodd"
+                                                                        d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
+                                                                    <path
+                                                                        d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
+                                                                </svg></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-header border-top">
+                                        <h5>4. Add marketing assets</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row g-5">
+                                            <div class="col-12">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexSwitchCheckChecked">Display
+                                                        logo</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                    <label class="form-check-label" for="inlineCheckbox1">No
+                                                        Assets</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                                    <label class="form-check-label" for="inlineCheckbox2">Add
+                                                        Image <a href="#" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
+                                                            data-bs-content="Maximum width: 450px, Maximum height: 325px, Maximum file size: 150kb, Accepted file formats: JPG, PNG, GIF, Animated GIF"><svg
+                                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                                class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                                            </svg></a></label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option2">
+                                                    <label class="form-check-label" for="inlineCheckbox3">Add
+                                                        Video <a href="#" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
+                                                            data-bs-content="Display size: 450x325, Maximum file size: 10mb for MP4, Accepted file formats: Uploaded MP4 file or URL link to MP4; YouTube; Vimeo; Facebook. "><svg
+                                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                                class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                                            </svg></a></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="#" class="btn btn-outline-primary rounded-pill">
+                                            Previous</a>
+                                        <a href="#" class="btn btn-primary rounded-pill">
+                                            Next</a>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel"
                                 aria-labelledby="disabled-tab" tabindex="0">
                                 <div class="card overflow-hidden">
@@ -1496,32 +1824,327 @@
                                         <a href="#" class="btn btn-primary rounded-pill">
                                             Generate</a>
                                     </div>
+                                </div></div>
+
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </main>
+    </div>
+    </div>
+    <!--//Page content End//-->
+     <!--//Page-footer//-->
+     <footer class="bg-white">
+       <div class="container-fluid py-5">
+         <span class="d-block lh-sm text-center small">
+           Do you have any questions about the tool? Contact us at: <a href="#"> support@smartcommerce.co</a> or the phone
+           number:
+           1-800-571-3520
+           <!-- &copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script>. Copyright -->
+         </span>
+       </div>
+     </footer>
+     <!--/.Page Footer End-->
+    <!-- Modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="brandedui" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Decide which style works better for your purpose
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <div class="row g-5">
+                                <div class="col-lg-4">
+                                    <img class="img-fluid mb-5"
+                                        src="https://smartsuite.co/images/pages/url_generator/branded_retailer_choice.png">
+                                    <h5>Retailer Choice</h5>
+                                    <p>Multiple retailer choices for defined product bundle, decorated with marketing assets
+                                    </p>
+                                </div>
+                                <div class="col-lg-4">
+                                    <img class="img-fluid mb-5"
+                                        src="https://smartsuite.co/images/pages/url_generator/branded_product_choice.png">
+                                    <h5>Product choices</h5>
+                                    <p>Multiple products choices for a single retailer, decorated with marketing assets
+                                    </p>
+                                </div>
+                                <div class="col-lg-4">
+                                    <img class="img-fluid mb-5"
+                                        src="https://smartsuite.co/images/pages/url_generator/branded_retailer_product_choice.png">
+                                    <h5>Retailer & Product Choice</h5>
+                                    <p>Multiple retailers with multiple products, decorated with marketing assets
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--//Page content End//-->
-                 <!--//Page-footer//-->
-                 <footer class="bg-white">
-                   <div class="container-fluid py-5">
-                     <span class="d-block lh-sm text-center small">
-                       Do you have any questions about the tool? Contact us at: <a href="#"> support@smartcommerce.co</a> or the phone
-                       number:
-                       1-800-571-3520
-                       <!-- &copy;
-                        <script>
-                          document.write(new Date().getFullYear())
-                        </script>. Copyright -->
-                     </span>
-                   </div>
-                 </footer>
-                 <!--/.Page Footer End-->
-            </main>
-
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary rounded-pill"
+                        data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Modal -->
+    <div class="modal fade" id="simpleui" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Decide which style works better for your purpose
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <div class="row g-5">
+                                <div class="col-lg-12">
+                                    <img class="img-fluid mb-5"
+                                        src="https://smartsuite.co/images/pages/url_generator/branded_retailer_choice.png">
+                                    <h5>Retailer Choice</h5>
+                                    <p>Multiple retailer choices for defined product bundle.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary rounded-pill"
+                        data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">More Info
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="text-info mb-3 text-center">Why would you use the URL
+                        generator?</h4>
+                    <ul class="nav justify-content-center nav-pills flex-column flex-sm-row py-2 py-lg-4" id="pills-tab"
+                        role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                aria-selected="true">Overview</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                                aria-selected="false">Click2Cart</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                                aria-selected="false">Shopper's Choice</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled"
+                                aria-selected="false">SmartSite</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-cat-tab" data-bs-toggle="pill" data-bs-target="#pills-cat"
+                                type="button" role="tab" aria-controls="pills-cat" aria-selected="false">Catalog</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab" tabindex="0">
+                            <div class="row p-2 p-lg-5">
+                                <div class="col-lg-6">
+                                    <p><strong class="text-info">What is the function of the URL
+                                            generator?</strong><br>
+                                        The URL generator creates links that let you tailor the product and
+                                        carting
+                                        experience to the specific campaigns you are running.</p>
+                                    <p><strong class="text-info">What is Click2Cart?</strong><br>
+                                        Click2Cart links let consumers add your products to their carts with a
+                                        single
+                                        click.</p>
+                                    <p><strong class="text-info">What is Shopper's Choice?</strong><br>
+                                        Shopper’s Choice lets you present the user with options: number of
+                                        products, preferred retailer, etc, before carting (min 2 clicks).
+                                    </p>
+                                </div>
+                                <div class="col-lg-6">
+                                    <p>
+                                        <strong class="text-info">What is SmartSite?</strong><br>
+                                        SmartSite allows to integrated a way of sell products in the own
+                                        website.
+                                        With a single click the user send the product to a concret retailer.
+                                    </p>
+
+                                    <p>
+                                        <strong class="text-info">What is Catalog?</strong><br>
+                                        Catalog lets you send the user to a pre-determined view within the eshop
+                                        – a
+                                        product category, set of products, or a single product.
+                                    </p>
+                                </div>
+                                <div class="col-lg-12">
+                                    <img class="img-fluid"
+                                        src="https://smartsuite.co/images/mockups/diferents_generators.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                            tabindex="0">
+                            <div class="row p-2 p-lg-5">
+                                <div class="col-lg-12 mb-5">
+                                    <p><strong class="text-info">What is Click2Cart?</strong><br>
+                                        Click2Cart links let consumers add your products to their carts with a
+                                        single click</p>
+                                    <p><strong class="text-info">How does it work?</strong><br>
+                                        Click2Cart links let consumers add your
+                                        products to their carts with a
+                                        single
+                                        click.</p>
+                                    <ol>
+                                        <li>You choose the lead retailer where you want to send the user.
+                                            You
+                                            can also activate <strong>“related retailers”</strong>, to send the
+                                            user to an
+                                            alternate retailer(s) if the lead retailer is out of stock.</li>
+
+                                        <li>You determine the lead product or products to be added to
+                                            the cart,
+                                            and the quantities to be added. You can also activate
+                                            <strong>“Related
+                                                products”</strong>, which will substitute the closest package
+                                            size of the
+                                            same product, if your product is out of stock.
+                                        </li>
+
+                                        <li>You can add parameters to identify and track your link.</li>
+
+                                        <li>Even after generating the URL, you can return later to
+                                            modify
+                                            retailers or products if you want.</li>
+                                    </ol>
+                                </div>
+                                <div class="col-lg-12">
+                                    <img class="img-fluid"
+                                        src="https://smartsuite.co/images/mockups/mockup_direct_cart.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
+                            tabindex="0">
+                            <div class="row p-2 p-lg-5">
+                                <div class="col-lg-12 mb-5">
+                                    <p><strong class="text-info">What is Shopper's Choice?</strong><br>
+                                        Shopper’s Choice lets you present the user with options: number of
+                                        products, preferred retailer, etc, before carting <strong>(min 2
+                                            clicks).</strong></p>
+                                    <p><strong class="text-info">How does it
+                                            work?</strong><br></p>
+                                    <ol>
+                                        <li>You choose which retailer or retailers you would like to offer to
+                                            your shopper. You can choose one, or as many as you like (we
+                                            recommend no more than 4).</li>
+
+                                        <li>You determine the lead product or products to be added to the cart,
+                                            and the default quantities to be added. You can also activate
+                                            “Related products,” which will substitute the closest package size
+                                            of the same product, if your product is out of stock.</li>
+
+                                        <li>You can add parameters to identify and track your link.</li>
+
+                                        <li>Even after generating the URL, you can return later to modify
+                                            retailers or products if you want.
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div class="col-lg-12">
+                                    <img class="img-fluid"
+                                        src="https://smartsuite.co/images/mockups/mockup_shopper_choice.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab"
+                            tabindex="0">
+                            <div class="row p-2 p-lg-5">
+                                <div class="col-lg-12 mb-5">
+                                    <p><strong class="text-info">What is SmartSite?</strong><br>
+                                        SmartSite can be used on a website, blog, etc. to provide Click2Cart
+                                        ease for shoppers.</p>
+                                    <p><strong class="text-info">How does it
+                                            work?</strong><br></p>
+                                    <ol>
+                                        <li>You choose which retailer or retailers you would like to offer to
+                                            your shopper.</li>
+
+                                        <li>You choose one product and the default quantities to be added. You
+                                            can activate <strong>“Related products”</strong>, which will
+                                            substitute the closest
+                                            package size of the same product, if your product is out of stock.
+                                            You can also activate <strong>“Product Selector”</strong>, which
+                                            will show a default
+                                            product size/type but allow the user to chose a different size/type
+                                            if he prefers.</li>
+
+                                        <li>Copy the code and use it on your website. If you need to modify the
+                                            code, you can do so in the tool and then re-add it to your site.
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div class="col-lg-12">
+                                    <img class="img-fluid"
+                                        src="https://smartsuite.co/images/mockups/mockup_embedded_code1.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-cat" role="tabpanel" aria-labelledby="pills-cat" tabindex="0">
+                            <div class="row p-2 p-lg-5">
+                                <div class="col-lg-12 mb-5">
+                                    <p><strong class="text-info">What is
+                                            Catalog?</strong><br>
+                                        Catalog lets you send the user to a
+                                        pre-determined view within the eshop – a
+                                        product category, set of products, or a
+                                        single product.</p>
+                                    <p><strong class="text-info">How does it
+                                            work?</strong><br></p>
+                                    <ol>
+                                        <li>You choose which category, brand, or
+                                            product to which you would like to
+                                            send the user.</li>
+
+                                        <li>You can also choose other parameters
+                                            like retailers or filters.</li>
+                                    </ol>
+                                </div>
+                                <div class="col-lg-12">
+                                    <img class="img-fluid" src="https://smartsuite.co/images/mockups/mockup_catalog.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="modal fade" id="retailconfiguration" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">

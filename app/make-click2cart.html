@@ -153,7 +153,8 @@
                                         </li>
                                         <li class="sidebar-item"><a class="sidebar-link" href="make-campaigns.html">Campaigns</a>
                                         </li>
-                                        <li class="sidebar-item"><a class="sidebar-link" href="#">Shopper's Choice</a>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="make-shoppers.html">Shopper's
+                                                Choice</a>
                                         </li>
                                         <li class="sidebar-item"><a class="sidebar-link" href="#">SmartSite</a></li>
                                         <li class="sidebar-item"><a class="sidebar-link" href="#">Eshop</a></li>
@@ -161,7 +162,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="maps.html"
+                                    <a href="#"
                                         class="nav-link d-flex align-items-center text-truncate ">
                                         <span class="sidebar-icon">
                                             <i class="fa fa-book-open"></i>
@@ -170,7 +171,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="datatables.html"
+                                    <a href="#"
                                         class="nav-link d-flex align-items-center text-truncate ">
                                         <span class="sidebar-icon">
                                             <i class="fa fa-info"></i>
@@ -225,7 +226,6 @@
                 <a href="#"></a>
             </div>
             <!--///.Sidebar close end///-->
-
             <!--///////////Page content wrapper///////////////-->
             <main class="page-content d-flex flex-column flex-row-fluid">
                 <!--//page-header//-->
@@ -332,16 +332,15 @@
                         </div>
                     </div>
                 </div>
-                <div class=" container-fluid text-center border-bottom py-2 px-4">
-
+                <div class="border-bottom py-2 px-4">
                     <div class="row justify-content-center">
                         <div class="col-auto text-center d-none d-lg-block d-xl-block">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb mb-0 justify-content-center">
+                            <nav>
+                                <ol class="breadcrumb mb-0">
                                     <li class="breadcrumb-item"><a href="#!">Home</a>
                                     </li>
-                                    <li class="breadcrumb-item active"><a href="#!">Make & Manage</a></li>
-                                    <li class="breadcrumb-item active">Click2Cart</li>
+                                    <li class="breadcrumb-item active"><a href="#!">Page</a></li>
+                                    <li class="breadcrumb-item active">Page</li>
                                 </ol>
                             </nav>
                         </div>
@@ -352,10 +351,10 @@
                 <div class="content p-4 d-flex flex-column-fluid">
                     <div class="container-fluid px-0">
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col">
                                 <div class="card shadow-sm mb-5 border-0">
                                     <div class="card-body bg-primary bg-opacity-10">
-                                        <div class="row row-cols-auto g-3">
+                                        <div class="row g-3">
                                             <div class="col-auto">
                                                 <label class="mb-2">Date</label>
                                                 <div class="input-group">
@@ -369,12 +368,12 @@
                                                         </svg></button>
                                                 </div>
                                             </div>
-                                            <div class="col-auto">
+                                            <div class="col">
                                                 <label class="mb-2">Transfer
                                                     Filter</label>
                                                 <div class="input-group">
                                                     <select class="form-select" id="inputGroupSelect01">
-                                                        <option selected>Show Transfers and Views</option>
+                                                        <option selected>Show Transfers & Views</option>
                                                         <option value="1">One</option>
                                                         <option value="2">Two</option>
                                                         <option value="3">Three</option>
@@ -386,7 +385,7 @@
                                                         </svg></button>
                                                 </div>
                                             </div>
-                                            <div class="col-auto">
+                                            <div class="col">
                                                 <label class="mb-2">Labels</label>
                                                 <div class="input-group">
                                                     <select class="form-select" id="inputGroupSelect01">
@@ -402,7 +401,7 @@
                                                         </svg></button>
                                                 </div>
                                             </div>
-                                            <div class="col-auto">
+                                            <div class="col">
                                                 <label class="mb-2">Partners</label>
                                                 <div class="input-group">
                                                     <select class="form-select" id="inputGroupSelect01">
@@ -426,7 +425,7 @@
                                                         </svg></button>
                                                 </div>
                                             </div>
-                                            <div class="col-auto">
+                                            <div class="col">
                                                 <label class="mb-2">Retailers</label>
                                                 <div class="input-group">
                                                     <select class="form-select" id="inputGroupSelect01">
@@ -458,8 +457,8 @@
                                             <div class="col">
                                                 <div class="input-group input-group-sm">
                                                     <span class="mt-1 me-3">Advanced Filters</span>
-                                                    <button style="min-width: 0;" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas"
-                                                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">ON
+                                                    <button style="min-width: 0;" class="btn btn-outline-primary btn-sm" data-bs-toggle="collapse"
+                                                        href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">ON
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                                             class="bi bi-funnel-fill" viewBox="0 0 16 16">
                                                             <path
@@ -469,6 +468,154 @@
                                                         All</button>
                                                 </div>
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="collapseExample">
+                                    <div class="card mb-5">
+                                        <div class="card-body">
+                                            <div class="row mb-5">
+                                                <div class="col-lg-4 mb-lg-0 mb-4">
+                                                    <div class="dropdown">
+                                                        <label for="predefineRange" class="form-label">Date</label>
+                                                        <button id="predefineRange" class="form-control text-start">
+                                                            <span>January 26, 2023 - February 1, 2023</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <label class="mb-3">Transfer filter</label>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                                                            checked>
+                                                        <label class="form-check-label" for="flexRadioDefault1">
+                                                            Show Transfers Only
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                            Show Transfers and Views
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-lg-4">
+                                                    <div class="form-floating mb-2">
+                                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                                            <option selected>All</option>
+                                                            <option value="1">By Labels</option>
+                                                        </select>
+                                                        <label for="floatingSelect">Labels</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <select class="form-select mb-3" id="inputGroupSelect01" disabled>
+                                                        <option selected>Chooose</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-lg-4">
+                                                    <div class="form-floating mb-2">
+                                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                                            <option selected>Ours and Partners</option>
+                                                            <option value="1">Ours Only</option>
+                                                            <option value="2">Partners Only</option>
+                                                        </select>
+                                                        <label for="floatingSelect">Scope</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-floating mb-2">
+                                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                                            <option selected>Choose..</option>
+                                                            <option value="1">Pinterest</option>
+                                                        </select>
+                                                        <label for="floatingSelect">Partners</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-lg-4">
+                                                    <div class="form-floating mb-2">
+                                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                                            <option selected>All Retailers</option>
+                                                            <option value="1">Selected Retailers</option>
+                                                        </select>
+                                                        <label for="floatingSelect">Retailers</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <select class="form-select mb-3" id="inputGroupSelect01" disabled>
+                                                        <option selected>Chooose</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-lg-4">
+                                                    <div class="form-floating mb-3">
+                                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                                            <option selected>
+                                                                All
+                                                            </option>
+                                                            <option value="1">
+                                                                One
+                                                            </option>
+                                                            <option value="2">
+                                                                Two
+                                                            </option>
+                                                            <option value="3">
+                                                                Three
+                                                            </option>
+                                                        </select>
+                                                        <label for="floatingSelect">UTM Paremeters</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-success" data-bs-toggle="button" style="min-width: 0;"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-unlock" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2zM3 8a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H3z" />
+                                                    </svg></button>
+                                                <button type="button" class="btn btn-success" data-bs-toggle="button" style="min-width: 0;"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-lock-fill" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
+                                                    </svg></button>
+                                                <a class="mt-2 ms-2" href="#" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
+                                                    data-bs-content="Select lock to retain Date & Transfer across implementations"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                                    </svg></a>
+                                                <button type="button" class="btn btn-outline-primary ms-5" data-bs-toggle="button"
+                                                    style="min-width: 0;">Export</button>
+                                                <a class="mt-2 ms-2" href="#" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
+                                                    data-bs-content="Global export is disabled for the date range you chose, please select a date range equal or lower than 31 days."><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                                    </svg></a>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="#" class="btn btn-outline-primary rounded-pill">
+                                                Reset</a>
+                                            <a href="#" class="btn btn-primary rounded-pill">
+                                                Filter</a>
                                         </div>
                                     </div>
                                 </div>
@@ -499,58 +646,46 @@
                                         <td>6686 | Pantene Nutrient and Sulfate Bundle | C2C | Walmart v6</td>
                                         <td><a href="#">47518 0 Views $2,779,072.43</a></td>
                                         <td>
-                                            <span
-                                                class="badge rounded-pill bg-success small flex-shrink-0">Active</span>
+                                            <span class="badge rounded-pill bg-success small flex-shrink-0">Active</span>
                                         </td>
                                         <td>2023-02-01</td>
                                         <td>-</td>
                                         <td>02-14-23 // 12:32h</td>
                                         <td>6</td>
-                                        <td><span class="text-su
-                                            ">ON</span></td>
+                                        <td><span class="text-success">ON</span></td>
                                         <td><a href="#">https://click2cart.com/00400dJ</a></td>
                                         <td class="text-end">
-                                            <button type="button" class="btn btn-outline-primary btn-circle"
-                                                data-bs-toggle="tooltip" data-bs-placement="top"
-                                                data-bs-title="Deactivate"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-eye-fill"
-                                                    viewBox="0 0 16 16">
+                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" data-bs-title="Deactivate"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
                                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
                                                     <path
                                                         d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
                                                 </svg>
                                             </button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle"
-                                                data-bs-toggle="tooltip" data-bs-placement="top"
-                                                data-bs-title="Deactivate"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor"
-                                                    class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" data-bs-title="Deactivate"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill"
+                                                    viewBox="0 0 16 16">
                                                     <path
                                                         d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
                                                 </svg>
                                             </button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle"
-                                                data-bs-toggle="tooltip" data-bs-placement="top"
-                                                data-bs-title="Activate"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-dash"
-                                                    viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" data-bs-title="Activate"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+                                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
                                                 </svg>
                                             </button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle"
-                                                data-bs-toggle="tooltip" data-bs-placement="top"
-                                                data-bs-title="Edit"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                    height="16" fill="currentColor" class="bi bi-pencil-fill"
-                                                    viewBox="0 0 16 16">
+                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" data-bs-title="Edit"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                    height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
                                                     <path
                                                         d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
                                                 </svg></button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle"
-                                                data-bs-toggle="tooltip" data-bs-placement="top"
-                                                data-bs-title="Delete"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-trash"
-                                                    viewBox="0 0 16 16">
+                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" data-bs-title="Delete"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                                                     <path
                                                         d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
                                                     <path fill-rule="evenodd"
@@ -591,7 +726,6 @@
     <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <!--////////////Theme Core scripts End/////////////////-->
-
 
 </body>
 

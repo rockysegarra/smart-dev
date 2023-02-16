@@ -147,7 +147,8 @@
                                         </li>
                                         <li class="sidebar-item"><a class="sidebar-link" href="make-campaigns.html">Campaigns</a>
                                         </li>
-                                        <li class="sidebar-item"><a class="sidebar-link" href="#">Shopper's Choice</a>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="make-shoppers.html">Shopper's
+                                                Choice</a>
                                         </li>
                                         <li class="sidebar-item"><a class="sidebar-link" href="#">SmartSite</a></li>
                                         <li class="sidebar-item"><a class="sidebar-link" href="#">Eshop</a></li>
@@ -155,7 +156,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="maps.html"
+                                    <a href="#"
                                         class="nav-link d-flex align-items-center text-truncate ">
                                         <span class="sidebar-icon">
                                             <i class="fa fa-book-open"></i>
@@ -164,7 +165,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="datatables.html"
+                                    <a href="#"
                                         class="nav-link d-flex align-items-center text-truncate ">
                                         <span class="sidebar-icon">
                                             <i class="fa fa-info"></i>
@@ -315,7 +316,8 @@
                                         <h5 class="mt-2">Main</h5>
                                     </div>
                                     <div class="col-6 text-end">
-                                        <button class="btn btn-outline-primary rounded-pill">
+                                        <button class="btn btn-outline-primary rounded-pill" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal">
                                             <i class="fa fa-info me-1"></i> More Info
                                         </button>
                                     </div>
@@ -324,16 +326,15 @@
                         </div>
                     </div>
                 </div>
-                <div class=" container-fluid text-center border-bottom py-2 px-4 d-none d-lg-block d-xl-block ">
-                    <div class="row">
-                        <div class="col text-center">
-                            <nav aria-label="breadcrumb">
-                                <ol
-                                    class="breadcrumb mb-0 justify-content-end justify-content-lg-center justify-content-sm-end">
+                <div class="border-bottom py-2 px-4">
+                    <div class="row justify-content-center">
+                        <div class="col-auto text-center d-none d-lg-block d-xl-block">
+                            <nav>
+                                <ol class="breadcrumb mb-0">
                                     <li class="breadcrumb-item"><a href="#!">Home</a>
                                     </li>
-                                    <li class="breadcrumb-item active">Meaure</li>
-                                    <li class="breadcrumb-item active">Main</li>
+                                    <li class="breadcrumb-item active"><a href="#!">Page</a></li>
+                                    <li class="breadcrumb-item active">Page</li>
                                 </ol>
                             </nav>
                         </div>
@@ -343,293 +344,278 @@
                 <!--//Page content//-->
                 <div class="content p-4 d-flex flex-column-fluid">
                     <div class="container-fluid px-5">
-                        <div class="card shadow-sm mb-5 border-0">
-                            <div class="card-body bg-primary bg-opacity-10">
-                                <div class="row row-cols-auto g-3">
-                                    <div class="col-auto">
-                                        <label class="mb-2">Date</label>
-                                        <div class="input-group">
-                                            <button id="predefineRange" class="form-control text-start">
-                                                <span>January 26, 2023 - February 1, 2023</span>
-                                            </button>
-                                            <button style="min-width: 0;" class="btn btn-primary"><svg
-                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                                                </svg></button>
+                        <div class="row">
+                            <div class="col">
+                                <div class="card shadow-sm mb-5 border-0">
+                                    <div class="card-body bg-primary bg-opacity-10">
+                                        <div class="row g-3">
+                                            <div class="col-auto">
+                                                <label class="mb-2">Date</label>
+                                                <div class="input-group">
+                                                    <button id="predefineRange" class="form-control text-start">
+                                                        <span>January 26, 2023 - February 1, 2023</span>
+                                                    </button>
+                                                    <button style="min-width: 0;" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                                        </svg></button>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <label class="mb-2">Transfer
+                                                    Filter</label>
+                                                <div class="input-group">
+                                                    <select class="form-select" id="inputGroupSelect01">
+                                                        <option selected>Show Transfers & Views</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                    <button style="min-width: 0;" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                                        </svg></button>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <label class="mb-2">Labels</label>
+                                                <div class="input-group">
+                                                    <select class="form-select" id="inputGroupSelect01">
+                                                        <option selected>Show All</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                    <button style="min-width: 0;" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                                        </svg></button>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <label class="mb-2">Partners</label>
+                                                <div class="input-group">
+                                                    <select class="form-select" id="inputGroupSelect01">
+                                                        <option selected>
+                                                            Ours and Partners
+                                                        </option>
+                                                        <option value="1">
+                                                            One
+                                                        </option>
+                                                        <option value="2">
+                                                            Two
+                                                        </option>
+                                                        <option value="3">
+                                                            Three
+                                                        </option>
+                                                    </select>
+                                                    <button style="min-width: 0;" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                                        </svg></button>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <label class="mb-2">Retailers</label>
+                                                <div class="input-group">
+                                                    <select class="form-select" id="inputGroupSelect01">
+                                                        <option selected>
+                                                            All
+                                                            Retailers
+                                                        </option>
+                                                        <option value="1">
+                                                            One
+                                                        </option>
+                                                        <option value="2">
+                                                            Two
+                                                        </option>
+                                                        <option value="3">
+                                                            Three
+                                                        </option>
+                                                    </select>
+                                                    <button style="min-width: 0;" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                                        </svg></button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-auto">
-                                        <label class="mb-2">Transfer
-                                            Filter</label>
-                                        <div class="input-group">
-                                            <select class="form-select" id="inputGroupSelect01">
-                                                <option selected>Show Transfers and Views</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                            </select>
-                                            <button style="min-width: 0;" class="btn btn-primary"><svg
-                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                                                </svg></button>
-                                        </div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <label class="mb-2">Labels</label>
-                                        <div class="input-group">
-                                            <select class="form-select" id="inputGroupSelect01">
-                                                <option selected>Show All</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                            </select>
-                                            <button style="min-width: 0;" class="btn btn-primary"><svg
-                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                                                </svg></button>
-                                        </div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <label class="mb-2">Partners</label>
-                                        <div class="input-group">
-                                            <select class="form-select" id="inputGroupSelect01">
-                                                <option selected>
-                                                    Ours and Partners
-                                                </option>
-                                                <option value="1">
-                                                    One
-                                                </option>
-                                                <option value="2">
-                                                    Two
-                                                </option>
-                                                <option value="3">
-                                                    Three
-                                                </option>
-                                            </select>
-                                            <button style="min-width: 0;" class="btn btn-primary"><svg
-                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                                                </svg></button>
-                                        </div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <label class="mb-2">Retailers</label>
-                                        <div class="input-group">
-                                            <select class="form-select" id="inputGroupSelect01">
-                                                <option selected>
-                                                    All
-                                                    Retailers
-                                                </option>
-                                                <option value="1">
-                                                    One
-                                                </option>
-                                                <option value="2">
-                                                    Two
-                                                </option>
-                                                <option value="3">
-                                                    Three
-                                                </option>
-                                            </select>
-                                            <button style="min-width: 0;" class="btn btn-primary"><svg
-                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                                                </svg></button>
+                                    <div class="card-footer">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="input-group input-group-sm">
+                                                    <span class="mt-1 me-3">Advanced Filters</span>
+                                                    <button style="min-width: 0;" class="btn btn-outline-primary btn-sm" data-bs-toggle="collapse"
+                                                        href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">ON
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                            class="bi bi-funnel-fill" viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z" />
+                                                        </svg></button>
+                                                    <button style="min-width: 0;" class="btn btn-primary">Reset
+                                                        All</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card-footer">
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="input-group input-group-sm">
-                                            <span class="mt-1 me-3">Advanced Filters</span>
-                                            <!-- <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample"
-                                                role="button" aria-expanded="false" aria-controls="collapseExample">
-                                                Link with href
-                                            </a> -->
-                                            <button style="min-width: 0;" class="btn btn-outline-primary btn-sm"
-                                                data-bs-toggle="collapse" href="#collapseExample" role="button"
-                                                aria-expanded="false" aria-controls="collapseExample">ON
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-funnel-fill" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z" />
-                                                </svg></button>
-                                            <button style="min-width: 0;" class="btn btn-primary">Reset
-                                                All</button>
+                                <div class="collapse" id="collapseExample">
+                                    <div class="card mb-5">
+                                        <div class="card-body">
+                                            <div class="row mb-5">
+                                                <div class="col-lg-4 mb-lg-0 mb-4">
+                                                    <div class="dropdown">
+                                                        <label for="predefineRange" class="form-label">Date</label>
+                                                        <button id="predefineRange" class="form-control text-start">
+                                                            <span>January 26, 2023 - February 1, 2023</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <label class="mb-3">Transfer filter</label>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                                                            checked>
+                                                        <label class="form-check-label" for="flexRadioDefault1">
+                                                            Show Transfers Only
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                            Show Transfers and Views
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-lg-4">
+                                                    <div class="form-floating mb-2">
+                                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                                            <option selected>All</option>
+                                                            <option value="1">By Labels</option>
+                                                        </select>
+                                                        <label for="floatingSelect">Labels</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <select class="form-select mb-3" id="inputGroupSelect01" disabled>
+                                                        <option selected>Chooose</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-lg-4">
+                                                    <div class="form-floating mb-2">
+                                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                                            <option selected>Ours and Partners</option>
+                                                            <option value="1">Ours Only</option>
+                                                            <option value="2">Partners Only</option>
+                                                        </select>
+                                                        <label for="floatingSelect">Scope</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-floating mb-2">
+                                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                                            <option selected>Choose..</option>
+                                                            <option value="1">Pinterest</option>
+                                                        </select>
+                                                        <label for="floatingSelect">Partners</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-lg-4">
+                                                    <div class="form-floating mb-2">
+                                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                                            <option selected>All Retailers</option>
+                                                            <option value="1">Selected Retailers</option>
+                                                        </select>
+                                                        <label for="floatingSelect">Retailers</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <select class="form-select mb-3" id="inputGroupSelect01" disabled>
+                                                        <option selected>Chooose</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-lg-4">
+                                                    <div class="form-floating mb-3">
+                                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                                            <option selected>
+                                                                All
+                                                            </option>
+                                                            <option value="1">
+                                                                One
+                                                            </option>
+                                                            <option value="2">
+                                                                Two
+                                                            </option>
+                                                            <option value="3">
+                                                                Three
+                                                            </option>
+                                                        </select>
+                                                        <label for="floatingSelect">UTM Paremeters</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-success" data-bs-toggle="button" style="min-width: 0;"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-unlock" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2zM3 8a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H3z" />
+                                                    </svg></button>
+                                                <button type="button" class="btn btn-success" data-bs-toggle="button" style="min-width: 0;"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-lock-fill" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
+                                                    </svg></button>
+                                                <a class="mt-2 ms-2" href="#" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
+                                                    data-bs-content="Select lock to retain Date & Transfer across implementations"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                                    </svg></a>
+                                                <button type="button" class="btn btn-outline-primary ms-5" data-bs-toggle="button"
+                                                    style="min-width: 0;">Export</button>
+                                                <a class="mt-2 ms-2" href="#" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
+                                                    data-bs-content="Global export is disabled for the date range you chose, please select a date range equal or lower than 31 days."><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                                    </svg></a>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="#" class="btn btn-outline-primary rounded-pill">
+                                                Reset</a>
+                                            <a href="#" class="btn btn-primary rounded-pill">
+                                                Filter</a>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="collapse" id="collapseExample">
-                            <div class="card mb-5">
-                                <div class="card-body">
-                                    <div class="row mb-5">
-                                        <div class="col-lg-4 mb-lg-0 mb-4">
-                                            <div class="dropdown">
-                                                <label for="predefineRange" class="form-label">Date</label>
-                                                <button id="predefineRange" class="form-control text-start">
-                                                    <span>January 26, 2023 - February 1, 2023</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <label class="mb-3">Transfer filter</label>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                    id="flexRadioDefault1" checked>
-                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                    Show Transfers Only
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                    id="flexRadioDefault2">
-                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                    Show Transfers and Views
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-lg-4">
-                                            <div class="form-floating mb-2">
-                                                <select class="form-select" id="floatingSelect"
-                                                    aria-label="Floating label select example">
-                                                    <option selected>All</option>
-                                                    <option value="1">By Labels</option>
-                                                </select>
-                                                <label for="floatingSelect">Labels</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <select class="form-select mb-3" id="inputGroupSelect01" disabled>
-                                                <option selected>Chooose</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-lg-4">
-                                            <div class="form-floating mb-2">
-                                                <select class="form-select" id="floatingSelect"
-                                                    aria-label="Floating label select example">
-                                                    <option selected>Ours and Partners</option>
-                                                    <option value="1">Ours Only</option>
-                                                    <option value="2">Partners Only</option>
-                                                </select>
-                                                <label for="floatingSelect">Scope</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-floating mb-2">
-                                                <select class="form-select" id="floatingSelect"
-                                                    aria-label="Floating label select example">
-                                                    <option selected>Choose..</option>
-                                                    <option value="1">Pinterest</option>
-                                                </select>
-                                                <label for="floatingSelect">Partners</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-lg-4">
-                                            <div class="form-floating mb-2">
-                                                <select class="form-select" id="floatingSelect"
-                                                    aria-label="Floating label select example">
-                                                    <option selected>All Retailers</option>
-                                                    <option value="1">Selected Retailers</option>
-                                                </select>
-                                                <label for="floatingSelect">Retailers</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <select class="form-select mb-3" id="inputGroupSelect01" disabled>
-                                                <option selected>Chooose</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-lg-4">
-                                            <div class="form-floating mb-3">
-                                                <select class="form-select" id="floatingSelect"
-                                                    aria-label="Floating label select example">
-                                                    <option selected>
-                                                        All
-                                                    </option>
-                                                    <option value="1">
-                                                        One
-                                                    </option>
-                                                    <option value="2">
-                                                        Two
-                                                    </option>
-                                                    <option value="3">
-                                                        Three
-                                                    </option>
-                                                </select>
-                                                <label for="floatingSelect">UTM Paremeters</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-outline-success" data-bs-toggle="button"
-                                            style="min-width: 0;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                height="16" fill="currentColor" class="bi bi-unlock"
-                                                viewBox="0 0 16 16">
-                                                <path
-                                                    d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2zM3 8a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H3z" />
-                                            </svg></button>
-                                        <button type="button" class="btn btn-success" data-bs-toggle="button"
-                                            style="min-width: 0;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                height="16" fill="currentColor" class="bi bi-lock-fill"
-                                                viewBox="0 0 16 16">
-                                                <path
-                                                    d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
-                                            </svg></button>
-                                        <a class="mt-2 ms-2" href="#" data-bs-container="body" data-bs-toggle="popover"
-                                            data-bs-placement="top"
-                                            data-bs-content="Select lock to retain Date & Transfer across implementations"><svg
-                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
-                                            </svg></a>
-                                        <button type="button" class="btn btn-outline-primary ms-5"
-                                            data-bs-toggle="button" style="min-width: 0;">Export</button>
-                                        <a class="mt-2 ms-2" href="#" data-bs-container="body" data-bs-toggle="popover"
-                                            data-bs-placement="top"
-                                            data-bs-content="Global export is disabled for the date range you chose, please select a date range equal or lower than 31 days."><svg
-                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
-                                            </svg></a>
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <a href="#" class="btn btn-outline-primary rounded-pill">
-                                        Reset</a>
-                                    <a href="#" class="btn btn-primary rounded-pill">
-                                        Filter</a>
                                 </div>
                             </div>
                         </div>
+
                         <div class="row g-5">
                             <div class="col-lg-4">
                                 <div class="card card-body text-center border-0">
@@ -1147,120 +1133,221 @@
                  <!--/.Page Footer End-->
             </main>
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">More Info
+                            </h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Advanced Filters  -->
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
-                aria-labelledby="offcanvasRightLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Advanced Filters</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <div class="dropdown">
-                        <div>
-                            <div class="card card-body">
-                                <label for="predefineRange" class="form-label">Date</label>
-                                <button id="predefineRange" class="form-control text-start">
-                                    <span>January 26, 2023 - February 1, 2023</span>
-                                </button>
+                            <h4 class="text-info mb-3 text-center">Why would you use the URL
+                                generator?</h4>
+                            <ul class="nav justify-content-center nav-pills flex-column flex-sm-row py-2 py-lg-4" id="pills-tab"
+                                role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                        aria-selected="true">Overview</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                                        aria-selected="false">Click2Cart</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                                        aria-selected="false">Shopper's Choice</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled"
+                                        aria-selected="false">SmartSite</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-cat-tab" data-bs-toggle="pill" data-bs-target="#pills-cat"
+                                        type="button" role="tab" aria-controls="pills-cat" aria-selected="false">Catalog</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                    aria-labelledby="pills-home-tab" tabindex="0">
+                                    <div class="row p-2 p-lg-5">
+                                        <div class="col-lg-6">
+                                            <p><strong class="text-info">What is the function of the URL
+                                                    generator?</strong><br>
+                                                The URL generator creates links that let you tailor the product and
+                                                carting
+                                                experience to the specific campaigns you are running.</p>
+                                            <p><strong class="text-info">What is Click2Cart?</strong><br>
+                                                Click2Cart links let consumers add your products to their carts with a
+                                                single
+                                                click.</p>
+                                            <p><strong class="text-info">What is Shopper's Choice?</strong><br>
+                                                Shopper’s Choice lets you present the user with options: number of
+                                                products, preferred retailer, etc, before carting (min 2 clicks).
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p>
+                                                <strong class="text-info">What is SmartSite?</strong><br>
+                                                SmartSite allows to integrated a way of sell products in the own
+                                                website.
+                                                With a single click the user send the product to a concret retailer.
+                                            </p>
+
+                                            <p>
+                                                <strong class="text-info">What is Catalog?</strong><br>
+                                                Catalog lets you send the user to a pre-determined view within the eshop
+                                                – a
+                                                product category, set of products, or a single product.
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <img class="img-fluid"
+                                                src="https://smartsuite.co/images/mockups/diferents_generators.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                                    tabindex="0">
+                                    <div class="row p-2 p-lg-5">
+                                        <div class="col-lg-12 mb-5">
+                                            <p><strong class="text-info">What is Click2Cart?</strong><br>
+                                                Click2Cart links let consumers add your products to their carts with a
+                                                single click</p>
+                                            <p><strong class="text-info">How does it work?</strong><br>
+                                                Click2Cart links let consumers add your
+                                                products to their carts with a
+                                                single
+                                                click.</p>
+                                            <ol>
+                                                <li>You choose the lead retailer where you want to send the user.
+                                                    You
+                                                    can also activate <strong>“related retailers”</strong>, to send the
+                                                    user to an
+                                                    alternate retailer(s) if the lead retailer is out of stock.</li>
+
+                                                <li>You determine the lead product or products to be added to
+                                                    the cart,
+                                                    and the quantities to be added. You can also activate
+                                                    <strong>“Related
+                                                        products”</strong>, which will substitute the closest package
+                                                    size of the
+                                                    same product, if your product is out of stock.
+                                                </li>
+
+                                                <li>You can add parameters to identify and track your link.</li>
+
+                                                <li>Even after generating the URL, you can return later to
+                                                    modify
+                                                    retailers or products if you want.</li>
+                                            </ol>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <img class="img-fluid"
+                                                src="https://smartsuite.co/images/mockups/mockup_direct_cart.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
+                                    tabindex="0">
+                                    <div class="row p-2 p-lg-5">
+                                        <div class="col-lg-12 mb-5">
+                                            <p><strong class="text-info">What is Shopper's Choice?</strong><br>
+                                                Shopper’s Choice lets you present the user with options: number of
+                                                products, preferred retailer, etc, before carting <strong>(min 2
+                                                    clicks).</strong></p>
+                                            <p><strong class="text-info">How does it
+                                                    work?</strong><br></p>
+                                            <ol>
+                                                <li>You choose which retailer or retailers you would like to offer to
+                                                    your shopper. You can choose one, or as many as you like (we
+                                                    recommend no more than 4).</li>
+
+                                                <li>You determine the lead product or products to be added to the cart,
+                                                    and the default quantities to be added. You can also activate
+                                                    “Related products,” which will substitute the closest package size
+                                                    of the same product, if your product is out of stock.</li>
+
+                                                <li>You can add parameters to identify and track your link.</li>
+
+                                                <li>Even after generating the URL, you can return later to modify
+                                                    retailers or products if you want.
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <img class="img-fluid"
+                                                src="https://smartsuite.co/images/mockups/mockup_shopper_choice.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab"
+                                    tabindex="0">
+                                    <div class="row p-2 p-lg-5">
+                                        <div class="col-lg-12 mb-5">
+                                            <p><strong class="text-info">What is SmartSite?</strong><br>
+                                                SmartSite can be used on a website, blog, etc. to provide Click2Cart
+                                                ease for shoppers.</p>
+                                            <p><strong class="text-info">How does it
+                                                    work?</strong><br></p>
+                                            <ol>
+                                                <li>You choose which retailer or retailers you would like to offer to
+                                                    your shopper.</li>
+
+                                                <li>You choose one product and the default quantities to be added. You
+                                                    can activate <strong>“Related products”</strong>, which will
+                                                    substitute the closest
+                                                    package size of the same product, if your product is out of stock.
+                                                    You can also activate <strong>“Product Selector”</strong>, which
+                                                    will show a default
+                                                    product size/type but allow the user to chose a different size/type
+                                                    if he prefers.</li>
+
+                                                <li>Copy the code and use it on your website. If you need to modify the
+                                                    code, you can do so in the tool and then re-add it to your site.
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <img class="img-fluid"
+                                                src="https://smartsuite.co/images/mockups/mockup_embedded_code1.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-cat" role="tabpanel" aria-labelledby="pills-cat" tabindex="0">
+                                    <div class="row p-2 p-lg-5">
+                                        <div class="col-lg-12 mb-5">
+                                            <p><strong class="text-info">What is
+                                                    Catalog?</strong><br>
+                                                Catalog lets you send the user to a
+                                                pre-determined view within the eshop – a
+                                                product category, set of products, or a
+                                                single product.</p>
+                                            <p><strong class="text-info">How does it
+                                                    work?</strong><br></p>
+                                            <ol>
+                                                <li>You choose which category, brand, or
+                                                    product to which you would like to
+                                                    send the user.</li>
+
+                                                <li>You can also choose other parameters
+                                                    like retailers or filters.</li>
+                                            </ol>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <img class="img-fluid" src="https://smartsuite.co/images/mockups/mockup_catalog.jpg">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="p-3">
-                        <label class="mb-3">Transfer filter</label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
-                                checked>
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Show Transfers Only
-                            </label>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                Show Transfers and Views
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-floating mb-2">
-                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                            <option selected>All</option>
-                            <option value="1">By Labels</option>
-                        </select>
-                        <label for="floatingSelect">Labels</label>
-                    </div>
-                    <div class="form-floating mb-2">
-                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                            <option selected>Ours and Partners</option>
-                            <option value="1">Ours Only</option>
-                            <option value="2">Partners Only</option>
-                        </select>
-                        <label for="floatingSelect">Scope</label>
-                    </div>
-                    <select class="form-select mb-3" id="inputGroupSelect01" disabled>
-                        <option selected>Chooose</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                    <div class="form-floating mb-2">
-                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                            <option selected>Choose..</option>
-                            <option value="1">Pinterest</option>
-                        </select>
-                        <label for="floatingSelect">Partners</label>
-                    </div>
-                    <div class="form-floating mb-2">
-                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                            <option selected>All Retailers</option>
-                            <option value="1">Selected Retailers</option>
-                        </select>
-                        <label for="floatingSelect">Retailers</label>
-                    </div>
-                    <select class="form-select mb-3" id="inputGroupSelect01" disabled>
-                        <option selected>Chooose</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                    <div class="form-floating mb-3">
-                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                            <option selected>
-                                All
-                            </option>
-                            <option value="1">
-                                One
-                            </option>
-                            <option value="2">
-                                Two
-                            </option>
-                            <option value="3">
-                                Three
-                            </option>
-                        </select>
-                        <label for="floatingSelect">UTM Paremeters</label>
-                    </div>
-                    <hr>
-                    <div class="d-grid gap-2">
-                        <button class="btn btn-primary" type="button">Filter</button>
-                        <button class="btn btn-outline-primary" type="button">Reset</button>
                     </div>
                 </div>
             </div>

@@ -35,7 +35,6 @@
         <!--Page-->
         <div class="page d-flex flex-row flex-column-fluid">
             @@include('./partials/sidebars/sidebar.html',{"settings": "settings"} )
-
             <!--///////////Page content wrapper///////////////-->
             <main class="page-content d-flex flex-column flex-row-fluid">
                 @@include('./partials/header/header.html')
@@ -59,19 +58,7 @@
                         </div>
                     </div>
                 </div>
-                <div class=" container-fluid text-center border-bottom py-2 px-4">
-                    <div class="row justify-content-center">
-                        <div class="col-auto text-center d-none d-lg-block d-xl-block">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb mb-0 justify-content-center">
-                                    <li class="breadcrumb-item"><a href="#!">Home</a>
-                                    </li>
-                                    <li class="breadcrumb-item active">Clients</li>
-                                </ol>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
+                @@include('./partials/header/breadcrumbs.html')
                 <!--//Page Toolbar End//-->
                 <!--//Page content//-->
                 <div class="content p-4 d-flex flex-column-fluid">
@@ -218,133 +205,12 @@
                 <!--//Page content End//-->
                 @@include('./partials/footer.html')
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">New Client</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form class="row g-5 needs-validation" novalidate>
-                                    <div class="col-md-4">
-                                        <label for="validationCustom01" class="form-label"><span
-                                                class="text-secondary">*</span>Name</label>
-                                        <input type="text" class="form-control" id="validationCustom01" value=""
-                                            required>
-                                        <div class="invalid-feedback">
-                                            *Name Required
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label for="validationCustom02" class="form-label"><span
-                                                class="text-secondary">*</span>Code</label>
-                                        <input type="text" class="form-control" id="validationCustom02" value=""
-                                            required>
-                                        <div class="invalid-feedback">
-                                            *Code Required
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label for="validationCustom04" class="form-label"><span
-                                                class="text-secondary">*</span>Client Type</label>
-                                        <select class="form-select" id="validationCustom04" required>
-                                            <option selected disabled value="">
-                                                Choose...</option>
-                                            <option>Agency</option>
-                                            <option>Manufacturer</option>
-                                            <option>Retailer</option>
-                                        </select>
-                                        <div class="invalid-feedback">
-                                            Please select a Client Type
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label for="validationCustom04" class="form-label"><span
-                                                class="text-secondary">*</span>Authentication</label>
-                                        <select class="form-select" id="validationCustom05" required>
-                                            <option selected disabled value="">
-                                                Choose...</option>
-                                            <option>Agency</option>
-                                            <option>Manufacturer</option>
-                                            <option>Retailer</option>
-                                        </select>
-                                        <div class="invalid-feedback">
-                                            Please select a Authentication
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label for="validationCustom04" class="form-label"><span
-                                                class="text-secondary">*</span>Packages</label>
-                                        <select class="form-select" multiple>
-                                            <option value="1">Manufacturer - SmartLink - Standard</option>
-                                            <option value="2">Manufacturer - SmartLink - Standard</option>
-                                            <option value="3">Manufacturer - SmartLink - Standard</option>
-                                            <option value="4">Manufacturer - SmartLink - Standard</option>
-                                            <option value="5">Manufacturer - SmartLink - Standard</option>
-                                            <option value="6">Manufacturer - SmartLink - Standard</option>
-                                        </select>
-                                        <div class="form-text">This is a multiselector field, press key 'Ctrl' + click
-                                            to select more than one value in the box</div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label class="form-label">Tracking</label>
-                                        <select class="form-select">
-                                            <option selected disabled value="">
-                                                Do Not Track</option>
-                                            <option>Off</option>
-                                            <option>No Opt In</option>
-                                            <option>Implicit Opt In</option>
-                                            <option>Explicit Opt In</option>
-                                        </select>
-                                        <div class="invalid-feedback">
-                                            Please select a Package
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <label class="form-label">GTM Container ID</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="col-md-12">
-                                        <label class="form-label">Action
-                                            Attributes</label>
-                                        <textarea type="text" class="form-control"></textarea>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="flexSwitchCheckChecked" checked>
-                                            <label class="form-check-label" for="flexSwitchCheckChecked">Enable
-                                                Transfers' Scrub</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="flexSwitchCheckChecked" checked>
-                                            <label class="form-check-label" for="flexSwitchCheckChecked">Enable
-                                                Users'
-                                                Password Reset</label>
-                                        </div>
-                                    </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-outline-primary rounded-pill"
-                                    data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary rounded-pill">Save</button>
-                            </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+                @@include('./partials/modal/retailconfiguration.html')
             </main>
             <!--///////////Page content wrapper End///////////////-->
         </div>
     </div>
     @@include('./partials/core-scripts.html')
-
 </body>
 
 </html>
