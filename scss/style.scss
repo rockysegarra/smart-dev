@@ -1,34 +1,33 @@
-$primary: #4363F9;
-$secondary: #F26B21;
-$success: #60D084;
-$danger: #E94F37;
+$primary: #4363f9;
+$secondary: #f26b21;
+$success: #60d084;
+$danger: #e94f37;
 $warning: #ffc107;
-$info: #252D6C;
-$dark: #4D4E4E;
-$light: #F4F5FB;
-
+$info: #252d6c;
+$dark: #4d4e4e;
+$light: #f4f5fb;
 
 body {
-    font-family: 'Poppins', sans-serif !important;
-    background-color: $light;
-    color: $dark !important;
+  font-family: "Poppins", sans-serif !important;
+  background-color: $light;
+  color: $dark !important;
 }
 
 a {
-    color: $primary;
+  color: $primary;
 }
 
 p {
-    font-size: clamp(14px, 1.11111vw, 16px) !important;
-    line-height: 150% !important;
+  font-size: clamp(14px, 1.11111vw, 16px) !important;
+  line-height: 150% !important;
 }
 
 tr .btn {
-    border-radius: .375rem !important;
+  border-radius: 0.375rem !important;
 }
 
 table td {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 // .btn {
@@ -36,26 +35,26 @@ table td {
 // }
 
 .btn-circle {
-    width: 30px !important;
-    height: 30px !important;
-    padding: 6px 0px !important;
-    border-radius: 15px !important;
-    text-align: center !important;
-    font-size: 12px !important;
-    line-height: 1.42857 !important;
-    min-width: 0px !important;
+  width: 30px !important;
+  height: 30px !important;
+  padding: 6px 0px !important;
+  border-radius: 15px !important;
+  text-align: center !important;
+  font-size: 12px !important;
+  line-height: 1.42857 !important;
+  min-width: 0px !important;
 }
 
 .btn-success {
-    color: white !important;
+  color: white !important;
 }
 
 .btn-outline-success.active {
-    color: white !important;
+  color: white !important;
 }
 
 .btn-outline-success:hover {
-    color: white !important;
+  color: white !important;
 }
 
 h1,
@@ -64,35 +63,34 @@ h3,
 h4,
 h5,
 h6 {
-    color: $dark !important;
-    margin: 0px !important;
-    line-height: 150% !important;
+  color: $dark !important;
+  margin: 0px !important;
+  line-height: 150% !important;
 }
 
 .form-select {
-    // border-radius: 20px !important;
+  // border-radius: 20px !important;
 }
 
 .form-control {
-    border-radius: 0rem !important;
-    border-top: 0px solid !important;
-    border-right: 0px solid !important;
-    border-bottom: solid $primary !important;
-    border-left: 0px solid !important;
-    background-color: $light !important;
-
+  border-radius: 0rem !important;
+  border-top: 0px solid !important;
+  border-right: 0px solid !important;
+  border-bottom: solid $primary !important;
+  border-left: 0px solid !important;
+  background-color: $light !important;
 }
 
 .display-4 {
-    font-weight: 400 !important;
+  font-weight: 400 !important;
 }
 
 .display-title {
-    font-size: calc(1.625rem + 4.5vw);
+  font-size: calc(1.625rem + 4.5vw);
 }
 
 .toolbar {
-    padding: 12px 20px;
+  padding: 12px 20px;
 }
 
 .scroller-side {
@@ -116,26 +114,35 @@ h6 {
   scrollbar-width: thin;
 }
 
-// .list-group {
-//     border-radius: 4px !important;
-// }
-
-.list-group-item.active {
-    z-index: 2;
-    color: #3a3a49;
-    background-color: white !important;
-    border-color: $primary !important;
-    border-width: 1px !important;
-    color: $primary !important;
-
+.table-scroll {
+  max-height: 550px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
 }
 
+table td,
+th {
+  font-size: 12px;
+}
+
+table th {
+  min-width: 150px;
+}
+
+.list-group-item.active {
+  z-index: 2;
+  color: #3a3a49;
+  background-color: white !important;
+  border-color: $primary !important;
+  border-width: 1px !important;
+  color: $primary !important;
+}
 
 // Bootstrap functions
-@import './node_modules/bootstrap/scss/functions';
+@import "./node_modules/bootstrap/scss/functions";
 
 // theme functions
-@import './custom/functions/functions';
+@import "./custom/functions/functions";
 
 //Third party plugins style import
 
@@ -149,11 +156,8 @@ h6 {
 //Import bootstrap core scss
 @import "./node_modules/bootstrap/scss/bootstrap.scss";
 
-
-
-
 //Admin core css files
 @import "./custom/utilities/utilities";
 @import "./custom/components/components";
 // Bootstrap functions
-@import './custom/webfonts/webfonts';
+@import "./custom/webfonts/webfonts";
