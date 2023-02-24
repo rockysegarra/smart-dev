@@ -1,0 +1,143 @@
+<div class="card border-0 overflow-hidden">
+    <div class="card-header d-lg-none">
+        <div class="hstack gap-3">
+            <div class="bg-body-tertiary">{TITLE}
+            </div>
+            <div class="bg-body-tertiary ms-auto">
+                <span class="badge bg-light text-dark">1
+                    of {#}</span>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row g-3">
+            <div class="col-lg-4">
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingInputValue" placeholder="name@example.com">
+                    <label for="floatingInputValue">Widget Name</label>
+                    <div class="form-text">Add a specific name to track your widget</div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-floating">
+                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                        <option selected>Choose Labels</option>
+                        <option value="1">One</option>
+                    </select>
+                    <label for="floatingSelect">Labels</label>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="standard-tab" data-bs-toggle="tab"
+                            data-bs-target="#standard-tab-pane" type="button" role="tab"
+                            aria-controls="standard-tab-pane" aria-selected="true">Standard</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="custom-tab" data-bs-toggle="tab" data-bs-target="#custom-tab-pane"
+                            type="button" role="tab" aria-controls="custom-tab-pane" aria-selected="false">Custom
+                            Options</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="standard-tab-pane" role="tabpanel"
+                        aria-labelledby="standard-tab" tabindex="0">
+                        <div class="card border-0 overflow-hidden">
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="form-floating">
+                                                    <select class="form-select" id="floatingSelect"
+                                                        aria-label="Floating label select example">
+                                                        <option selected>Default</option>
+                                                    </select>
+                                                    <label for="floatingSelect">Geolocation Provider</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="custom-tab-pane" role="tabpanel" aria-labelledby="custom-tab"
+                        tabindex="0">
+                        <div class="card border-0 overflow-hidden">
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="form-floating">
+                                                    <select class="form-select" id="floatingSelect"
+                                                        aria-label="Floating label select example">
+                                                        <option selected>Inherit</option>
+                                                    </select>
+                                                    <label for="floatingSelect">Tracking</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a class="btn btn-primary mt-lg-0 mt-2" data-bs-toggle="collapse"
+                                                    href="#collapseExample" role="button" aria-expanded="false"
+                                                    aria-controls="collapseExample">
+                                                    Advanced Options
+                                                </a>
+                                            </div>
+
+                                            <div class="col-lg-12 collapse mt-3" id="collapseExample">
+                                                <div class="row g-3">
+                                                    <div class="col-lg-4">
+                                                        <div class="form-floating">
+                                                            <input type="email" class="form-control"
+                                                                id="floatingInputValue" placeholder="name@example.com">
+                                                            <label for="floatingInputValue">Default GTM
+                                                                ID</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="form-floating">
+                                                            <input type="email" class="form-control"
+                                                                id="floatingInputValue" placeholder="name@example.com">
+                                                            <label for="floatingInputValue">Override GTM
+                                                                ID</label>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="form-floating">
+                                                    <select class="form-select" id="floatingSelect"
+                                                        aria-label="Floating label select example">
+                                                        <option selected>Default</option>
+                                                    </select>
+                                                    <label for="floatingSelect">Geolocation Provider</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <a href="#" class="btn btn-outline-primary rounded-pill">
+            Previous</a>
+        <a href="#" class="btn btn-primary rounded-pill">
+            Save</a>
+    </div>
+</div>

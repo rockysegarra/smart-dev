@@ -148,7 +148,8 @@
                                         <li class="sidebar-item"><a class="sidebar-link" href="make-shoppers.html">Shopper's
                                                 Choice</a>
                                         </li>
-                                        <li class="sidebar-item"><a class="sidebar-link" href="#">SmartSite</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="make-smartsite.html">SmartSite</a>
+                                        </li>
                                         <li class="sidebar-item"><a class="sidebar-link" href="#">Eshop</a></li>
                                         <li class="sidebar-item"><a class="sidebar-link" href="make-catalog.html">Catalog</a></li>
                                     </ul>
@@ -479,19 +480,28 @@
                                 <div class="card border-0 overflow-hidden">
                                     <div class="card-header d-lg-none">
                                         <div class="hstack gap-3">
-                                            <div class="bg-body-tertiary">
-                                                <h5 class="mb-0">Choose the lead retailer
-                                                </h5>
+                                            <div class="bg-body-tertiary">{TITLE}
                                             </div>
                                             <div class="bg-body-tertiary ms-auto">
-                                                <h5 class="mb-0">
-                                                    <span class="badge bg-light text-dark">1
-                                                        of 4</span>
-                                                </h5>
+                                                <span class="badge bg-light text-dark">1
+                                                    of {#}</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card-body" style="min-height: 5rem;">
+                                    <div class="card-body">
+                                        <div class="row mb-5">
+                                            <div class="col-auto mb-3">
+                                                <label for="staticEmail2" class="mt-0 mt-lg-2">Choose
+                                                    retailers to be shown to users and determine the order in
+                                                    which they will show</label>
+                                            </div>
+                                            <div class="col-auto">
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected="">Random Selection</option>
+                                                    <option value="1">Manual Selection</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                         <div class="row border-bottom pb-2 mb-2">
                                             <div class="col-auto">
                                                 <div class="form-check form-switch mb-3 mb-lg-0">
@@ -666,8 +676,7 @@
                                             <li class="nav-item" role="presentation">
                                                 <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane-1"
                                                     type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
-                                                    <span class="px-5">Select
-                                                        Retailers</span></button>
+                                                    Select Retailers</button>
                                             </li>
                                         </ul>
                                         <div class="tab-content" id="myTabContent">
@@ -734,15 +743,11 @@
                                 <div class="card border-0 overflow-hidden">
                                     <div class="card-header d-lg-none">
                                         <div class="hstack gap-3">
-                                            <div class="bg-body-tertiary">
-                                                <h5 class="mb-0">Search and choose products
-                                                </h5>
+                                            <div class="bg-body-tertiary">{TITLE}
                                             </div>
                                             <div class="bg-body-tertiary ms-auto">
-                                                <h5 class="mb-0">
-                                                    <span class="badge bg-light text-dark">2
-                                                        of 4</span>
-                                                </h5>
+                                                <span class="badge bg-light text-dark">1
+                                                    of {#}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1196,13 +1201,11 @@
                                 <div class="card border-0 overflow-hidden">
                                     <div class="card-header d-lg-none">
                                         <div class="hstack gap-3">
-                                            <div class="bg-body-tertiary">
-                                                <h5 class="mb-0">Customize your Messaging</h5>
+                                            <div class="bg-body-tertiary">{TITLE}
                                             </div>
                                             <div class="bg-body-tertiary ms-auto">
-                                                <h5 class="mb-0">
-                                                    <span class="badge bg-light text-dark">3 of 4</span>
-                                                </h5>
+                                                <span class="badge bg-light text-dark">1
+                                                    of {#}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1496,8 +1499,18 @@
                             <div class="tab-pane fade" id="display-tab-pane" role="tabpanel"
                                 aria-labelledby="display-tab" tabindex="0">
                                 <div class="card">
+                                    <div class="card-header d-lg-none">
+                                        <div class="hstack gap-3">
+                                            <div class="bg-body-tertiary">{TITLE}
+                                            </div>
+                                            <div class="bg-body-tertiary ms-auto">
+                                                <span class="badge bg-light text-dark">1
+                                                    of {#}</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="card-header">
-                                        <h5>1. Customize your display options</h5>
+                                        Customize your display options
                                     </div>
                                     <div class="card-body">
                                         <div class="row">
@@ -1518,16 +1531,16 @@
                                         </div>
                                     </div>
                                     <div class="card-header border-top">
-                                        <h5>2. Customize your text options</h5>
+                                        Customize your text options
                                     </div>
                                     <div class="card-body">
-                                        <div class="row">
+                                        <div class="row g-3">
                                             <div class="col-12">
-                                                <div class="mb-3 row">
-                                                    <label for="inputPassword" class="col-sm-2 col-form-label">Heading
+                                                <div class="row">
+                                                    <label for="inputPassword" class="col-lg-2 col-form-label">Heading
                                                         Text color:</label>
                                                     <div class="col-sm-4">
-                                                        <div class="input-group mb-3">
+                                                        <div class="input-group">
                                                             <input type="text" class="form-control" placeholder="" aria-label=""
                                                                 aria-describedby="button-addon2">
                                                             <button class="btn btn-primary" style="min-width: 0;" type="button" id="button-addon2"><svg
@@ -1543,11 +1556,11 @@
                                                 </div>
                                             </div>
                                             <div class="col-12">
-                                                <div class="mb-3 row">
-                                                    <label for="inputPassword" class="col-sm-2 col-form-label">Secondary
+                                                <div class="row">
+                                                    <label for="inputPassword" class="col-lg-2 col-form-label">Secondary
                                                         Heading Text color:</label>
                                                     <div class="col-sm-4">
-                                                        <div class="input-group mb-3">
+                                                        <div class="input-group">
                                                             <input type="text" class="form-control" placeholder="" aria-label=""
                                                                 aria-describedby="button-addon2">
                                                             <button class="btn btn-primary" style="min-width: 0;" type="button" id="button-addon2"><svg
@@ -1563,11 +1576,11 @@
                                                 </div>
                                             </div>
                                             <div class="col-12">
-                                                <div class="mb-3 row">
-                                                    <label for="inputPassword" class="col-sm-2 col-form-label">Bottom
+                                                <div class="row">
+                                                    <label for="inputPassword" class="col-lg-2 col-form-label">Bottom
                                                         Text color:</label>
-                                                    <div class="col-sm-4">
-                                                        <div class="input-group mb-3">
+                                                    <div class="col-lg-4">
+                                                        <div class="input-group">
                                                             <input type="text" class="form-control" placeholder="" aria-label=""
                                                                 aria-describedby="button-addon2">
                                                             <button class="btn btn-primary" style="min-width: 0;" type="button" id="button-addon2"><svg
@@ -1583,11 +1596,11 @@
                                                 </div>
                                             </div>
                                             <div class="col-12">
-                                                <div class="mb-3 row">
-                                                    <label for="inputPassword" class="col-sm-2 col-form-label">Hyperlink
+                                                <div class="row">
+                                                    <label for="inputPassword" class="col-lg-2 col-form-label">Hyperlink
                                                         color:</label>
-                                                    <div class="col-sm-4">
-                                                        <div class="input-group mb-3">
+                                                    <div class="col-lg-4">
+                                                        <div class="input-group">
                                                             <input type="text" class="form-control" placeholder="" aria-label=""
                                                                 aria-describedby="button-addon2">
                                                             <button class="btn btn-primary" style="min-width: 0;" type="button" id="button-addon2"><svg
@@ -1605,7 +1618,7 @@
                                         </div>
                                     </div>
                                     <div class="card-header border-top">
-                                        <h5>3. Customize your background</h5>
+                                        Customize your background
                                     </div>
                                     <div class="card-body">
                                         <div class="row g-5">
@@ -1660,11 +1673,11 @@
                                                 </div>
                                             </div>
                                             <div class="col-12">
-                                                <div class="mb-3 row">
-                                                    <label for="inputPassword" class="col-sm-2 col-form-label">Inner
+                                                <div class="row">
+                                                    <label for="inputPassword" class="col-lg-2 col-form-label">Inner
                                                         background color:</label>
                                                     <div class="col-sm-4">
-                                                        <div class="input-group mb-3">
+                                                        <div class="input-group">
                                                             <input type="text" class="form-control" placeholder="" aria-label=""
                                                                 aria-describedby="button-addon2">
                                                             <button class="btn btn-primary" style="min-width: 0;" type="button" id="button-addon2"><svg
@@ -1682,7 +1695,7 @@
                                         </div>
                                     </div>
                                     <div class="card-header border-top">
-                                        <h5>4. Add marketing assets</h5>
+                                        Add marketing assets
                                     </div>
                                     <div class="card-body">
                                         <div class="row g-5">
@@ -1737,13 +1750,11 @@
                                 <div class="card overflow-hidden">
                                     <div class="card-header d-lg-none">
                                         <div class="hstack gap-3">
-                                            <div class="bg-body-tertiary">
-                                                <h5 class="mb-0">Save & Preview</h5>
+                                            <div class="bg-body-tertiary">{TITLE}
                                             </div>
                                             <div class="bg-body-tertiary ms-auto">
-                                                <h5 class="mb-0">
-                                                    <span class="badge bg-light text-dark">4 of 4</span>
-                                                </h5>
+                                                <span class="badge bg-light text-dark">1
+                                                    of {#}</span>
                                             </div>
                                         </div>
                                     </div>

@@ -156,7 +156,8 @@
                                         <li class="sidebar-item"><a class="sidebar-link" href="make-shoppers.html">Shopper's
                                                 Choice</a>
                                         </li>
-                                        <li class="sidebar-item"><a class="sidebar-link" href="#">SmartSite</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="make-smartsite.html">SmartSite</a>
+                                        </li>
                                         <li class="sidebar-item"><a class="sidebar-link" href="#">Eshop</a></li>
                                         <li class="sidebar-item"><a class="sidebar-link" href="make-catalog.html">Catalog</a></li>
                                     </ul>
@@ -506,75 +507,125 @@
                  </footer>
                  <!--/.Page Footer End-->
                 <!-- Modal -->
-                <div class="modal fade" id="retailconfiguration" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Retailer Configuration</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">New Client</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <h5 class="mb-3">Default Properties</h5>
-                                <div class="table-responsive mb-5">
-                                    <table class="table table-borderless table-nowrap mb-0" style="width: 100%">
-                                        <thead class="text-muted text-uppercase small bg-body bg-opacity-50">
-                                            <tr>
-                                                <th>Retailer Name</th>
-                                                <th>Retailer Type</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="align-middle">
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <a href="#!.html"><img src="assets/Frame.svg"
-                                                                class="avatar p-1 border rounded-2 me-2 align-middle" alt="" /></a>
-                                                    </div>
-                                                </td>
-                                                <td>National PDP Retailer</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <h5 class="mb-0 pb-0">Overrides</h5>
-                                <hr>
-                                <form class="row g-5">
-                                    <div class="col-md-12">
-                                        <label class="form-label"><span class="text-secondary">*</span>Retailer
-                                            Name</label>
+                                <form class="row g-5 needs-validation" novalidate>
+                                    <div class="col-md-4">
+                                        <label for="validationCustom01" class="form-label"><span
+                                                class="text-secondary">*</span>Name</label>
+                                        <input type="text" class="form-control" id="validationCustom01" value=""
+                                            required>
+                                        <div class="invalid-feedback">
+                                            *Name Required
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="validationCustom02" class="form-label"><span
+                                                class="text-secondary">*</span>Code</label>
+                                        <input type="text" class="form-control" id="validationCustom02" value=""
+                                            required>
+                                        <div class="invalid-feedback">
+                                            *Code Required
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="validationCustom04" class="form-label"><span
+                                                class="text-secondary">*</span>Client
+                                            Type</label>
+                                        <select class="form-select" id="validationCustom04" required>
+                                            <option selected disabled value="">
+                                                Choose...</option>
+                                            <option>Agency</option>
+                                            <option>Manufacturer</option>
+                                            <option>Retailer</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a Client Type
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="validationCustom04" class="form-label"><span
+                                                class="text-secondary">*</span>Authentication</label>
+                                        <select class="form-select" id="validationCustom05" required>
+                                            <option selected disabled value="">
+                                                Choose...</option>
+                                            <option>Agency</option>
+                                            <option>Manufacturer</option>
+                                            <option>Retailer</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a Authentication
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="validationCustom04" class="form-label"><span
+                                                class="text-secondary">*</span>Packages</label>
+                                        <select class="form-select" id="validationCustom06" required>
+                                            <option selected disabled value="">
+                                                Choose...</option>
+                                            <option value="1">
+                                                Manufacturer - SmartLink
+                                            </option>
+                                            <option value="2">
+                                                Agency - Full Product
+                                            </option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a Package
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Tracking</label>
+                                        <select class="form-select">
+                                            <option selected disabled value="">
+                                                Do Not Track</option>
+                                            <option>Off</option>
+                                            <option>No Opt In</option>
+                                            <option>Implicit Opt In</option>
+                                            <option>Explicit Opt In</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a Package
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <label class="form-label">GTM Container ID</label>
                                         <input type="text" class="form-control">
                                     </div>
                                     <div class="col-md-12">
-                                        <label class="form-label">Carting Type</label>
-                                        <select class="form-select">
-                                            <option selected disabled value="">
-                                                Costco</option>
-                                        </select>
+                                        <label class="form-label">Action
+                                            Attributes</label>
+                                        <textarea type="text" class="form-control"></textarea>
                                     </div>
-                                    <div class="col-12">
-                                        <div class="row mt-">
-                                            <div class="col-12"><label class="form-label">Retailer
-                                                    Carting Parameters</label></div>
-                                            <div class="col"><input type="text" class="form-control"></div>
-                                            <div class="col"><input type="text" class="form-control"></div>
-                                            <div class="col-auto"><button class="btn btn-outline-primary rounded-pill"><svg
-                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                                        class="bi bi-trash" viewBox="0 0 16 16">
-                                                        <path
-                                                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
-                                                        <path fill-rule="evenodd"
-                                                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
-                                                    </svg></button></div>
+                                    <div class="col-auto">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch"
+                                                id="flexSwitchCheckChecked" checked>
+                                            <label class="form-check-label" for="flexSwitchCheckChecked">Enable
+                                                Transfers' Scrub</label>
                                         </div>
                                     </div>
-                                    <div class="col-12">
-                                        <button class="btn btn-outline-primary rounded-pill">Add New</button>
+                                    <div class="col-auto">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch"
+                                                id="flexSwitchCheckChecked" checked>
+                                            <label class="form-check-label" for="flexSwitchCheckChecked">Enable
+                                                Users'
+                                                Password Reset</label>
+                                        </div>
                                     </div>
-                                </form>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-outline-primary rounded-pill"
-                                    data-bs-dismiss="modal">Cancel</button>
+                                    data-bs-dismiss="modal">Close</button>
                                 <button type="submit" class="btn btn-primary rounded-pill">Save</button>
                             </div>
                             </form>
