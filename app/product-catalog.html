@@ -573,7 +573,8 @@
                                                     <td>25073907</td>
                                                     <td><a href="#">Attributes Available</a></td>
                                                     <td>1011778</td>
-                                                    <td><a href="#">Available</a></td>
+                                                    <td><a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#confirmationdialog">Available</a></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -606,6 +607,32 @@
                    </div>
                  </footer>
                  <!--/.Page Footer End-->
+                <!-- Modal -->
+                <div class="modal fade" id="confirmationdialog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmation dialog</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Hiding this product will not allow users to search or add it to any SmartLinks or
+                                    widgets. Are you sure you want to hide
+                                    the product?</p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Globally for all users? This is a discontinued product.
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Accept</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
             <!--///////////Page content wrapper End///////////////-->
         </div>
