@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Suite</title>
+
+    <!--Simplebar css-->
+    <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css">
+
+    <!--Choices css-->
+    <link rel="stylesheet" href="assets/vendor/css/choices.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>
+
+    <!--Font awesome icons-->
+    <link href="assets/fonts/font-awesome5-free/css/all.min.css" rel="stylesheet">
+
+    <!--Google web fonts-->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!--Main style-->
+    <link rel="stylesheet" href="assets/css/style.min.css" id="switchThemeStyle">
+    <script src="https://kit.fontawesome.com/9b71cccaf3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+      <!--////////////////// PreLoader Start//////////////////////-->
+      <div class="loader">
+        <!--Placeholder animated layout for preloader-->
+        <div class="d-flex flex-column flex-root">
+          <div class="page d-flex flex-row flex-column-fluid">
+
+            <!--Sidebar start-->
+            <aside class="page-sidebar aside-dark placeholder-wave">
+              <div class="placeholder col-12 h-100 bg-gray"></div>
+            </aside>
+            <div class="page-content d-flex flex-column flex-row-fluid">
+              <div
+                class="content flex-column p-4 pb-0 d-flex justify-content-center align-items-center flex-column-fluid position-relative">
+                <div class="w-100 h-100 position-relative d-flex align-items-center justify-content-center">
+                  <i class="anim-spinner fas fa-spinner me-3"></i>
+                  <div>
+                  <span>Loading...</span>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--////////////////// /.PreLoader END//////////////////////-->
+
+    <!--App Start-->
+    <div class="d-flex flex-column flex-root">
+        <!--Page-->
+        <div class="page d-flex flex-row flex-column-fluid">
+            <!--///////////Page sidebar begin///////////////-->
+            <aside class="page-sidebar">
+                <div class="h-100 flex-column d-flex" data-simplebar>
+
+                    <!--Aside-logo-->
+                    <div class="aside-logo p-3 position-relative">
+                        <a href="index.html" class="d-block pe-2">
+                            <div class="d-flex align-items-center flex-no-wrap text-truncate">
+                                <!--Sidebar-icon-->
+                                <span class="sidebar-icon">
+                                    <img src="assets/smart-mark.svg">
+                                </span>
+                                <span class="sidebar-text">
+                                    <!--Sidebar-text-->
+                                    <span class="sidebar-text text-truncate fs-4 text-uppercase fw-bolder">
+                                        <img src="assets/smart-logo.svg">
+                                    </span>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <!--Aside-Menu pe-2 -->
+                    <div class="pe-4 ps-4 pt-4 d-lg-none" style="background-color: #252D6C;">
+                        <div class="mb-2"><select class="form-select" aria-label="Default select example">
+                                <option selected>Manufacturer</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select></div>
+                        <div class="mb-2"><select class="form-select" aria-label="Default select example">
+                                <option selected>Procter & Gamber</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select></div>
+                        <div class="mb-2"><select class="form-select" aria-label="Default select example">
+                                <option selected>Pantene - US</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="aside-menu my-auto flex-column-fluid text-white"
+                        style="background-color: #252D6C; padding-left: 10px;">
+                        <nav class="flex-grow-1 h-100" id="page-navbar">
+                            <!--:Sidebar nav-->
+                            <ul class="nav flex-column collapse-group collapse d-flex pt-4">
+                                <!-- <li class="nav-item sidebar-title text-truncate opacity-50 small">
+                                    <i class="fas fa-ellipsis-h align-middle"></i>
+                                    <span>Main</span>
+                                </li> -->
+                                <li class="nav-item">
+                                    <a href="#dashboards" data-bs-toggle="collapse"
+                                        class="nav-link d-flex align-items-center text-truncate "
+                                        aria-expanded="false">
+                                        <span class="sidebar-icon">
+                                            <i class="fa fa-chart-line"></i>
+                                        </span>
+                                        <!--Sidebar nav text-->
+                                        <span class="sidebar-text">Measure</span>
+                                    </a>
+                                    <ul data-bs-target="#dashboards" id="dashboards"
+                                        class="sidebar-dropdown list-unstyled collapse mb-3">
+                                        <li class="sidebar-item"><a class="sidebar-link" href="measure-main.html">Main</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a data-bs-toggle="collapse"
+                                        class="nav-link d-flex align-items-center text-truncate active"
+                                        aria-expanded="false" href="#ui-pages">
+                                        <span class="sidebar-icon">
+                                            <i class="fa fa-link"></i>
+                                        </span>
+                                        <!--Sidebar nav text-->
+                                        <span class="sidebar-text">Make & Manage</span>
+                                    </a>
+                                    <ul id="ui-pages" class="sidebar-dropdown list-unstyled collapse">
+                                        <li class="sidebar-item"><a class="sidebar-link" href="make-main.html">Main</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="make-click2cart.html">Click2Cart</a>
+                                        </li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="make-campaigns.html">Campaigns</a>
+                                        </li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="make-shoppers.html">Shopper's
+                                                Choice</a>
+                                        </li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="make-smartsite.html">SmartSite</a>
+                                        </li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="#">Eshop</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="make-catalog.html">Catalog</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="product-catalog.html"
+                                        class="nav-link d-flex align-items-center text-truncate ">
+                                        <span class="sidebar-icon">
+                                            <i class="fa fa-book-open"></i>
+                                        </span>
+                                        <span class="sidebar-text">Product Catalog</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#"
+                                        class="nav-link d-flex align-items-center text-truncate ">
+                                        <span class="sidebar-icon">
+                                            <i class="fa fa-info"></i>
+                                        </span>
+                                        <span class="sidebar-text">SmartHub</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item d-lg-none">
+                                    <a href="#settings" data-bs-toggle="collapse"
+                                        class="nav-link d-flex align-items-center text-truncate "
+                                        aria-expanded="false">
+                                        <span class="sidebar-icon">
+                                            <i class="fa fa-gear"></i>
+                                        </span>
+                                        <!--Sidebar nav text-->
+                                        <span class="sidebar-text">Settings</span>
+                                    </a>
+                                    <ul data-bs-target="settings" id="settings" class="sidebar-dropdown list-unstyled collapse">
+                                        <li class="sidebar-item"><a class="sidebar-link" href="settings-clients.html">Clients</a>
+                                        </li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="index-dashboard2.html">Dashboard
+                                                2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item d-lg-none">
+                                    <a href="page-auth-signin.html"
+                                        class="nav-link d-flex align-items-center text-truncate ">
+                                        <span class="sidebar-icon">
+                                            <i class="fa fa-power-off"></i>
+                                        </span>
+                                        <span class="sidebar-text">Log Out</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!--Aside-footer-->
+                    <!-- <footer class="aside-footer position-relative p-3">
+                        <div class="p-3 bg-secondary text-white rounded-3 position-relative overflow-hidden">
+                            <div class="position-relative">
+                                <p class="mb-0 pb-2">Release your maximal potencial software</p>
+                                <a href="#!.html" class="btn rounded-pill btn-white text-truncate btn-sm">Upgrade Pro</a>
+                            </div>
+                        </div>
+                    </footer> -->
+                </div>
+            </aside>
+            <!--///////////Page Sidebar End///////////////-->
+
+            <!--///Sidebar close button for 991px or below devices///-->
+            <div class="sidebar-close d-lg-none">
+                <a href="#"></a>
+            </div>
+            <!--///.Sidebar close end///-->
+            <!--///////////Page content wrapper///////////////-->
+            <main class="page-content d-flex flex-column flex-row-fluid">
+                <!--//page-header//-->
+                <header class="navbar py-0 page-header border-bottom navbar-expand navbar-light px-4">
+                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <div class="d-flex align-items-center flex-no-wrap text-truncate">
+                            <!--Sidebar-icon-->
+                            <img src="assets/smart-mark.svg">
+                        </div>
+                    </a>
+                    <ul class="navbar-nav d-flex align-items-center h-100">
+                        <li class="nav-item d-none d-lg-flex flex-column h-100 me-lg-2 align-items-center justify-content-center">
+                            <a href="javascript:void(0)"
+                                class="sidebar-trigger nav-link rounded-3 size-35 d-flex align-items-center justify-content-center p-0">
+                                <i class="fa fa-arrow-left"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex flex-column me-lg-2 h-100 justify-content-center dropdown">
+                            <div class="d-none d-lg-block d-xl-block">
+                                <div class="d-flex">
+                                    <div class="me-1"><select class="form-select" aria-label="Default select example">
+                                            <option selected>Manufacturer</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select></div>
+                                    <div class="me-1"><select class="form-select" aria-label="Default select example">
+                                            <option selected>Procter & Gamber</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select></div>
+                                    <div class="me-1"><select class="form-select" aria-label="Default select example">
+                                            <option selected>Pantene - US</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto d-flex align-items-center h-100">
+                        <li class="nav-item d-flex flex-column h-100 justify-content-center dropdown">
+                            <a href="#" data-bs-toggle="dropdown"
+                                class="dropdown-toggle nav-link py-2 px-2 d-flex align-items-center justify-content-center p-0 me-2">
+                                <i class="fa fa-globe fa-2x text-primary" style="margin-top: 0px;"></i>
+                            </a>
+                            <div class="dropdown-menu overflow-hidden mt-0">
+                                <a href="#!" class="dropdown-item active">
+                                    English
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                    Spanish
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                    French
+                                </a>
+                            </div>
+                        </li>
+                        <div class="d-none d-lg-block d-xl-block ms-auto d-flex align-items-center h-100">
+                            <div class="dropdown d-flex flex-column h-100 justify-content-center dropdown">
+                                <button data-bs-toggle="dropdown" class="btn btn-outline-primary me-1 dropdown-toggle rounded-pill"><i
+                                        class="fa fa-gear me-1"></i> Settings</button>
+                                <div class="dropdown-menu overflow-hidden mt-0">
+                                    <a href="settings-clients.html" class="dropdown-item active">
+                                        Clients
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-none d-lg-block d-xl-block">
+                            <a href="page-auth-signin.html" class="btn btn-primary rounded-pill">Log out</a>
+                        </div>
+
+                        <li
+                            class="nav-item dropdown ms-1 ms-lg-3 d-flex d-lg-none align-items-center justify-content-center flex-column h-100">
+                            <a href="#"
+                                class="nav-link sidebar-trigger-lg-down p-0 d-flex align-items-center justify-content-center rounded-3">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </header>
+                <!--Main Header End-->
+                <!--//Page Toolbar//-->
+                <div class="toolbar bg-white">
+                    <div class="position-relative container-fluid px-0">
+                        <div class="row position-relative">
+                            <div class="col-md-12 ">
+                                <div class="row g-0">
+                                    <div class="col-6">
+                                        <h5 class="mt-2">Detail URL</h5>
+                                    </div>
+                                    <div class="col-6 text-end">
+                                        <a href="make-click2cart-new-url.html"
+                                            class="btn btn-outline-primary rounded-pill">
+                                            Create New Url
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-bottom py-2 px-4">
+                    <div class="row justify-content-center">
+                        <div class="col-auto text-center d-none d-lg-block d-xl-block">
+                            <nav>
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item"><a href="#!">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item active"><a href="#!">Page</a></li>
+                                    <li class="breadcrumb-item active">Page</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <!--//Page Toolbar End//-->
+                <!--//Page content//-->
+                <div class="content p-4 d-flex flex-column-fluid">
+                    <div class="container-fluid px-0">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="alert alert-success d-flex align-items-center" role="alert">
+                                    <i class="far fa-check-circle fs-1 me-3 flex-shrink-0 text-success"></i>
+                                    <div class="text-success">
+                                        <h1 class="h3 text-success">URL GENERATED CORRECTLY</h1>
+                                        <span class="text-success">Base Link:</span> <a href="#"
+                                            class="text-success">https://click2cart.com/00400dK</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="standard-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#standard-tab-pane" type="button" role="tab"
+                                                    aria-controls="standard-tab-pane" aria-selected="true">Platform
+                                                    Links</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="custom-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#custom-tab-pane" type="button" role="tab"
+                                                    aria-controls="custom-tab-pane" aria-selected="false">Custom
+                                                    Links</button>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content" id="myTabContent">
+                                            <div class="tab-pane fade active show" id="standard-tab-pane"
+                                                role="tabpanel" aria-labelledby="standard-tab" tabindex="0">
+                                                <div class="card border-0 overflow-hidden mb-1">
+                                                    <div class="card-body">
+                                                        <div class="row g-3">
+                                                            <div class="col-12 mb-3">
+                                                                Below you will find links that are configured per
+                                                                platform. You can copy individual links or copy all
+                                                                links to paste
+                                                                inside an email.
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="table-responsive bg-white">
+                                                                    <table class="table table-borderless mb-0"
+                                                                        style="width:100%">
+                                                                        <thead class="text-uppercase small bg-body">
+                                                                            <tr>
+                                                                                <th>Platform</th>
+                                                                                <th>Link</th>
+                                                                                <th>Actions</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody class="align-middle">
+                                                                            <tr>
+                                                                                <td>Meta (Facebook & Instagram)</td>
+                                                                                <td><input class="form-control"
+                                                                                        type="text" placeholder=""
+                                                                                        aria-label="default input example"
+                                                                                        value="https://click2cart.com/00400dK?bf_campaign={{campaign.id}}&bf_campaign_name={{campaign.name}}&bf_ad_group={{adset.id}}&bf_ad_group_name={{adset.name}}&bf_creative={{ad.id}}&bf_creative_name={{ad.name}}&bf_provider={{site_source_name}}">
+                                                                                </td>
+                                                                                <td><button type="button"
+                                                                                        class="btn btn-outline-primary btn-circle"
+                                                                                        data-bs-toggle="tooltip"
+                                                                                        data-bs-placement="top"
+                                                                                        data-bs-title="Copied"><svg
+                                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                                            width="16" height="16"
+                                                                                            fill="currentColor"
+                                                                                            class="bi bi-files"
+                                                                                            viewBox="0 0 16 16">
+                                                                                            <path
+                                                                                                d="M13 0H6a2 2 0 0 0-2 2 2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2 2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 13V4a2 2 0 0 0-2-2H5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1zM3 4a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4z" />
+                                                                                        </svg>
+                                                                                    </button></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="custom-tab-pane" role="tabpanel"
+                                                aria-labelledby="custom-tab" tabindex="0">
+                                                <div class="card border-0 overflow-hidden">
+                                                    <div class="card-body">
+                                                        <div class="row g-3">
+                                                            <div class="col-12">
+                                                                <div class="row g-3">
+                                                                    <div class="col-12"><strong>Optional: Add UTM
+                                                                            tracking
+                                                                            parameters.</strong></div>
+                                                                    <div class="col-12">
+                                                                        <div class="row">
+                                                                            <label for="inputPassword"
+                                                                                class="col-lg-2 col-form-label">Source
+                                                                                * <a href="#" data-bs-toggle="tooltip"
+                                                                                    data-bs-title="Use utm_source to identify a search engine, newsletter name, or other source (e.g google)."><svg
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        width="16" height="16"
+                                                                                        fill="currentColor"
+                                                                                        class="bi bi-info-circle-fill"
+                                                                                        viewBox="0 0 16 16">
+                                                                                        <path
+                                                                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                                                                    </svg></a></label>
+                                                                            <div class="col-lg-4">
+                                                                                <select class="form-select"
+                                                                                    aria-label="Default select example">
+                                                                                    <option selected></option>
+                                                                                    <option value="1">One</option>
+                                                                                    <option value="2">Two</option>
+                                                                                    <option value="3">Three</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <div class="row">
+                                                                            <label for="inputPassword"
+                                                                                class="col-lg-2 col-form-label">Medium
+                                                                                * <a href="#" data-bs-toggle="tooltip"
+                                                                                    data-bs-title="Use utm_medium to identify a medium such as email or cost-per- click (e.g cpc)."><svg
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        width="16" height="16"
+                                                                                        fill="currentColor"
+                                                                                        class="bi bi-info-circle-fill"
+                                                                                        viewBox="0 0 16 16">
+                                                                                        <path
+                                                                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                                                                    </svg></a></label>
+                                                                            <div class="col-lg-4">
+                                                                                <select class="form-select"
+                                                                                    aria-label="Default select example">
+                                                                                    <option selected></option>
+                                                                                    <option value="1">One</option>
+                                                                                    <option value="2">Two</option>
+                                                                                    <option value="3">Three</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <div class="row">
+                                                                            <label for="inputPassword"
+                                                                                class="col-lg-2 col-form-label">Name
+                                                                                * <a href="#" data-bs-toggle="tooltip"
+                                                                                    data-bs-title="Used for keyword analysis. Use utm_campaign to identify a specific product promotion or strategic campaign (e.g utm_campaign=spring_sale)."><svg
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        width="16" height="16"
+                                                                                        fill="currentColor"
+                                                                                        class="bi bi-info-circle-fill"
+                                                                                        viewBox="0 0 16 16">
+                                                                                        <path
+                                                                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                                                                    </svg></a></label>
+                                                                            <div class="col-lg-4">
+                                                                                <select class="form-select"
+                                                                                    aria-label="Default select example">
+                                                                                    <option selected></option>
+                                                                                    <option value="1">One</option>
+                                                                                    <option value="2">Two</option>
+                                                                                    <option value="3">Three</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <div class="row">
+                                                                            <label for="inputPassword"
+                                                                                class="col-lg-2 col-form-label">Term
+                                                                                <a href="#" data-bs-toggle="tooltip"
+                                                                                    data-bs-title="Used for paid search. Use utm_term to note the keywords for this ad (e.g running+shoes)."><svg
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        width="16" height="16"
+                                                                                        fill="currentColor"
+                                                                                        class="bi bi-info-circle-fill"
+                                                                                        viewBox="0 0 16 16">
+                                                                                        <path
+                                                                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                                                                    </svg></a></label>
+                                                                            <div class="col-lg-4">
+                                                                                <select class="form-select"
+                                                                                    aria-label="Default select example">
+                                                                                    <option selected></option>
+                                                                                    <option value="1">One</option>
+                                                                                    <option value="2">Two</option>
+                                                                                    <option value="3">Three</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <div class="row">
+                                                                            <label for="inputPassword"
+                                                                                class="col-lg-2 col-form-label">Content<a
+                                                                                    href="#" data-bs-toggle="tooltip"
+                                                                                    data-bs-title="Used for A/B testing and content-targeted ads. Use utm_content to differentiate ads or links that point to the same URL (e.g logolink, textlink, etc.)"><svg
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        width="16" height="16"
+                                                                                        fill="currentColor"
+                                                                                        class="bi bi-info-circle-fill"
+                                                                                        viewBox="0 0 16 16">
+                                                                                        <path
+                                                                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                                                                    </svg></a></label>
+                                                                            <div class="col-lg-4">
+                                                                                <select class="form-select"
+                                                                                    aria-label="Default select example">
+                                                                                    <option selected></option>
+                                                                                    <option value="1">One</option>
+                                                                                    <option value="2">Two</option>
+                                                                                    <option value="3">Three</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <div class="alert alert-danger" role="alert">
+                                                                            <div>Campaign Source cannot be empty.</div>
+                                                                            <div>Campaign Source cannot be empty.</div>
+                                                                            <div>Campaign Source cannot be empty.</div>
+                                                                        </div>
+                                                                        <button class="btn btn-primary rounded-pill">Add
+                                                                            Tracking
+                                                                            Parameters</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-header border-top">Summary of URL</div>
+                                    <div class="card-body">
+                                        <div class="table-responsive bg-white">
+                                            <table class="table table-borderless mb-0" style="width:100%">
+                                                <thead class="text-uppercase small bg-body">
+                                                    <tr>
+                                                        <th>Edit Link</th>
+                                                        <th>URL</th>
+                                                        <th>Lead Retailer</th>
+                                                        <th>Backup Retailers</th>
+                                                        <th>Related Products</th>
+                                                        <th>Products</th>
+                                                        <th>End Date</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="align-middle">
+                                                    <tr>
+                                                        <td>BETCHES - JFM Tentpole - WAL ONLY</td>
+                                                        <td>https://click2cart.com/00400dK</td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <a href="#!.html"><img src="assets/Frame.svg"
+                                                                        class="avatar p-1 border rounded-2 me-2 align-middle"
+                                                                        alt=""></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <a href="#!.html"><img src="assets/target.svg"
+                                                                        class="avatar p-1 border rounded-2 me-2 align-middle"
+                                                                        alt=""></a>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-success">ON</td>
+                                                        <td>6</td>
+                                                        <td>-</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="card-header border-top">Text Options</div>
+                                    <div class="card-body">
+                                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="english-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#english-tab-pane" type="button" role="tab"
+                                                    aria-controls="english-tab-pane"
+                                                    aria-selected="true">English</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="spanish-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#spanish-tab-pane" type="button" role="tab"
+                                                    aria-controls="spanish-tab-pane"
+                                                    aria-selected="false">Spanish</button>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content" id="myTabContent">
+                                            <div class="tab-pane fade active show" id="english-tab-pane" role="tabpanel"
+                                                aria-labelledby="standard-tab" tabindex="0">
+                                                <div class="card border-0 overflow-hidden mb-1">
+                                                    <div class="card-body">
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+                                                                <div class="table-responsive bg-white">
+                                                                    <table class="table table-borderless mb-0"
+                                                                        style="width:100%">
+                                                                        <thead class="text-uppercase small bg-body">
+                                                                            <tr>
+                                                                                <th>Redirect Title</th>
+                                                                                <th>Redirect Message</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody class="align-middle">
+                                                                            <tr>
+                                                                                <td>-</td>
+                                                                                <td>-
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="spanish-tab-pane" role="tabpanel"
+                                                aria-labelledby="custom-tab" tabindex="0">
+                                                <div class="card border-0 overflow-hidden">
+                                                    <div class="card-body">
+                                                        <div class="row g-3">
+                                                            <div class="col-12">TBD</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <di class="card-body">
+                                        <div class="table-responsive bg-white table-scroll">
+                                            <table class="table table-borderless mb-0" style="width:100%">
+                                                <thead class="text-uppercase small bg-body">
+                                                    <tr>
+                                                        <th>Image</th>
+                                                        <th>Title Product</th>
+                                                        <th>Quantity</th>
+                                                        <th>Required</th>
+                                                        <th>Related Products</th>
+                                                        <th>Product Substitution</th>
+                                                        <th>Retailers</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="align-middle">
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <a href="#!.html"><img src="assets/media/products/6.png"
+                                                                        class="avatar p-1 border rounded-2 me-2 align-middle"
+                                                                        alt=""></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>BETCHES - JFM Tentpole - WAL ONLY</td>
+                                                        <td>1</td>
+                                                        <td>
+                                                            No
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <button
+                                                                    class="btn btn-sm btn-link dropdown-toggle p-0 m-0 text-primary"
+                                                                    type="button" data-bs-toggle="dropdown"
+                                                                    aria-expanded="false">
+                                                                    See related products(1)
+                                                                </button>
+                                                                <ul class="dropdown-menu p-0 border-0">
+                                                                    <div class="scroller-product" style="width: 300px;">
+                                                                        <div class="card mb-1">
+                                                                            <div class="row g-3 p-3">
+                                                                                <div class="col-md-4">
+                                                                                    <img src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
+                                                                                        class="img-fluid" alt="...">
+                                                                                </div>
+                                                                                <div class="col-md-8">
+                                                                                    <small>Pantene - Pantene
+                                                                                        Beautiful
+                                                                                        Lengths Conditioner 23.7 fl
+                                                                                        oz
+                                                                                        bottle</small>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="card mb-1">
+                                                                            <div class="row g-3 py-3">
+                                                                                <div class="col-md-4">
+                                                                                    <img src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
+                                                                                        class="img-fluid" alt="...">
+                                                                                </div>
+                                                                                <div class="col-md-8">
+                                                                                    <small>Pantene - Pantene
+                                                                                        Beautiful
+                                                                                        Lengths Conditioner 23.7 fl
+                                                                                        oz
+                                                                                        bottle</small>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="card">
+                                                                            <div class="row g-3 py-3">
+                                                                                <div class="col-md-4">
+                                                                                    <img src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
+                                                                                        class="img-fluid" alt="...">
+                                                                                </div>
+                                                                                <div class="col-md-8">
+                                                                                    <small>Pantene - Pantene
+                                                                                        Beautiful
+                                                                                        Lengths Conditioner 23.7 fl
+                                                                                        oz
+                                                                                        bottle</small>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                        <td>Direct
+                                                            <div>
+                                                                <button
+                                                                    class="btn btn-sm btn-link dropdown-toggle p-0 m-0 text-primary"
+                                                                    type="button" data-bs-toggle="dropdown"
+                                                                    aria-expanded="false">
+                                                                    View indirect substitutions
+                                                                </button>
+                                                                <ul class="dropdown-menu p-0 border-0">
+                                                                    <div class="scroller-product" style="width: 300px;">
+                                                                        <div class="card mb-1">
+                                                                            <div class="row g-3 p-3">
+                                                                                <div class="col-md-4">
+                                                                                    <img src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
+                                                                                        class="img-fluid" alt="...">
+                                                                                </div>
+                                                                                <div class="col-md-8">
+                                                                                    <small>Pantene - Pantene
+                                                                                        Beautiful
+                                                                                        Lengths Conditioner 23.7 fl
+                                                                                        oz
+                                                                                        bottle</small>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="card mb-1">
+                                                                            <div class="row g-3 py-3">
+                                                                                <div class="col-md-4">
+                                                                                    <img src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
+                                                                                        class="img-fluid" alt="...">
+                                                                                </div>
+                                                                                <div class="col-md-8">
+                                                                                    <small>Pantene - Pantene
+                                                                                        Beautiful
+                                                                                        Lengths Conditioner 23.7 fl
+                                                                                        oz
+                                                                                        bottle</small>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="card">
+                                                                            <div class="row g-3 py-3">
+                                                                                <div class="col-md-4">
+                                                                                    <img src="https://images.ctfassets.net/r9udlqyetmm3/5UYMAfKdcIsfyewSCKHnaD/f89f65591a108ad0802673b4a1bd031c/pantene-miracle_rescue-collection-DT.jpg?fm=webp"
+                                                                                        class="img-fluid" alt="...">
+                                                                                </div>
+                                                                                <div class="col-md-8">
+                                                                                    <small>Pantene - Pantene
+                                                                                        Beautiful
+                                                                                        Lengths Conditioner 23.7 fl
+                                                                                        oz
+                                                                                        bottle</small>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <a href="#!.html"><img src="assets/Frame.svg"
+                                                                        class="avatar p-1 border rounded-2 me-2 align-middle"
+                                                                        alt=""></a>
+                                                                <a href="#!.html"><img src="assets/Frame.svg"
+                                                                        class="avatar p-1 border rounded-2 me-2 align-middle"
+                                                                        alt=""></a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <!--//Page content End//-->
+         <!--//Page-footer//-->
+         <footer class="bg-white">
+           <div class="container-fluid py-5">
+             <span class="d-block lh-sm text-center small">
+               Do you have any questions about the tool? Contact us at: <a href="#"> support@smartcommerce.co</a> or the phone
+               number:
+               1-800-571-3520
+               <!-- &copy;
+                <script>
+                  document.write(new Date().getFullYear())
+                </script>. Copyright -->
+             </span>
+           </div>
+         </footer>
+         <!--/.Page Footer End-->
+        </main>
+        <!--///////////Page content wrapper End///////////////-->
+    </div>
+    </div>
+    
+    <!--////////////Theme Core scripts Start/////////////////-->
+
+    <script src="assets/js/theme.bundle.js"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!--////////////Theme Core scripts End/////////////////-->
+
+</body>
+
+</html>
