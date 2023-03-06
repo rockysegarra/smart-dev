@@ -325,7 +325,11 @@
                                     <div class="col-6 text-end">
                                         <a href="make-click2cart-new-url.html"
                                             class="btn btn-outline-primary rounded-pill">
-                                            Create New Url
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                                            </svg> Return to list
                                         </a>
                                     </div>
                                 </div>
@@ -392,15 +396,14 @@
                                                                 links to paste
                                                                 inside an email.
                                                             </div>
-                                                            <div class="col-lg-6">
+                                                            <div class="col-lg-12">
                                                                 <div class="table-responsive bg-white">
-                                                                    <table class="table table-borderless mb-0"
-                                                                        style="width:100%">
+                                                                    <table class="table table-borderless mb-0">
                                                                         <thead class="text-uppercase small bg-body">
                                                                             <tr>
-                                                                                <th>Platform</th>
-                                                                                <th>Link</th>
-                                                                                <th>Actions</th>
+                                                                                <th scope="col">Platform</th>
+                                                                                <th scope="col">Link</th>
+                                                                                <th scope="col">Actions</th>
                                                                             </tr>
                                                                         </thead>
                                                                         <tbody class="align-middle">
@@ -456,10 +459,17 @@
                                                                             tracking
                                                                             parameters.</strong></div>
                                                                     <div class="col-12">
+                                                                        <div class="alert alert-danger" role="alert">
+                                                                            <div>*Campaign Source cannot be empty.</div>
+                                                                            <div>*Campaign Source cannot be empty.</div>
+                                                                            <div>*Campaign Source cannot be empty.</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12">
                                                                         <div class="row">
                                                                             <label for="inputPassword"
-                                                                                class="col-lg-2 col-form-label">Source
-                                                                                * <a href="#" data-bs-toggle="tooltip"
+                                                                                class="col-lg-2 col-form-label"><a
+                                                                                    href="#" data-bs-toggle="tooltip"
                                                                                     data-bs-title="Use utm_source to identify a search engine, newsletter name, or other source (e.g google)."><svg
                                                                                         xmlns="http://www.w3.org/2000/svg"
                                                                                         width="16" height="16"
@@ -468,7 +478,8 @@
                                                                                         viewBox="0 0 16 16">
                                                                                         <path
                                                                                             d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
-                                                                                    </svg></a></label>
+                                                                                    </svg></a> Source
+                                                                                * </label>
                                                                             <div class="col-lg-4">
                                                                                 <select class="form-select"
                                                                                     aria-label="Default select example">
@@ -483,8 +494,8 @@
                                                                     <div class="col-12">
                                                                         <div class="row">
                                                                             <label for="inputPassword"
-                                                                                class="col-lg-2 col-form-label">Medium
-                                                                                * <a href="#" data-bs-toggle="tooltip"
+                                                                                class="col-lg-2 col-form-label"><a
+                                                                                    href="#" data-bs-toggle="tooltip"
                                                                                     data-bs-title="Use utm_medium to identify a medium such as email or cost-per- click (e.g cpc)."><svg
                                                                                         xmlns="http://www.w3.org/2000/svg"
                                                                                         width="16" height="16"
@@ -493,7 +504,8 @@
                                                                                         viewBox="0 0 16 16">
                                                                                         <path
                                                                                             d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
-                                                                                    </svg></a></label>
+                                                                                    </svg></a> Medium
+                                                                                *</label>
                                                                             <div class="col-lg-4">
                                                                                 <select class="form-select"
                                                                                     aria-label="Default select example">
@@ -508,8 +520,8 @@
                                                                     <div class="col-12">
                                                                         <div class="row">
                                                                             <label for="inputPassword"
-                                                                                class="col-lg-2 col-form-label">Name
-                                                                                * <a href="#" data-bs-toggle="tooltip"
+                                                                                class="col-lg-2 col-form-label"><a
+                                                                                    href="#" data-bs-toggle="tooltip"
                                                                                     data-bs-title="Used for keyword analysis. Use utm_campaign to identify a specific product promotion or strategic campaign (e.g utm_campaign=spring_sale)."><svg
                                                                                         xmlns="http://www.w3.org/2000/svg"
                                                                                         width="16" height="16"
@@ -518,7 +530,8 @@
                                                                                         viewBox="0 0 16 16">
                                                                                         <path
                                                                                             d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
-                                                                                    </svg></a></label>
+                                                                                    </svg></a> Name
+                                                                                *</label>
                                                                             <div class="col-lg-4">
                                                                                 <select class="form-select"
                                                                                     aria-label="Default select example">
@@ -533,8 +546,8 @@
                                                                     <div class="col-12">
                                                                         <div class="row">
                                                                             <label for="inputPassword"
-                                                                                class="col-lg-2 col-form-label">Term
-                                                                                <a href="#" data-bs-toggle="tooltip"
+                                                                                class="col-lg-2 col-form-label"><a
+                                                                                    href="#" data-bs-toggle="tooltip"
                                                                                     data-bs-title="Used for paid search. Use utm_term to note the keywords for this ad (e.g running+shoes)."><svg
                                                                                         xmlns="http://www.w3.org/2000/svg"
                                                                                         width="16" height="16"
@@ -543,7 +556,8 @@
                                                                                         viewBox="0 0 16 16">
                                                                                         <path
                                                                                             d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
-                                                                                    </svg></a></label>
+                                                                                    </svg></a> Term
+                                                                            </label>
                                                                             <div class="col-lg-4">
                                                                                 <select class="form-select"
                                                                                     aria-label="Default select example">
@@ -558,8 +572,8 @@
                                                                     <div class="col-12">
                                                                         <div class="row">
                                                                             <label for="inputPassword"
-                                                                                class="col-lg-2 col-form-label">Content
-                                                                                <a href="#" data-bs-toggle="tooltip"
+                                                                                class="col-lg-2 col-form-label"> <a
+                                                                                    href="#" data-bs-toggle="tooltip"
                                                                                     data-bs-title="Used for A/B testing and content-targeted ads. Use utm_content to differentiate ads or links that point to the same URL (e.g logolink, textlink, etc.)"><svg
                                                                                         xmlns="http://www.w3.org/2000/svg"
                                                                                         width="16" height="16"
@@ -568,7 +582,8 @@
                                                                                         viewBox="0 0 16 16">
                                                                                         <path
                                                                                             d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
-                                                                                    </svg></a></label>
+                                                                                    </svg></a> Content
+                                                                            </label>
                                                                             <div class="col-lg-4">
                                                                                 <select class="form-select"
                                                                                     aria-label="Default select example">
@@ -581,11 +596,6 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-12">
-                                                                        <div class="alert alert-danger" role="alert">
-                                                                            <div>Campaign Source cannot be empty.</div>
-                                                                            <div>Campaign Source cannot be empty.</div>
-                                                                            <div>Campaign Source cannot be empty.</div>
-                                                                        </div>
                                                                         <button class="btn btn-primary rounded-pill">Add
                                                                             Tracking
                                                                             Parameters</button>
@@ -601,39 +611,126 @@
                                     <div class="card-header border-top">Summary of URL</div>
                                     <div class="card-body">
                                         <div class="table-responsive bg-white">
-                                            <table class="table table-borderless mb-0" style="width:100%">
-                                                <thead class="text-uppercase small bg-body">
-                                                    <tr>
-                                                        <th>Edit Link</th>
-                                                        <th>URL</th>
-                                                        <th>Lead Retailer</th>
-                                                        <th>Backup Retailers</th>
-                                                        <th>Related Products</th>
-                                                        <th>Products</th>
-                                                        <th>End Date</th>
-                                                    </tr>
-                                                </thead>
+                                            <table
+                                                class="table table-sm table-bordered table-borderless table-striped mb-0"
+                                                style="width:100%">
                                                 <tbody class="align-middle">
                                                     <tr>
-                                                        <td>BETCHES - JFM Tentpole - WAL ONLY</td>
-                                                        <td>https://click2cart.com/00400dK</td>
+                                                        <td>Name</td>
+                                                        <td>Brand SiteProduct Detail Page Carousel with Selector</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Retailers</td>
                                                         <td>
                                                             <div class="d-flex align-items-center">
                                                                 <a href="#!.html"><img src="assets/Frame.svg"
                                                                         class="avatar p-1 border rounded-2 me-2 align-middle"
                                                                         alt=""></a>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <a href="#!.html"><img src="assets/target.svg"
+                                                                <a href="#!.html"><img src="assets/Frame.svg"
+                                                                        class="avatar p-1 border rounded-2 me-2 align-middle"
+                                                                        alt=""></a>
+                                                                <a href="#!.html"><img src="assets/Frame.svg"
+                                                                        class="avatar p-1 border rounded-2 me-2 align-middle"
+                                                                        alt=""></a>
+                                                                <a href="#!.html"><img src="assets/Frame.svg"
+                                                                        class="avatar p-1 border rounded-2 me-2 align-middle"
+                                                                        alt=""></a>
+                                                                <a href="#!.html"><img src="assets/Frame.svg"
                                                                         class="avatar p-1 border rounded-2 me-2 align-middle"
                                                                         alt=""></a>
                                                             </div>
                                                         </td>
-                                                        <td class="text-success">ON</td>
-                                                        <td>6</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Widget Design</td>
+                                                        <td>Carousel</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Widget Type</td>
+                                                        <td>Carousel</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Product Selector Order</td>
+                                                        <td>Carousel</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Related Product Substition</td>
+                                                        <td>
+                                                            <div class="form-check form-switch">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    role="switch" id="flexSwitchCheckDisabled" disabled>
+                                                                <label class="form-check-label"
+                                                                    for="flexSwitchCheckDisabled">OFF</label>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Redirect Title</td>
                                                         <td>-</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Border</td>
+                                                        <td>
+                                                            <div class="form-check form-switch">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    role="switch" id="flexSwitchCheckDisabled" disabled>
+                                                                <label class="form-check-label"
+                                                                    for="flexSwitchCheckDisabled">OFF</label>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Shadow</td>
+                                                        <td>
+                                                            <div class="form-check form-switch">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    role="switch" id="flexSwitchCheckDisabled" disabled>
+                                                                <label class="form-check-label"
+                                                                    for="flexSwitchCheckDisabled">OFF</label>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Background Transparency</td>
+                                                        <td>
+                                                            <div class="form-check form-switch">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    role="switch" id="flexSwitchCheckCheckedDisabled"
+                                                                    checked disabled>
+                                                                <label class="form-check-label"
+                                                                    for="flexSwitchCheckCheckedDisabled">ON</label>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Background Color</td>
+                                                        <td><svg class="border" style="color: white;"
+                                                                xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor"
+                                                                class="bi bi-square-fill" viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2z" />
+                                                            </svg></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Text Color</td>
+                                                        <td><svg class="border" style="color: black;"
+                                                                xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor"
+                                                                class="bi bi-square-fill" viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2z" />
+                                                            </svg></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Link and modal colors</td>
+                                                        <td><svg class="border" style="color: green;"
+                                                                xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor"
+                                                                class="bi bi-square-fill" viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2z" />
+                                                            </svg></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -663,26 +760,42 @@
                                                         <div class="row">
                                                             <div class="col-lg-6">
                                                                 <div class="table-responsive bg-white">
-                                                                    <table class="table table-borderless mb-0"
+                                                                    <table
+                                                                        class="table table-sm table-bordered table-borderless table-striped mb-0"
                                                                         style="width:100%">
-                                                                        <thead class="text-uppercase small bg-body">
-                                                                            <tr>
-                                                                                <th>Redirect Title</th>
-                                                                                <th>Redirect Message</th>
-                                                                            </tr>
-                                                                        </thead>
                                                                         <tbody class="align-middle">
                                                                             <tr>
+                                                                                <td>Retailer Call to Action</td>
+                                                                                <td>Save to cart at these retailers:
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>PDP Call to Action</td>
                                                                                 <td>-</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Custom text OOS</td>
+                                                                                <td>-</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Postal code detected message:</td>
+                                                                                <td>-</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Postal code detection fail message:
+                                                                                </td>
                                                                                 <td>-
                                                                                 </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Placeholder Text</td>
+                                                                                <td>-</td>
                                                                             </tr>
                                                                         </tbody>
                                                                     </table>
                                                                 </div>
                                                             </div>
                                                         </div>
-
                                                     </div>
                                                 </div>
                                             </div>
