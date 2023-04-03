@@ -22,6 +22,11 @@ p {
   line-height: 150% !important;
 }
 
+.table thead {
+  background-color: $light !important;
+  color: $dark !important;
+}
+
 tr .btn {
   border-radius: 0.375rem !important;
 }
@@ -99,6 +104,11 @@ label {
   border-bottom: solid $primary !important;
   border-left: 0px solid !important;
   background-color: $light !important;
+}
+
+.form-control:disabled {
+  opacity: 0.5 !important;
+  border-bottom: solid $dark !important;
 }
 
 .display-4 {
