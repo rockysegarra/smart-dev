@@ -135,6 +135,9 @@
                                     <ul data-bs-target="#dashboards" id="dashboards"
                                         class="sidebar-dropdown list-unstyled collapse mb-3">
                                         <li class="sidebar-item"><a class="sidebar-link" href="measure-main.html">Main</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="#">SmartLink</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="#">SmartSite</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="#">Eshop</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
@@ -149,7 +152,11 @@
                                     </a>
                                     <ul id="ui-pages" class="sidebar-dropdown list-unstyled collapse">
                                         <li class="sidebar-item"><a class="sidebar-link" href="make-main.html">Main</a></li>
-                                        <li class="sidebar-item"><a class="sidebar-link" href="make-click2cart.html">Click2Cart</a>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="make-click2cart.html">SmartLink</a>
+                                        </li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="#">SmartSite</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="#">Eshop</a></li>
+                                        <!-- <li class="sidebar-item"><a class="sidebar-link" href="make-click2cart.html">Click2Cart</a>
                                         </li>
                                         <li class="sidebar-item"><a class="sidebar-link" href="make-campaigns.html">Campaigns</a>
                                         </li>
@@ -159,7 +166,7 @@
                                         <li class="sidebar-item"><a class="sidebar-link" href="make-smartsite.html">SmartSite</a>
                                         </li>
                                         <li class="sidebar-item"><a class="sidebar-link" href="#">Eshop</a></li>
-                                        <li class="sidebar-item"><a class="sidebar-link" href="make-catalog.html">Catalog</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="make-catalog.html">Catalog</a></li> -->
                                     </ul>
                                 </li>
                                 <li class="nav-item">
@@ -334,9 +341,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="border-bottom py-2 px-4">
+                <div class="border-bottom py-2 px-4 d-none d-lg-block d-xl-block">
                     <div class="row justify-content-center">
-                        <div class="col-auto text-center d-none d-lg-block d-xl-block">
+                        <div class="col-auto text-center">
                             <nav>
                                 <ol class="breadcrumb mb-0">
                                     <li class="breadcrumb-item"><a href="#!">Home</a>
@@ -356,8 +363,8 @@
                             <div class="col-12">
                                 <div class="card shadow-sm mb-5 border-0">
                                     <div class="card-body bg-primary bg-opacity-10">
-                                        <div class="row row-cols-auto g-3">
-                                            <div class="col">
+                                        <div class="row g-5">
+                                            <div class="col-lg-3">
                                                 <label class="mb-2">Date</label>
                                                 <div class="input-group">
                                                     <button id="predefineRange" class="form-control text-start">
@@ -370,7 +377,7 @@
                                                         </svg></button>
                                                 </div>
                                             </div>
-                                            <div class="col">
+                                            <div class="col-lg-3">
                                                 <label class="mb-2">Transfer
                                                     Filter</label>
                                                 <div class="input-group">
@@ -387,7 +394,23 @@
                                                         </svg></button>
                                                 </div>
                                             </div>
-                                            <div class="col">
+                                            <div class="col-lg-3">
+                                                <label class="mb-2">Link Type</label>
+                                                <div class="input-group">
+                                                    <select class="form-select" id="inputGroupSelect01">
+                                                        <option selected>Link Type</option>
+                                                        <option value="1">SmartLink</option>
+                                                        <option value="1">SmartSite</option>
+                                                        <option value="1">Eshop</option>
+                                                    </select>
+                                                    <button style="min-width: 0;" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                                        </svg></button>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
                                                 <label class="mb-2">Labels</label>
                                                 <div class="input-group">
                                                     <select class="form-select" id="inputGroupSelect01">
@@ -403,7 +426,7 @@
                                                         </svg></button>
                                                 </div>
                                             </div>
-                                            <div class="col">
+                                            <div class="col-lg-3">
                                                 <label class="mb-2">Partners</label>
                                                 <div class="input-group">
                                                     <select class="form-select" id="inputGroupSelect01">
@@ -427,7 +450,7 @@
                                                         </svg></button>
                                                 </div>
                                             </div>
-                                            <div class="col">
+                                            <div class="col-lg-3">
                                                 <label class="mb-2">Retailers</label>
                                                 <div class="input-group">
                                                     <select class="form-select" id="inputGroupSelect01">
@@ -499,6 +522,19 @@
                                                         <label class="form-check-label" for="flexRadioDefault2">
                                                             Show Transfers and Views
                                                         </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-lg-4">
+                                                    <div class="form-floating mb-2">
+                                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                                            <option selected>All</option>
+                                                            <option value="1">SmartLink</option>
+                                                            <option value="1">SmartSite</option>
+                                                            <option value="1">Eshop</option>
+                                                        </select>
+                                                        <label for="floatingSelect">Link Type</label>
                                                     </div>
                                                 </div>
                                             </div>

@@ -12,15 +12,6 @@
 
     <!--Choices css-->
     <link rel="stylesheet" href="assets/vendor/css/choices.min.css">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
-
-    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>
 
     <!--Font awesome icons-->
     <link href="assets/fonts/font-awesome5-free/css/all.min.css" rel="stylesheet">
@@ -37,6 +28,7 @@
     <!--Main style-->
     <link rel="stylesheet" href="assets/css/style.min.css" id="switchThemeStyle">
     <script src="https://kit.fontawesome.com/9b71cccaf3.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/phosphor-icons"></script>
 </head>
 
 <body>
@@ -152,21 +144,9 @@
                                     </a>
                                     <ul id="ui-pages" class="sidebar-dropdown list-unstyled collapse">
                                         <li class="sidebar-item"><a class="sidebar-link" href="make-main.html">Main</a></li>
-                                        <li class="sidebar-item"><a class="sidebar-link" href="make-click2cart.html">SmartLink</a>
-                                        </li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="#">SmartLink</a></li>
                                         <li class="sidebar-item"><a class="sidebar-link" href="#">SmartSite</a></li>
                                         <li class="sidebar-item"><a class="sidebar-link" href="#">Eshop</a></li>
-                                        <!-- <li class="sidebar-item"><a class="sidebar-link" href="make-click2cart.html">Click2Cart</a>
-                                        </li>
-                                        <li class="sidebar-item"><a class="sidebar-link" href="make-campaigns.html">Campaigns</a>
-                                        </li>
-                                        <li class="sidebar-item"><a class="sidebar-link" href="make-shoppers.html">Shopper's
-                                                Choice</a>
-                                        </li>
-                                        <li class="sidebar-item"><a class="sidebar-link" href="make-smartsite.html">SmartSite</a>
-                                        </li>
-                                        <li class="sidebar-item"><a class="sidebar-link" href="#">Eshop</a></li>
-                                        <li class="sidebar-item"><a class="sidebar-link" href="make-catalog.html">Catalog</a></li> -->
                                     </ul>
                                 </li>
                                 <li class="nav-item">
@@ -234,7 +214,6 @@
                 <a href="#"></a>
             </div>
             <!--///.Sidebar close end///-->
-
             <!--///////////Page content wrapper///////////////-->
             <main class="page-content d-flex flex-column flex-row-fluid">
                 <!--//page-header//-->
@@ -322,13 +301,19 @@
                 </header>
                 <!--Main Header End-->
                 <!--//Page Toolbar//-->
-                <div class="toolbar bg-white">
+                <div class="toolbar bg-white" style="padding: 12px 20px 12px 20px">
                     <div class="position-relative container-fluid px-0">
                         <div class="row position-relative">
-                            <div class="col-md-12 ">
+                            <div class="col-md-12">
                                 <div class="row g-0">
                                     <div class="col-6">
-                                        <h5 class="mt-2">Catalog</h5>
+                                        <h5 class="mt-2">Make & Manage</h5>
+                                    </div>
+                                    <div class="col-6 text-end">
+                                        <button class="btn btn-outline-primary rounded-pill" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal">
+                                            <i class="fa fa-info me-1"></i> More Info
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -351,71 +336,63 @@
                 </div>
                 <!--//Page Toolbar End//-->
                 <!--//Page content//-->
-                <div class="content p-4 d-flex flex-column-fluid">
-                    <div class="container-fluid px-0">
-                        <div class="card overflow-hidden">
-                            <div class="card-header">
-                                <div class="hstack gap-3">
-                                    <div class="bg-body-tertiary">
-                                        <h5 class="mb-0">Generate URLs of Category Pages <a href="#"
-                                                data-bs-container="body" data-bs-toggle="popover"
-                                                data-bs-placement="top"
-                                                data-bs-content="Generate URLs of different pages of your catalog, choosing parameters such as Category, Retailer, and Zip Code."><svg
-                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-info-circle-fill"
-                                                    viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
-                                                </svg></a></h5>
-                                    </div>
-                                </div>
+                <div class="content d-flex flex-column-fluid">
+                    <div class="container-fluid p-lg-2 m-5">
+                        <div class="row justify-content-md-center g-5">
+                            <div class="col-lg-12 text-center p-5">
+                                <h1 class="h3 text-info">Select Your SmartCommerce Solution</h1>
                             </div>
-                            <div class="card-body" style="min-height: 5rem;">
-                                <div class="row">
-                                    <div class="col-auto">
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
-                                                value="option1" checked>
-                                            <label class="form-check-label" for="inlineCheckbox1"
-                                                checked>Category</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                                value="option2">
-                                            <label class="form-check-label" for="inlineCheckbox2">Brand</label>
+                            <div class="col-lg-3 col-md-4">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body text-center">
+                                        <img class="img-fluid"
+                                            src="https://smartsuite.co/images/mockups/mockup_direct_cart1.png">
+                                        <h2 class="py-3 h3 text-info">Smartlink</h2>
+                                        <p>A Click2Cart® Service for Campaigns for use in display ads, social posts,
+                                            video links, and emails. </p>
+                                    </div>
+                                    <div class="card-footer border-top-0 text-center">
+                                        <div class="pb-5">
+                                            <a href="page-link-1.html" class="btn btn-primary btn-lg rounded-pill"
+                                                type="button">Get
+                                                Started</a>
                                         </div>
                                     </div>
                                 </div>
-                                <hr>
-                                <div class="row g-5">
-                                    <div class="col-lg-3">
-                                        <label for="formGroupExampleInput" class="form-label">Category</label>
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>
-                                            </option>
-                                            <option value="1">Beauty</option>
-                                            <option value="2">Hair Care</option>
-                                        </select>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body text-center">
+                                        <img class="img-fluid"
+                                            src="https://smartsuite.co/images/mockups/mockup_shopper_decision.png">
+                                        <h2 class="py-3 h3 text-info">SmartSite</h2>
+                                        <p>A Click2Cart® Service for Campaigns for use in display ads, social posts,
+                                            video links, and emails. </p>
                                     </div>
-                                    <div class="col-lg-3">
-                                        <label for="formGroupExampleInput" class="form-label">Retailer</label>
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>
-                                            </option>
-                                            <option value="1">Amazon</option>
-                                            <option value="2">Boxed</option>
-                                            <option value="2">Chewy</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <label for="formGroupExampleInput" class="form-label">Zip Code</label>
-                                        <input type="text" class="form-control" placeholder="000000">
+                                    <div class="card-footer border-top-0 text-center">
+                                        <div class="pb-5">
+                                            <button class="btn btn-primary btn-lg rounded-pill" type="button">Get
+                                                Started</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-footer">
-                                <a href="#" class="btn btn-primary rounded-pill">
-                                    Generate</a>
+                            <div class="col-lg-3 col-md-4">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body text-center">
+                                        <img class="img-fluid"
+                                            src="https://smartsuite.co/images/mockups/mockup_embedded_code.png">
+                                        <h2 class="py-3 h3 text-info">Eshop</h2>
+                                        <p>A Click2Cart® Service for Campaigns for use in display ads, social posts,
+                                            video links, and emails. </p>
+                                    </div>
+                                    <div class="card-footer border-top-0 text-center">
+                                        <div class="pb-5">
+                                            <button class="btn btn-primary btn-lg rounded-pill" type="button">Get
+                                                Started</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -438,6 +415,225 @@
                  <!--/.Page Footer End-->
             </main>
             <!--///////////Page content wrapper End///////////////-->
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">More Info
+                            </h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h4 class="text-info mb-3 text-center">Why would you use the URL
+                                generator?</h4>
+                            <ul class="nav justify-content-center nav-pills flex-column flex-sm-row py-2 py-lg-4" id="pills-tab"
+                                role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                        aria-selected="true">Overview</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                                        aria-selected="false">Click2Cart</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                                        aria-selected="false">Shopper's Choice</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled"
+                                        aria-selected="false">SmartSite</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-cat-tab" data-bs-toggle="pill" data-bs-target="#pills-cat"
+                                        type="button" role="tab" aria-controls="pills-cat" aria-selected="false">Catalog</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                    aria-labelledby="pills-home-tab" tabindex="0">
+                                    <div class="row p-2 p-lg-5">
+                                        <div class="col-lg-6">
+                                            <p><strong class="text-info">What is the function of the URL
+                                                    generator?</strong><br>
+                                                The URL generator creates links that let you tailor the product and
+                                                carting
+                                                experience to the specific campaigns you are running.</p>
+                                            <p><strong class="text-info">What is Click2Cart?</strong><br>
+                                                Click2Cart links let consumers add your products to their carts with a
+                                                single
+                                                click.</p>
+                                            <p><strong class="text-info">What is Shopper's Choice?</strong><br>
+                                                Shopper’s Choice lets you present the user with options: number of
+                                                products, preferred retailer, etc, before carting (min 2 clicks).
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p>
+                                                <strong class="text-info">What is SmartSite?</strong><br>
+                                                SmartSite allows to integrated a way of sell products in the own
+                                                website.
+                                                With a single click the user send the product to a concret retailer.
+                                            </p>
+
+                                            <p>
+                                                <strong class="text-info">What is Catalog?</strong><br>
+                                                Catalog lets you send the user to a pre-determined view within the eshop
+                                                – a
+                                                product category, set of products, or a single product.
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <img class="img-fluid"
+                                                src="https://smartsuite.co/images/mockups/diferents_generators.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                                    tabindex="0">
+                                    <div class="row p-2 p-lg-5">
+                                        <div class="col-lg-12 mb-5">
+                                            <p><strong class="text-info">What is Click2Cart?</strong><br>
+                                                Click2Cart links let consumers add your products to their carts with a
+                                                single click</p>
+                                            <p><strong class="text-info">How does it work?</strong><br>
+                                                Click2Cart links let consumers add your
+                                                products to their carts with a
+                                                single
+                                                click.</p>
+                                            <ol>
+                                                <li>You choose the lead retailer where you want to send the user.
+                                                    You
+                                                    can also activate <strong>“related retailers”</strong>, to send the
+                                                    user to an
+                                                    alternate retailer(s) if the lead retailer is out of stock.</li>
+
+                                                <li>You determine the lead product or products to be added to
+                                                    the cart,
+                                                    and the quantities to be added. You can also activate
+                                                    <strong>“Related
+                                                        products”</strong>, which will substitute the closest package
+                                                    size of the
+                                                    same product, if your product is out of stock.
+                                                </li>
+
+                                                <li>You can add parameters to identify and track your link.</li>
+
+                                                <li>Even after generating the URL, you can return later to
+                                                    modify
+                                                    retailers or products if you want.</li>
+                                            </ol>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <img class="img-fluid"
+                                                src="https://smartsuite.co/images/mockups/mockup_direct_cart.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
+                                    tabindex="0">
+                                    <div class="row p-2 p-lg-5">
+                                        <div class="col-lg-12 mb-5">
+                                            <p><strong class="text-info">What is Shopper's Choice?</strong><br>
+                                                Shopper’s Choice lets you present the user with options: number of
+                                                products, preferred retailer, etc, before carting <strong>(min 2
+                                                    clicks).</strong></p>
+                                            <p><strong class="text-info">How does it
+                                                    work?</strong><br></p>
+                                            <ol>
+                                                <li>You choose which retailer or retailers you would like to offer to
+                                                    your shopper. You can choose one, or as many as you like (we
+                                                    recommend no more than 4).</li>
+
+                                                <li>You determine the lead product or products to be added to the cart,
+                                                    and the default quantities to be added. You can also activate
+                                                    “Related products,” which will substitute the closest package size
+                                                    of the same product, if your product is out of stock.</li>
+
+                                                <li>You can add parameters to identify and track your link.</li>
+
+                                                <li>Even after generating the URL, you can return later to modify
+                                                    retailers or products if you want.
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <img class="img-fluid"
+                                                src="https://smartsuite.co/images/mockups/mockup_shopper_choice.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab"
+                                    tabindex="0">
+                                    <div class="row p-2 p-lg-5">
+                                        <div class="col-lg-12 mb-5">
+                                            <p><strong class="text-info">What is SmartSite?</strong><br>
+                                                SmartSite can be used on a website, blog, etc. to provide Click2Cart
+                                                ease for shoppers.</p>
+                                            <p><strong class="text-info">How does it
+                                                    work?</strong><br></p>
+                                            <ol>
+                                                <li>You choose which retailer or retailers you would like to offer to
+                                                    your shopper.</li>
+
+                                                <li>You choose one product and the default quantities to be added. You
+                                                    can activate <strong>“Related products”</strong>, which will
+                                                    substitute the closest
+                                                    package size of the same product, if your product is out of stock.
+                                                    You can also activate <strong>“Product Selector”</strong>, which
+                                                    will show a default
+                                                    product size/type but allow the user to chose a different size/type
+                                                    if he prefers.</li>
+
+                                                <li>Copy the code and use it on your website. If you need to modify the
+                                                    code, you can do so in the tool and then re-add it to your site.
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <img class="img-fluid"
+                                                src="https://smartsuite.co/images/mockups/mockup_embedded_code1.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-cat" role="tabpanel" aria-labelledby="pills-cat" tabindex="0">
+                                    <div class="row p-2 p-lg-5">
+                                        <div class="col-lg-12 mb-5">
+                                            <p><strong class="text-info">What is
+                                                    Catalog?</strong><br>
+                                                Catalog lets you send the user to a
+                                                pre-determined view within the eshop – a
+                                                product category, set of products, or a
+                                                single product.</p>
+                                            <p><strong class="text-info">How does it
+                                                    work?</strong><br></p>
+                                            <ol>
+                                                <li>You choose which category, brand, or
+                                                    product to which you would like to
+                                                    send the user.</li>
+
+                                                <li>You can also choose other parameters
+                                                    like retailers or filters.</li>
+                                            </ol>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <img class="img-fluid" src="https://smartsuite.co/images/mockups/mockup_catalog.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     
@@ -447,6 +643,7 @@
     <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <!--////////////Theme Core scripts End/////////////////-->
+
 
 </body>
 

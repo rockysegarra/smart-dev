@@ -135,6 +135,9 @@
                                     <ul data-bs-target="#dashboards" id="dashboards"
                                         class="sidebar-dropdown list-unstyled collapse mb-3">
                                         <li class="sidebar-item"><a class="sidebar-link" href="measure-main.html">Main</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="#">SmartLink</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="#">SmartSite</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="#">Eshop</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
@@ -149,7 +152,11 @@
                                     </a>
                                     <ul id="ui-pages" class="sidebar-dropdown list-unstyled collapse">
                                         <li class="sidebar-item"><a class="sidebar-link" href="make-main.html">Main</a></li>
-                                        <li class="sidebar-item"><a class="sidebar-link" href="make-click2cart.html">Click2Cart</a>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="make-click2cart.html">SmartLink</a>
+                                        </li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="#">SmartSite</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="#">Eshop</a></li>
+                                        <!-- <li class="sidebar-item"><a class="sidebar-link" href="make-click2cart.html">Click2Cart</a>
                                         </li>
                                         <li class="sidebar-item"><a class="sidebar-link" href="make-campaigns.html">Campaigns</a>
                                         </li>
@@ -159,7 +166,7 @@
                                         <li class="sidebar-item"><a class="sidebar-link" href="make-smartsite.html">SmartSite</a>
                                         </li>
                                         <li class="sidebar-item"><a class="sidebar-link" href="#">Eshop</a></li>
-                                        <li class="sidebar-item"><a class="sidebar-link" href="make-catalog.html">Catalog</a></li>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="make-catalog.html">Catalog</a></li> -->
                                     </ul>
                                 </li>
                                 <li class="nav-item">
@@ -320,22 +327,35 @@
                             <div class="col-md-12 ">
                                 <div class="row g-0">
                                     <div class="col-6">
-                                        <h5 class="mt-2">Click2Cart</h5>
+                                        <h5 class="mt-2">SmartLink</h5>
                                     </div>
                                     <div class="col-6 text-end">
-                                        <a href="make-click2cart-new-url.html"
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-primary dropdown-toggle rounded-pill"
+                                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Create New Url +
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item"
+                                                        href="make-click2cart-new-url.html">Click2Cart</a></li>
+                                                <li><a class="dropdown-item" href="make-shoppers-new-url.html">Shopper's
+                                                        Choice</a></li>
+                                                <li><a class="dropdown-item" href="#">SmartShelf</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- <a href="make-click2cart-new-url.html"
                                             class="btn btn-outline-primary rounded-pill">
                                             Create New Url
-                                        </a>
+                                        </a> -->
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="border-bottom py-2 px-4">
+                <div class="border-bottom py-2 px-4 d-none d-lg-block d-xl-block">
                     <div class="row justify-content-center">
-                        <div class="col-auto text-center d-none d-lg-block d-xl-block">
+                        <div class="col-auto text-center">
                             <nav>
                                 <ol class="breadcrumb mb-0">
                                     <li class="breadcrumb-item"><a href="#!">Home</a>
@@ -355,8 +375,8 @@
                             <div class="col">
                                 <div class="card shadow-sm mb-5 border-0">
                                     <div class="card-body bg-primary bg-opacity-10">
-                                        <div class="row row-cols-auto g-3">
-                                            <div class="col">
+                                        <div class="row g-5">
+                                            <div class="col-lg-3">
                                                 <label class="mb-2">Date</label>
                                                 <div class="input-group">
                                                     <button id="predefineRange" class="form-control text-start">
@@ -369,7 +389,7 @@
                                                         </svg></button>
                                                 </div>
                                             </div>
-                                            <div class="col">
+                                            <div class="col-lg-3">
                                                 <label class="mb-2">Transfer
                                                     Filter</label>
                                                 <div class="input-group">
@@ -386,7 +406,23 @@
                                                         </svg></button>
                                                 </div>
                                             </div>
-                                            <div class="col">
+                                            <div class="col-lg-3">
+                                                <label class="mb-2">Link Type</label>
+                                                <div class="input-group">
+                                                    <select class="form-select" id="inputGroupSelect01">
+                                                        <option selected>Link Type</option>
+                                                        <option value="1">SmartLink</option>
+                                                        <option value="1">SmartSite</option>
+                                                        <option value="1">Eshop</option>
+                                                    </select>
+                                                    <button style="min-width: 0;" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                                        </svg></button>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
                                                 <label class="mb-2">Labels</label>
                                                 <div class="input-group">
                                                     <select class="form-select" id="inputGroupSelect01">
@@ -402,7 +438,7 @@
                                                         </svg></button>
                                                 </div>
                                             </div>
-                                            <div class="col">
+                                            <div class="col-lg-3">
                                                 <label class="mb-2">Partners</label>
                                                 <div class="input-group">
                                                     <select class="form-select" id="inputGroupSelect01">
@@ -426,7 +462,7 @@
                                                         </svg></button>
                                                 </div>
                                             </div>
-                                            <div class="col">
+                                            <div class="col-lg-3">
                                                 <label class="mb-2">Retailers</label>
                                                 <div class="input-group">
                                                     <select class="form-select" id="inputGroupSelect01">
@@ -498,6 +534,19 @@
                                                         <label class="form-check-label" for="flexRadioDefault2">
                                                             Show Transfers and Views
                                                         </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-lg-4">
+                                                    <div class="form-floating mb-2">
+                                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                                            <option selected>All</option>
+                                                            <option value="1">SmartLink</option>
+                                                            <option value="1">SmartSite</option>
+                                                            <option value="1">Eshop</option>
+                                                        </select>
+                                                        <label for="floatingSelect">Link Type</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -629,6 +678,7 @@
                                         <th>ID</th>
                                         <th>Partner</th>
                                         <th>Internal Name</th>
+                                        <th>Link Type</th>
                                         <th>Results</th>
                                         <th>Status</th>
                                         <th>Creating Date</th>
@@ -645,6 +695,7 @@
                                         <td>43669</td>
                                         <td>Saatchi & Saatchi X</td>
                                         <td>6686 | Pantene Nutrient and Sulfate Bundle | C2C | Walmart v6</td>
+                                        <td>SmartLink</td>
                                         <td><a href="#">47518 0 Views $2,779,072.43</a></td>
                                         <td>
                                             <span class="badge bg-success small flex-shrink-0">Active</span>
@@ -699,6 +750,7 @@
                                         <td>43669</td>
                                         <td>Saatchi & Saatchi X</td>
                                         <td>6686 | Pantene Nutrient and Sulfate Bundle | C2C | Walmart v6</td>
+                                        <td>SmartSite</td>
                                         <td><a href="#">47518 0 Views $2,779,072.43</a></td>
                                         <td>
                                             <span class="badge bg-success small flex-shrink-0">Active</span>
@@ -753,387 +805,10 @@
                                         <td>43669</td>
                                         <td>Saatchi & Saatchi X</td>
                                         <td>6686 | Pantene Nutrient and Sulfate Bundle | C2C | Walmart v6</td>
+                                        <td>Eshop</td>
                                         <td><a href="#">47518 0 Views $2,779,072.43</a></td>
                                         <td>
-                                            <span class="badge  bg-success small flex-shrink-0">Active</span>
-                                        </td>
-                                        <td>2023-02-01</td>
-                                        <td>-</td>
-                                        <td>02-14-23 // 12:32h</td>
-                                        <td>6</td>
-                                        <td><span class="badge bg-success small flex-shrink-0">ON</span></td>
-                                        <td><a href="#">https://click2cart.com/00400dJ</a></td>
-                                        <td class="text-end">
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Deactivate"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
-                                                    <path
-                                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
-                                                </svg>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Deactivate"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill"
-                                                    viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                                                </svg>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Activate"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
-                                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
-                                                </svg>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Edit"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                    height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
-                                                </svg></button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Delete"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
-                                                    <path fill-rule="evenodd"
-                                                        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
-                                                </svg>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>43669</td>
-                                        <td>Saatchi & Saatchi X</td>
-                                        <td>6686 | Pantene Nutrient and Sulfate Bundle | C2C | Walmart v6</td>
-                                        <td><a href="#">47518 0 Views $2,779,072.43</a></td>
-                                        <td>
-                                            <span class="badge  bg-success small flex-shrink-0">Active</span>
-                                        </td>
-                                        <td>2023-02-01</td>
-                                        <td>-</td>
-                                        <td>02-14-23 // 12:32h</td>
-                                        <td>6</td>
-                                        <td><span class="badge bg-success small flex-shrink-0">ON</span></td>
-                                        <td><a href="#">https://click2cart.com/00400dJ</a></td>
-                                        <td class="text-end">
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Deactivate"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
-                                                    <path
-                                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
-                                                </svg>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Deactivate"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill"
-                                                    viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                                                </svg>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Activate"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
-                                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
-                                                </svg>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Edit"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                    height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
-                                                </svg></button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Delete"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
-                                                    <path fill-rule="evenodd"
-                                                        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
-                                                </svg>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>43669</td>
-                                        <td>Saatchi & Saatchi X</td>
-                                        <td>6686 | Pantene Nutrient and Sulfate Bundle | C2C | Walmart v6</td>
-                                        <td><a href="#">47518 0 Views $2,779,072.43</a></td>
-                                        <td>
-                                            <span class="badge  bg-success small flex-shrink-0">Active</span>
-                                        </td>
-                                        <td>2023-02-01</td>
-                                        <td>-</td>
-                                        <td>02-14-23 // 12:32h</td>
-                                        <td>6</td>
-                                        <td><span class="badge bg-success small flex-shrink-0">ON</span></td>
-                                        <td><a href="#">https://click2cart.com/00400dJ</a></td>
-                                        <td class="text-end">
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Deactivate"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
-                                                    <path
-                                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
-                                                </svg>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Deactivate"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill"
-                                                    viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                                                </svg>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Activate"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
-                                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
-                                                </svg>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Edit"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                    height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
-                                                </svg></button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Delete"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
-                                                    <path fill-rule="evenodd"
-                                                        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
-                                                </svg>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>43669</td>
-                                        <td>Saatchi & Saatchi X</td>
-                                        <td>6686 | Pantene Nutrient and Sulfate Bundle | C2C | Walmart v6</td>
-                                        <td><a href="#">47518 0 Views $2,779,072.43</a></td>
-                                        <td>
-                                            <span class="badge  bg-success small flex-shrink-0">Active</span>
-                                        </td>
-                                        <td>2023-02-01</td>
-                                        <td>-</td>
-                                        <td>02-14-23 // 12:32h</td>
-                                        <td>6</td>
-                                        <td><span class="badge bg-success small flex-shrink-0">ON</span></td>
-                                        <td><a href="#">https://click2cart.com/00400dJ</a></td>
-                                        <td class="text-end">
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Deactivate"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
-                                                    <path
-                                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
-                                                </svg>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Deactivate"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill"
-                                                    viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                                                </svg>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Activate"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
-                                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
-                                                </svg>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Edit"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                    height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
-                                                </svg></button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Delete"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
-                                                    <path fill-rule="evenodd"
-                                                        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
-                                                </svg>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>43669</td>
-                                        <td>Saatchi & Saatchi X</td>
-                                        <td>6686 | Pantene Nutrient and Sulfate Bundle | C2C | Walmart v6</td>
-                                        <td><a href="#">47518 0 Views $2,779,072.43</a></td>
-                                        <td>
-                                            <span class="badge  bg-success small flex-shrink-0">Active</span>
-                                        </td>
-                                        <td>2023-02-01</td>
-                                        <td>-</td>
-                                        <td>02-14-23 // 12:32h</td>
-                                        <td>6</td>
-                                        <td><span class="badge bg-success small flex-shrink-0">ON</span></td>
-                                        <td><a href="#">https://click2cart.com/00400dJ</a></td>
-                                        <td class="text-end">
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Deactivate"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
-                                                    <path
-                                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
-                                                </svg>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Deactivate"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill"
-                                                    viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                                                </svg>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Activate"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
-                                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
-                                                </svg>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Edit"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                    height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
-                                                </svg></button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Delete"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
-                                                    <path fill-rule="evenodd"
-                                                        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
-                                                </svg>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>43669</td>
-                                        <td>Saatchi & Saatchi X</td>
-                                        <td>6686 | Pantene Nutrient and Sulfate Bundle | C2C | Walmart v6</td>
-                                        <td><a href="#">47518 0 Views $2,779,072.43</a></td>
-                                        <td>
-                                            <span class="badge  bg-success small flex-shrink-0">Active</span>
-                                        </td>
-                                        <td>2023-02-01</td>
-                                        <td>-</td>
-                                        <td>02-14-23 // 12:32h</td>
-                                        <td>6</td>
-                                        <td><span class="badge bg-success small flex-shrink-0">ON</span></td>
-                                        <td><a href="#">https://click2cart.com/00400dJ</a></td>
-                                        <td class="text-end">
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Deactivate"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
-                                                    <path
-                                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
-                                                </svg>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Deactivate"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill"
-                                                    viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                                                </svg>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Activate"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
-                                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
-                                                </svg>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Edit"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                    height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
-                                                </svg></button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Delete"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
-                                                    <path fill-rule="evenodd"
-                                                        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
-                                                </svg>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>43669</td>
-                                        <td>Saatchi & Saatchi X</td>
-                                        <td>6686 | Pantene Nutrient and Sulfate Bundle | C2C | Walmart v6</td>
-                                        <td><a href="#">47518 0 Views $2,779,072.43</a></td>
-                                        <td>
-                                            <span class="badge  bg-success small flex-shrink-0">Active</span>
-                                        </td>
-                                        <td>2023-02-01</td>
-                                        <td>-</td>
-                                        <td>02-14-23 // 12:32h</td>
-                                        <td>6</td>
-                                        <td><span class="badge bg-success small flex-shrink-0">ON</span></td>
-                                        <td><a href="#">https://click2cart.com/00400dJ</a></td>
-                                        <td class="text-end">
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Deactivate"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
-                                                    <path
-                                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
-                                                </svg>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Deactivate"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill"
-                                                    viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                                                </svg>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Activate"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
-                                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
-                                                </svg>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Edit"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                    height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
-                                                </svg></button>
-                                            <button type="button" class="btn btn-outline-primary btn-circle" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-title="Delete"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
-                                                    <path fill-rule="evenodd"
-                                                        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
-                                                </svg>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>43669</td>
-                                        <td>Saatchi & Saatchi X</td>
-                                        <td>6686 | Pantene Nutrient and Sulfate Bundle | C2C | Walmart v6</td>
-                                        <td><a href="#">47518 0 Views $2,779,072.43</a></td>
-                                        <td>
-                                            <span class="badge  bg-success small flex-shrink-0">Active</span>
+                                            <span class="badge bg-success small flex-shrink-0">Active</span>
                                         </td>
                                         <td>2023-02-01</td>
                                         <td>-</td>
